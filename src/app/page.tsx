@@ -37,10 +37,10 @@ export default function Home() {
             {/* Right Image */}
             <div className="absolute top-0 right-0 h-full w-1/2 hidden md:block">
                 <div className="relative h-full w-full">
-                    <div className="absolute -left-1/3 top-1/2 -translate-y-1/2 w-[150%] aspect-square rounded-full border-[12px] border-primary/80">
+                    <div className="absolute -left-1/3 top-1/2 -translate-y-1/2 w-[120%] aspect-square rounded-full border-[10px] border-primary/80">
                     </div>
                      <div 
-                        className="absolute -left-1/3 top-1/2 -translate-y-1/2 w-[150%] aspect-square rounded-full overflow-hidden"
+                        className="absolute -left-1/3 top-1/2 -translate-y-1/2 w-[120%] aspect-square rounded-full overflow-hidden"
                      >
                         <Image
                             src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW0lMjBkaXNjdXNzaW5nfGVufDB8fHx8MTc1OTg4NDQxMXww&ixlib=rb-4.1.0&q=80&w=1080"
