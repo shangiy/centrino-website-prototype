@@ -49,7 +49,7 @@ export default function Home() {
             </div>
             <div
               className="relative w-full aspect-square max-w-[450px] mx-auto"
-              style={{ clipPath: 'polygon(25% 0%, 100% 0%, 100% 75%, 75% 100%, 0% 100%, 0% 25%)' }}
+              style={{ clipPath: 'path("M263.2,38.9c25.4-2,53.2,1,65.8,11.5s2.9,41.9-9.4,62.9s-33.8,40-58.4,45s-53.7-6.2-70.1-23.7 s-22-44-15.5-67.2s28.2-46.7,59.2-51.7S239.3,40.8,263.2,38.9z")' }}
             >
               {heroImage && (
                 <Image
