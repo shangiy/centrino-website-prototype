@@ -47,23 +47,19 @@ export default function Home() {
                 </Link>
               </Button>
             </div>
-            <div className="relative h-full min-h-[300px] md:min-h-[450px]">
-              <div className="absolute inset-0 flex items-center justify-center">
-                 <div className="w-full h-full max-w-[450px] max-h-[450px] rounded-full bg-gradient-to-r from-pink-100 to-purple-200 blur-3xl opacity-40 dark:opacity-20" />
-              </div>
-              <div className="relative w-full h-full flex items-center justify-center">
-                 <div className="w-full h-full rounded-full border-[12px] border-primary/20 absolute -rotate-12" />
-                {heroImage && (
-                  <Image
-                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxidXNpbmVzcyUyMGRpc2N1c3Npb258ZW58MHx8fHwxNzU5ODgwMzgxfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                    alt="Business discussion"
-                    width={450}
-                    height={450}
-                    className="rounded-full object-cover aspect-square shadow-2xl z-10"
-                    data-ai-hint="business discussion"
-                  />
-                )}
-              </div>
+            <div
+              className="relative w-full aspect-square max-w-[450px] mx-auto"
+              style={{ clipPath: 'polygon(25% 0%, 100% 0%, 100% 75%, 75% 100%, 0% 100%, 0% 25%)' }}
+            >
+              {heroImage && (
+                <Image
+                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxidXNpbmVzcyUyMGRpc2N1c3Npb258ZW58MHx8fHwxNzU5ODgwMzgxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                  alt="Business discussion"
+                  fill
+                  className="object-cover"
+                  data-ai-hint="business discussion"
+                />
+              )}
             </div>
           </div>
         </section>
