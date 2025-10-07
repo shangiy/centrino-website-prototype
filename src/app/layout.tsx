@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
+import { Clock, Mail } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Centrino Technologies Ltd',
@@ -35,6 +36,18 @@ export default function RootLayout({
         )}
       >
         <div className="relative flex min-h-dvh flex-col bg-background">
+          <div className="bg-secondary/50 py-2 text-sm text-muted-foreground">
+            <div className="container flex justify-between items-center">
+              <div className='flex items-center gap-2'>
+                <Clock className="w-4 h-4" />
+                <span>Mon-Fri: 8:30 AM – 5:30 PM & Saturday 8.30am – 1:00PM</span>
+              </div>
+              <a href="mailto:info@centrino.co.ke" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Mail className="w-4 h-4" />
+                <span>info@centrino.co.ke</span>
+              </a>
+            </div>
+          </div>
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
