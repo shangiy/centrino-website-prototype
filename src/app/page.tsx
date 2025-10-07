@@ -13,17 +13,17 @@ export default function Home() {
     <div className="bg-background text-foreground">
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 md:py-32">
-           {heroImage && <div className="absolute inset-0">
+        <section className="relative py-20 md:py-32 overflow-hidden">
+           {heroImage && <div className="absolute inset-0 z-0">
                 <Image 
                     src={heroImage.imageUrl}
                     alt={heroImage.description}
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     data-ai-hint={heroImage.imageHint}
                     priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-background/30 via-background/80 to-background"></div>
             </div>}
           <div className="container relative z-10 text-center">
             <Badge>Empowering Financial Innovation</Badge>
