@@ -70,3 +70,17 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.animated-gradient-line {
+  height: 2px;
+  border: none;
+  background: linear-gradient(270deg, #00E0FF, #9D00FF, #FF005C, #00E0FF);
+  background-size: 600% 600%;
+  animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
