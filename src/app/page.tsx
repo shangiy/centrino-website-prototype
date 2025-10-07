@@ -37,12 +37,12 @@ export default function Home() {
             </div>
 
             {/* Right Image */}
-            <div className="relative w-full max-w-md mx-auto md:max-w-none md:mx-0">
+            <div className="relative w-full max-w-lg mx-auto md:max-w-none md:mx-0">
               <div
-                className="relative w-full aspect-[4/3.5] group"
+                className="relative w-full aspect-[4/3] group"
                 style={{
                   clipPath:
-                    'path("M452.8,262.8c-33.5,41.4-100.2,52.3-157.9,46.2c-57.7-6.1-106.3-41.1-137.2-90.1C126.8,169.9,114.5,108,154.9,64.2c40.4-43.8,111.4-52.9,165-36.8c53.6,16.1,90,62.3,111.7,112.5C453.3,190,486.3,221.4,452.8,262.8z")',
+                    'path("M427.9,259.6c-23.9,48.5-85.3,73.1-140.2,65.3c-54.9-7.8-96.2-51.4-123.6-99.3c-27.4-47.9-39.7-101.5-12.8-142.2c26.9-40.7,91-62.8,143.5-50.5c52.5,12.3,92.5,59.3,115.9,106.8C434.7,188,451.8,211.1,427.9,259.6z")',
                 }}
               >
                 <div className="absolute inset-0 transition-transform duration-500 ease-in-out group-hover:scale-110">
