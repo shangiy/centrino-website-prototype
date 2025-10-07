@@ -1,6 +1,6 @@
 'use client';
 
-import { Menu } from 'lucide-react';
+import { Menu, Phone } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -21,6 +21,7 @@ import { services } from '@/lib/data';
 
 const navLinks = [
   { href: '/', label: 'Home' },
+  { href: '/about', label: 'About Us'},
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
@@ -56,7 +57,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center">
+      <div className="container flex h-20 max-w-screen-2xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Image src="/centrino logo.png" alt="Centrino Logo" width={140} height={40} />
         </Link>
@@ -66,10 +67,8 @@ export function Header() {
               key={link.href}
               href={link.href}
               className={cn(
-                'inline-flex items-center justify-center rounded-md bg-transparent px-4 py-2 text-lg font-semibold transition-transform duration-200 ease-in-out hover:scale-95',
-                pathname === link.href
-                  ? 'text-primary'
-                  : 'text-foreground/70 hover:text-foreground'
+                'inline-flex items-center justify-center rounded-md bg-transparent px-4 py-2 text-base font-semibold text-foreground/80 transition-transform duration-200 ease-in-out hover:scale-95 hover:text-foreground',
+                pathname === link.href ? 'text-primary' : ''
               )}
             >
               {link.label}
@@ -80,10 +79,10 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger
                    className={cn(
-                    'inline-flex items-center justify-center rounded-md bg-transparent px-4 py-2 text-lg font-semibold transition-transform duration-200 ease-in-out hover:scale-95',
+                    'inline-flex items-center justify-center rounded-md bg-transparent px-4 py-2 text-base font-semibold text-foreground/80 transition-transform duration-200 ease-in-out hover:scale-95 hover:text-foreground',
                     pathname.startsWith('/services')
                       ? 'text-primary'
-                      : 'text-foreground/70 hover:text-foreground'
+                      : ''
                   )}
                 >
                   Services
@@ -114,7 +113,15 @@ export function Header() {
             </NavigationMenuList>
           </NavigationMenu>
         </nav>
-        <div className="flex flex-1 items-center justify-end">
+        <div className="flex flex-1 items-center justify-end gap-4">
+           <a href="tel:+254202587637" className="hidden md:flex items-center gap-2 text-foreground/80 font-semibold hover:text-primary transition-colors">
+            <Phone className="w-4 h-4 text-primary" />
+            +254 20 258 7637
+          </a>
+          <Button asChild className="hidden md:flex rounded-full">
+            <Link href="/contact">Contact Us</Link>
+          </Button>
+
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon">
@@ -168,16 +175,12 @@ export function Header() {
                     className="w-full"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <Link href="/contact">Get a Quote</Link>
+                    <Link href="/contact">Contact Us</Link>
                   </Button>
                 </div>
               </div>
             </SheetContent>
           </Sheet>
-
-          <Button asChild className="hidden md:flex">
-            <Link href="/contact">Get a Quote</Link>
-          </Button>
         </div>
       </div>
     </header>

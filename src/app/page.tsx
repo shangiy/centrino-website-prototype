@@ -1,11 +1,6 @@
+
 import {
   ArrowRight,
-  BrainCircuit,
-  Cloud,
-  Code,
-  PenTool,
-  Shield,
-  Smartphone,
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,7 +10,6 @@ import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
@@ -35,35 +29,41 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh">
       <main className="flex-1">
-        <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white">
-          {heroImage && (
-            <Image
-              src={heroImage.imageUrl}
-              alt={heroImage.description}
-              fill
-              className="object-cover"
-              priority
-              data-ai-hint={heroImage.imageHint}
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20" />
-          <div className="relative z-10 container px-4 md:px-6 space-y-4">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter font-headline">
-              Innovative Technology for a Digital Future
-            </h1>
-            <p className="max-w-[700px] mx-auto text-lg md:text-xl text-gray-200">
-              Centrino Technologies delivers cutting-edge solutions in AI,
-              cloud, and web development to propel your business forward.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg">
-                <Link href="/services">
-                  Explore Our Services <ArrowRight className="ml-2" />
+        <section className="w-full bg-gradient-to-r from-white via-pink-50 to-purple-100/60 dark:from-gray-900 dark:via-purple-950/20 dark:to-purple-950/40">
+          <div className="container grid md:grid-cols-2 gap-8 items-center py-12 md:py-24">
+            <div className="space-y-6 text-left">
+               <Badge variant="outline" className="border-primary/50 text-primary font-semibold">
+                WELCOME TO CENTRINO TECHNOLOGIES
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter font-headline">
+                Smarter Tech Solutions for <span className="text-primary">Financial Institutions</span>
+              </h1>
+              <p className="max-w-[600px] text-muted-foreground text-lg">
+                We empower financial institutions with innovative software solutions to simplify complex needs, enhance customer experiences, and drive growth.
+              </p>
+              <Button size="lg" asChild>
+                <Link href="/about">
+                  Discover More
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="secondary">
-                <Link href="/contact">Get in Touch</Link>
-              </Button>
+            </div>
+            <div className="relative h-full min-h-[300px] md:min-h-[450px]">
+              <div className="absolute inset-0 flex items-center justify-center">
+                 <div className="w-full h-full max-w-[450px] max-h-[450px] rounded-full bg-gradient-to-r from-pink-100 to-purple-200 blur-3xl opacity-40 dark:opacity-20" />
+              </div>
+              <div className="relative w-full h-full flex items-center justify-center">
+                 <div className="w-full h-full rounded-full border-[12px] border-primary/20 absolute -rotate-12" />
+                {heroImage && (
+                  <Image
+                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxidXNpbmVzcyUyMGRpc2N1c3Npb258ZW58MHx8fHwxNzU5ODgwMzgxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                    alt="Business discussion"
+                    width={450}
+                    height={450}
+                    className="rounded-full object-cover aspect-square shadow-2xl z-10"
+                    data-ai-hint="business discussion"
+                  />
+                )}
+              </div>
             </div>
           </div>
         </section>
