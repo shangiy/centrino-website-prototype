@@ -49,7 +49,7 @@ export default function Home() {
             </div>
             <div
               className="relative w-full aspect-square max-w-[450px] mx-auto lg:col-span-2"
-              style={{ clipPath: 'path("M263.2,38.9c25.4-2,53.2,1,65.8,11.5s2.9,41.9-9.4,62.9s-33.8,40-58.4,45s-53.7-6.2-70.1-23.7 s-22-44-15.5-67.2s28.2-46.7,59.2-51.7S239.3,40.8,263.2,38.9z")' }}
+              style={{ clipPath: 'path("M315.8,46.7c30.5-2.4,63.8,1.2,79,13.8s3.5,50.3-11.3,75.5s-40.6,48-70.1,54s-64.4-7.4-84.1-28.4 s-26.4-52.8-18.6-80.6s33.8-56,71-62S287.2,49,315.8,46.7z")' }}
             >
               <Image
                 src="/landingpage-image.png"
