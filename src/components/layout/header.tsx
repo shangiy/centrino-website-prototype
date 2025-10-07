@@ -13,7 +13,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -22,7 +21,6 @@ import { services } from '@/lib/data';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  // { href: '/services', label: 'Services' }, // Replaced by dropdown
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
@@ -72,7 +70,7 @@ export function Header() {
                 'inline-flex items-center justify-center rounded-md bg-transparent px-4 py-2 text-lg font-semibold transition-transform duration-200 ease-in-out hover:scale-95',
                 pathname === link.href
                   ? 'text-primary'
-                  : 'text-foreground'
+                  : 'text-foreground/70 hover:text-foreground'
               )}
             >
               {link.label}
@@ -86,7 +84,7 @@ export function Header() {
                     'inline-flex items-center justify-center rounded-md bg-transparent px-4 py-2 text-lg font-semibold transition-transform duration-200 ease-in-out hover:scale-95',
                     pathname.startsWith('/services')
                       ? 'text-primary'
-                      : 'text-foreground'
+                      : 'text-foreground/70 hover:text-foreground'
                   )}
                 >
                   Services
