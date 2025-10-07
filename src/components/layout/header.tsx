@@ -2,10 +2,10 @@
 
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
-import { Logo } from '@/components/icons';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -58,8 +58,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Logo className="h-6 w-6" />
-          <span className="font-bold font-headline inline-block">Centrino</span>
+          <Image src="/centrino logo.png" alt="Centrino Logo" width={140} height={40} />
         </Link>
         <nav className="hidden md:flex items-center space-x-1 text-sm font-medium">
           {navLinks.map((link) => (
@@ -131,8 +130,7 @@ export function Header() {
                     className="flex items-center space-x-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <Logo className="h-6 w-6" />
-                    <span className="font-bold font-headline">Centrino</span>
+                    <Image src="/centrino logo.png" alt="Centrino Logo" width={140} height={40} />
                   </Link>
                 </div>
                 <nav className="flex flex-col space-y-4 mt-6">
