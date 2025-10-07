@@ -51,15 +51,13 @@ export default function Home() {
               className="relative w-full aspect-square max-w-[450px] mx-auto lg:col-span-2"
               style={{ clipPath: 'path("M263.2,38.9c25.4-2,53.2,1,65.8,11.5s2.9,41.9-9.4,62.9s-33.8,40-58.4,45s-53.7-6.2-70.1-23.7 s-22-44-15.5-67.2s28.2-46.7,59.2-51.7S239.3,40.8,263.2,38.9z")' }}
             >
-              {heroImage && (
-                <Image
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxidXNpbmVzcyUyMGRpc2N1c3Npb258ZW58MHx8fHwxNzU5ODgwMzgxfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Business discussion"
-                  fill
-                  className="object-cover"
-                  data-ai-hint="business discussion"
-                />
-              )}
+              <Image
+                src="/landingpage-image.png"
+                alt="Business discussion"
+                fill
+                className="object-cover"
+                data-ai-hint="business discussion"
+              />
             </div>
           </div>
         </section>
