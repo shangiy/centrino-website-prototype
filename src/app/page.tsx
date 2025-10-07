@@ -4,58 +4,49 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Check } from 'lucide-react';
 import { services } from '@/lib/data';
+import { Badge } from '@/components/ui/badge';
 
 export default function Home() {
   return (
     <div className="bg-background text-foreground">
       <main>
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-purple-50/10 via-pink-50/10 to-purple-100/20 py-20 md:py-32 overflow-hidden">
-          <div className="container grid md:grid-cols-2 items-center gap-12">
-            {/* Left Content */}
-            <div className="z-10">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 bg-primary"></div>
-                <p className="font-semibold tracking-wider text-sm">
-                  WELCOME TO CENTRINO TECHNOLOGIES
-                </p>
-              </div>
-              <h1 className="text-4xl font-bold tracking-tight font-headline sm:text-5xl lg:text-6xl">
+        <section className="w-full bg-gradient-to-r from-white via-pink-50 to-purple-100/60 dark:from-gray-900 dark:via-purple-950/20 dark:to-purple-950/40">
+          <div className="container grid lg:grid-cols-5 gap-8 items-center py-12 md:py-24">
+            <div className="space-y-6 text-left lg:col-span-3">
+              <Badge
+                variant="outline"
+                className="border-primary/50 text-primary font-semibold"
+              >
+                WELCOME TO CENTRINO TECHNOLOGIES
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter font-headline">
                 Smarter Tech Solutions for{' '}
                 <span className="text-primary">Financial Institutions</span>
               </h1>
-              <p className="mt-6 max-w-xl text-lg text-muted-foreground">
+              <p className="max-w-[600px] text-muted-foreground text-lg">
                 We empower financial institutions with innovative software
                 solutions to simplify complex needs, enhance customer
                 experiences, and drive growth.
               </p>
-              <div className="mt-10">
-                <Button asChild size="lg" className="rounded-full">
-                  <Link href="/services">Discover More</Link>
-                </Button>
-              </div>
+              <Button size="lg" asChild>
+                <Link href="/about"> Discover More </Link>
+              </Button>
             </div>
-
-            {/* Right Image */}
-            <div className="relative w-full max-w-lg mx-auto md:max-w-none md:mx-0">
-              <div
-                className="relative w-full aspect-[4/3] group"
-                style={{
-                  clipPath:
-                    'path("M427,249.4c-20.9,50.3-78.9,76.5-133,70.1c-54.1-6.4-96.2-48.5-124.6-95c-28.4-46.5-43.2-100.1-20.4-142.2c22.8-42.1,86.2-61.1,139.7-50.5C342.3,43,386.7,87.6,413.7,133.4C440.7,179.2,447.9,202.1,427,249.4z")',
-                }}
-              >
-                <div className="absolute inset-0 transition-transform duration-500 ease-in-out group-hover:scale-110">
-                  <Image
-                    src="/landingpage-image.png"
-                    alt="Business team discussing"
-                    fill
-                    className="object-cover"
-                    data-ai-hint="business team discussion"
-                    priority
-                  />
-                </div>
-              </div>
+            <div
+              className="relative w-full aspect-square max-w-[450px] mx-auto lg:col-span-2"
+              style={{
+                clipPath:
+                  'path("M315.8,46.7c30.5-2.4,63.8,1.2,79,13.8s3.5,50.3-11.3,75.5s-40.6,48-70.1,54s-64.4-7.4-84.1-28.4 s-26.4-52.8-18.6-80.6s33.8-56,71-62S287.2,49,315.8,46.7z")',
+              }}
+            >
+              <Image
+                src="/landingpage-image.png"
+                alt="Business discussion"
+                fill
+                className="object-cover"
+                data-ai-hint="business discussion"
+              />
             </div>
           </div>
         </section>
