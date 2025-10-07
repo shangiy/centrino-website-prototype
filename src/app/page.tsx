@@ -30,8 +30,8 @@ export default function Home() {
     <div className="flex flex-col min-h-dvh">
       <main className="flex-1">
         <section className="w-full bg-gradient-to-r from-white via-pink-50 to-purple-100/60 dark:from-gray-900 dark:via-purple-950/20 dark:to-purple-950/40">
-          <div className="container grid md:grid-cols-2 gap-8 items-center py-12 md:py-24">
-            <div className="space-y-6 text-left">
+          <div className="container grid lg:grid-cols-5 gap-8 items-center py-12 md:py-24">
+            <div className="space-y-6 text-left lg:col-span-3">
                <Badge variant="outline" className="border-primary/50 text-primary font-semibold">
                 WELCOME TO CENTRINO TECHNOLOGIES
               </Badge>
@@ -48,7 +48,7 @@ export default function Home() {
               </Button>
             </div>
             <div
-              className="relative w-full aspect-square max-w-[450px] mx-auto"
+              className="relative w-full aspect-square max-w-[550px] mx-auto lg:col-span-2"
               style={{ clipPath: 'path("M263.2,38.9c25.4-2,53.2,1,65.8,11.5s2.9,41.9-9.4,62.9s-33.8,40-58.4,45s-53.7-6.2-70.1-23.7 s-22-44-15.5-67.2s28.2-46.7,59.2-51.7S239.3,40.8,263.2,38.9z")' }}
             >
               {heroImage && (
