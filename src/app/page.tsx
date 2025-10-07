@@ -42,12 +42,12 @@ export default function Home() {
                 className="relative w-full aspect-[4/3.5] group"
                 style={{
                   clipPath:
-                    'path("M413.9,131.3c23.2-22.3,55-32.3,77.3-15.3c24,18.3,21.3,64.6,14.6,98.6c-6.8,34-17.8,61.7-41.2,76.8 c-25.1,16.2-62.8,11.9-96.2-4.1c-33.4-16-62.5-47.7-77.9-80.1s-17-65.2-1.3-89.8C204.6,93,253.1,88.4,293.4,92.5 C336.5,96.8,389.2,155,413.9,131.3z")',
+                    'path("M452.8,262.8c-33.5,41.4-100.2,52.3-157.9,46.2c-57.7-6.1-106.3-41.1-137.2-90.1C126.8,169.9,114.5,108,154.9,64.2c40.4-43.8,111.4-52.9,165-36.8c53.6,16.1,90,62.3,111.7,112.5C453.3,190,486.3,221.4,452.8,262.8z")',
                 }}
               >
                 <div className="absolute inset-0 transition-transform duration-500 ease-in-out group-hover:scale-110">
                   <Image
-                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW0lMjBkaXNjdXNzaW5nfGVufDB8fHx8MTc1OTg4NDQxMXww&ixlib=rb-4.1.0&q=80&w=1080"
+                    src="/landingpage-image.png"
                     alt="Business team discussing"
                     fill
                     className="object-cover"
