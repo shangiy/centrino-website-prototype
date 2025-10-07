@@ -36,46 +36,76 @@ export interface Post {
 
 export const services: Service[] = [
   {
-    title: 'AI & Machine Learning',
-    icon: BrainCircuit,
-    shortDescription: 'Intelligent solutions to automate and innovate.',
-    fullDescription:
-      'We build custom AI and machine learning models to automate processes, gain insights from data, and create intelligent products. Our expertise spans natural language processing, computer vision, and predictive analytics.',
-  },
-  {
-    title: 'Cloud Solutions',
-    icon: Cloud,
-    shortDescription: 'Scalable and secure cloud infrastructure.',
-    fullDescription:
-      'Leverage the power of the cloud with our architecture, migration, and management services. We work with major cloud providers like AWS, Google Cloud, and Azure to build resilient and cost-effective infrastructure.',
-  },
-  {
-    title: 'Cybersecurity',
-    icon: Shield,
-    shortDescription: 'Protecting your digital assets from threats.',
-    fullDescription:
-      'Our cybersecurity services protect your infrastructure, applications, and data from evolving threats. We offer penetration testing, security audits, and incident response to ensure your business stays secure.',
-  },
-  {
-    title: 'Web Development',
+    title: 'Core Banking',
     icon: Code,
-    shortDescription: 'Modern web applications that perform.',
-    fullDescription:
-      'We specialize in building high-performance, scalable web applications using modern frameworks like React, Next.js, and Node.js. Our focus is on creating responsive, fast, and user-friendly digital experiences.',
+    shortDescription: 'Comprehensive banking solutions.',
+    fullDescription: 'Comprehensive banking solutions.',
   },
   {
-    title: 'Mobile Development',
+    title: 'Mobile Banking',
     icon: Smartphone,
-    shortDescription: 'Engaging mobile apps for iOS and Android.',
-    fullDescription:
-      'From concept to launch, we develop native and cross-platform mobile applications for iOS and Android. We focus on creating engaging user experiences with a solid, scalable backend.',
+    shortDescription: 'Banking on the go.',
+    fullDescription: 'Banking on the go.',
   },
   {
-    title: 'UI/UX Design',
+    title: 'Agency Banking',
+    icon: Code,
+    shortDescription: 'Extending banking services.',
+    fullDescription: 'Extending banking services.',
+  },
+  {
+    title: 'SMS Communication',
+    icon: Code,
+    shortDescription: 'Reliable SMS services.',
+    fullDescription: 'Reliable SMS services.',
+  },
+  {
+    title: 'EDMS',
+    icon: Code,
+    shortDescription: 'Electronic Document Management.',
+    fullDescription: 'Electronic Document Management.',
+  },
+  {
+    title: 'E-Board',
+    icon: Code,
+    shortDescription: 'Digital board solutions.',
+    fullDescription: 'Digital board solutions.',
+  },
+  {
+    title: 'Performance Management System',
+    icon: BrainCircuit,
+    shortDescription: 'Track and manage performance.',
+    fullDescription: 'Track and manage performance.',
+  },
+  {
+    title: 'Members Portal',
+    icon: Code,
+    shortDescription: 'Portal for members.',
+    fullDescription: 'Portal for members.',
+  },
+  {
+    title: 'Online Loan Form Submission',
+    icon: Code,
+    shortDescription: 'Easy online loan applications.',
+    fullDescription: 'Easy online loan applications.',
+  },
+  {
+    title: 'E-Guarantorship',
+    icon: Shield,
+    shortDescription: 'Digital guarantorship services.',
+    fullDescription: 'Digital guarantorship services.',
+  },
+  {
+    title: 'ICT Consultancy',
+    icon: Cloud,
+    shortDescription: 'Expert ICT advice.',
+    fullDescription: 'Expert ICT advice.',
+  },
+  {
+    title: 'Training',
     icon: PenTool,
-    shortDescription: 'Intuitive and beautiful user interfaces.',
-    fullDescription:
-      'Our design team crafts intuitive and visually appealing user interfaces that enhance user engagement and satisfaction. We follow a user-centered design process, from wireframing and prototyping to high-fidelity mockups.',
+    shortDescription: 'Professional training services.',
+    fullDescription: 'Professional training services.',
   },
 ];
 
@@ -167,7 +197,7 @@ export const blogPosts: Post[] = [
     date: '2024-06-28',
     imageId: 'blog-post-2',
     excerpt:
-      'In today\'s digital world, application downtime is not an option. Learn the key principles for building resilient, fault-tolerant systems.',
+      "In today's digital world, application downtime is not an option. Learn the key principles for building resilient, fault-tolerant systems.",
     content:
       'Resilience is the ability of a system to withstand failure. For web applications, this means implementing strategies like redundancy, failover mechanisms, and graceful degradation. Techniques such as microservices architecture, health checks, and circuit breakers are crucial. A resilient application not only ensures a better user experience but also protects your business from revenue loss and reputational damage. Our development philosophy is rooted in these principles to deliver applications you can trust.',
   },

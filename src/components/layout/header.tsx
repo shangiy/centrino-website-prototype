@@ -1,42 +1,75 @@
 'use client';
 
-import { Menu, X } from 'lucide-react';
+import { ChevronDown, Menu } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 import { Logo } from '@/components/icons';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from '@/components/ui/navigation-menu';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
+import { services } from '@/lib/data';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
+  // { href: '/services', label: 'Services' }, // Replaced by dropdown
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ];
 
+const ListItem = (({ className, title, ...props }) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          className={cn(
+            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = 'ListItem';
+
 export function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Split services for two-column layout
+  const halfway = Math.ceil(services.length / 2);
+  const servicesCol1 = services.slice(0, halfway);
+  const servicesCol2 = services.slice(halfway);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Logo className="h-6 w-6" />
-          <span className="font-bold font-headline inline-block">
-            Centrino
-          </span>
+          <span className="font-bold font-headline inline-block">Centrino</span>
         </Link>
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <nav className="hidden md:flex items-center space-x-1 text-sm font-medium">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
+                navigationMenuTriggerStyle(),
                 'transition-colors hover:text-primary',
                 pathname === link.href
                   ? 'text-primary'
@@ -46,6 +79,44 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger
+                  className={cn(
+                    'transition-colors hover:text-primary text-sm',
+                    pathname.startsWith('/services')
+                      ? 'text-primary'
+                      : 'text-muted-foreground'
+                  )}
+                >
+                  Services
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                    <ul className="flex flex-col gap-3">
+                      {servicesCol1.map((component) => (
+                        <ListItem
+                          key={component.title}
+                          title={component.title}
+                          href="/services"
+                        />
+                      ))}
+                    </ul>
+                     <ul className="flex flex-col gap-3">
+                      {servicesCol2.map((component) => (
+                        <ListItem
+                          key={component.title}
+                          title={component.title}
+                          href="/services"
+                        />
+                      ))}
+                    </ul>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
         </nav>
         <div className="flex flex-1 items-center justify-end">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -81,6 +152,18 @@ export function Header() {
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {link.label}
+                    </Link>
+                  ))}
+                  {/* Mobile Services Links */}
+                  <div className="text-lg text-foreground font-semibold">Services</div>
+                  {services.map((service) => (
+                     <Link
+                      key={service.title}
+                      href={'/services'}
+                      className='text-foreground/80 pl-4 text-base hover:text-primary'
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {service.title}
                     </Link>
                   ))}
                 </nav>
