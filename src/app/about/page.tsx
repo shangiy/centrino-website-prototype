@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Building, Gem, Target, Users } from 'lucide-react';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 const stats = [
   { value: '10+', label: 'Years of Experience' },
@@ -32,7 +34,7 @@ export default function AboutPage() {
     <div className="bg-background text-foreground">
       <main>
         {/* Hero Section */}
-        <section className="relative py-24 md:py-32 bg-gradient-to-r from-pink-50 to-purple-100 dark:from-gray-900 dark:to-purple-950/40">
+        <section className="relative py-24 md:py-32 bg-gradient-to-r from-purple-50/10 via-pink-50/10 to-purple-100/20">
           <div className="container mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight">
               About <span className="text-primary">Centrino Technologies</span>
@@ -47,7 +49,10 @@ export default function AboutPage() {
         <section className="py-20 md:py-28">
             <div className="container grid md:grid-cols-2 gap-12 items-center">
                 <div className='space-y-6'>
-                    <Badge>Our Purpose</Badge>
+                    <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 bg-primary"></div>
+                        <p className="font-semibold tracking-wider text-sm text-primary">OUR PURPOSE</p>
+                    </div>
                     <h2 className='text-3xl font-bold font-headline'>Our Mission & Vision</h2>
                     <p className='text-muted-foreground'>
                         Our mission is to empower financial institutions with innovative, reliable, and secure software solutions that simplify complex needs, enhance customer experiences, and drive sustainable growth. We envision a future where technology seamlessly connects institutions with their members, fostering financial inclusion and prosperity for all.
@@ -76,7 +81,10 @@ export default function AboutPage() {
         {/* Core Values Section */}
         <section className="py-20 md:py-28">
             <div className="container text-center max-w-4xl">
-                 <Badge>Our Values</Badge>
+                <div className="flex items-center justify-center gap-2">
+                    <div className="w-3 h-3 bg-primary"></div>
+                    <p className="font-semibold tracking-wider text-sm text-primary">OUR VALUES</p>
+                </div>
                 <h2 className='text-3xl font-bold font-headline mt-4 mb-12'>The Principles That Guide Us</h2>
                 <div className="grid md:grid-cols-3 gap-12">
                     {values.map((value) => {
@@ -101,12 +109,17 @@ export default function AboutPage() {
             <p className="mt-4 max-w-xl mx-auto opacity-80">
               Let's work together to build the next generation of financial technology.
             </p>
-            <a
-              href="/contact"
-              className="mt-8 inline-block bg-primary-foreground text-primary font-bold py-3 px-8 rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors"
+            <Button
+              asChild
+              variant="secondary"
+              className="mt-8 rounded-full font-bold"
             >
-              Contact Us
-            </a>
+              <Link
+                href="/contact"
+              >
+                Contact Us
+              </Link>
+            </Button>
           </div>
         </section>
       </main>

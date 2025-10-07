@@ -2,49 +2,67 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ArrowRight, Check } from "lucide-react";
 import { services } from "@/lib/data";
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
   return (
     <div className="bg-background text-foreground">
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 md:py-32 overflow-hidden">
-           {heroImage && <div className="absolute inset-0 z-0">
-                <Image 
-                    src={heroImage.imageUrl}
-                    alt={heroImage.description}
-                    fill
-                    className="object-cover object-center"
-                    data-ai-hint={heroImage.imageHint}
-                    priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-background/30 via-background/80 to-background"></div>
-            </div>}
-          <div className="container relative z-10 text-center">
-            <Badge>Empowering Financial Innovation</Badge>
-            <h1 className="mt-4 text-4xl font-bold tracking-tight font-headline sm:text-5xl lg:text-6xl">
-              Technology Solutions for a{' '}
-              <span className="text-primary">Digital Future</span>
-            </h1>
-            <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground">
-              We specialize in Core Banking, Mobile Banking, EDMS, and ICT
-              Consultancy to help financial institutions thrive in the digital
-              age.
-            </p>
-            <div className="mt-10 flex justify-center gap-4">
-              <Button asChild size="lg" className="rounded-full">
-                <Link href="/services">
-                  Explore Our Services <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full">
-                <Link href="/contact">Contact Us</Link>
-              </Button>
+        <section className="relative bg-gradient-to-r from-purple-50/10 via-pink-50/10 to-purple-100/20 py-20 md:py-32 overflow-hidden">
+          <div className="container grid md:grid-cols-2 items-center gap-12">
+            {/* Left Content */}
+            <div className="z-10">
+              <div className="flex items-center gap-2 mb-4">
+                  <div className="w-3 h-3 bg-primary"></div>
+                  <p className="font-semibold tracking-wider text-sm">WELCOME TO CENTRINO TECHNOLOGIES</p>
+              </div>
+              <h1 className="text-4xl font-bold tracking-tight font-headline sm:text-5xl lg:text-6xl">
+                Smarter Tech Solutions for{' '}
+                <span className="text-primary">Financial Institutions</span>
+              </h1>
+              <p className="mt-6 max-w-xl text-lg text-muted-foreground">
+                We empower financial institutions with innovative software solutions to simplify complex needs, enhance customer experiences, and drive growth.
+              </p>
+              <div className="mt-10">
+                <Button asChild size="lg" className="rounded-full">
+                  <Link href="/services">
+                    Discover More
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Right Image */}
+            <div className="absolute top-0 right-0 h-full w-1/2 hidden md:block">
+                <div className="relative h-full w-full">
+                    <div className="absolute -left-1/3 top-1/2 -translate-y-1/2 w-[150%] aspect-square rounded-full border-[12px] border-primary/80">
+                    </div>
+                     <div 
+                        className="absolute -left-1/3 top-1/2 -translate-y-1/2 w-[150%] aspect-square rounded-full overflow-hidden"
+                     >
+                        <Image
+                            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW0lMjBkaXNjdXNzaW5nfGVufDB8fHx8MTc1OTg4NDQxMXww&ixlib=rb-4.1.0&q=80&w=1080"
+                            alt="Business team discussing"
+                            fill
+                            className="object-cover"
+                            data-ai-hint="business team discussion"
+                        />
+                     </div>
+                </div>
+            </div>
+            {/* Mobile Image */}
+            <div className="relative md:hidden w-full aspect-square mt-8">
+                 <div className="relative h-full w-full rounded-full border-8 border-primary/80 overflow-hidden">
+                     <Image
+                        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW0lMjBkaXNjdXNzaW5nfGVufDB8fHx8MTc1OTg4NDQxMXww&ixlib=rb-4.1.0&q=80&w=1080"
+                        alt="Business team discussing"
+                        fill
+                        className="object-cover"
+                        data-ai-hint="business team discussion"
+                    />
+                 </div>
             </div>
           </div>
         </section>
@@ -96,7 +114,10 @@ export default function Home() {
                 />
             </div>
             <div className="space-y-6">
-                <Badge>Why Centrino?</Badge>
+                <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 bg-primary"></div>
+                    <p className="font-semibold tracking-wider text-sm text-primary">WHY CENTRINO?</p>
+                </div>
               <h2 className="text-3xl font-bold font-headline">
                 Your Trusted Partner in Financial Technology
               </h2>
