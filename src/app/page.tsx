@@ -48,7 +48,7 @@ export default function Home() {
               </Button>
             </div>
             <div
-              className="relative w-full aspect-square max-w-[450px] mx-auto lg:col-span-2"
+              className="relative w-full aspect-square max-w-[450px] mx-auto lg:col-span-2" 
               style={{ clipPath: 'path("M315.8,46.7c30.5-2.4,63.8,1.2,79,13.8s3.5,50.3-11.3,75.5s-40.6,48-70.1,54s-64.4-7.4-84.1-28.4 s-26.4-52.8-18.6-80.6s33.8-56,71-62S287.2,49,315.8,46.7z")' }}
             >
               <Image
