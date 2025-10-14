@@ -48,6 +48,9 @@ export const services: Service[] = [
       'Account Management',
       'Transaction Processing',
       'Customer Relationship Management (CRM)',
+      'Loan Management',
+      'Security and Compliance',
+      'Reporting and Analytics'
     ],
     imageUrl: '/core-banking.png',
   },
