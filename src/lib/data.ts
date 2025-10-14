@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 
 export interface Service {
+  slug: string;
   title: string;
   icon: LucideIcon;
   shortDescription: string;
@@ -36,76 +37,88 @@ export interface Post {
 
 export const services: Service[] = [
   {
+    slug: 'core-banking',
     title: 'Core Banking',
     icon: Code,
     shortDescription: 'Comprehensive banking solutions.',
-    fullDescription: 'Comprehensive banking solutions.',
+    fullDescription: 'Our core banking solution is a comprehensive, modular system designed to meet the diverse needs of modern financial institutions. It provides a single, unified platform for managing customer accounts, transactions, loans, and other essential banking operations, ensuring efficiency, security, and scalability.',
   },
   {
+    slug: 'mobile-banking',
     title: 'Mobile Banking',
     icon: Smartphone,
     shortDescription: 'Banking on the go.',
-    fullDescription: 'Banking on the go.',
+    fullDescription: 'Empower your customers with a secure and feature-rich mobile banking application. Our solution allows users to check balances, transfer funds, pay bills, and access other banking services anytime, anywhere, directly from their smartphones.',
   },
   {
+    slug: 'agency-banking',
     title: 'Agency Banking',
     icon: Code,
     shortDescription: 'Extending banking services.',
-    fullDescription: 'Extending banking services.',
+    fullDescription: 'Expand your reach and serve more customers with our agency banking solution. This system allows you to authorize third-party agents to perform banking transactions on your behalf, bringing financial services closer to underserved communities.',
   },
   {
+    slug: 'sms-communication',
     title: 'SMS Communication',
     icon: Code,
     shortDescription: 'Reliable SMS services.',
-    fullDescription: 'Reliable SMS services.',
+    fullDescription: 'Stay connected with your customers through our reliable SMS communication platform. Send transaction alerts, marketing messages, and important notifications quickly and efficiently, enhancing customer engagement and security.',
   },
   {
+    slug: 'edms',
     title: 'EDMS',
     icon: Code,
     shortDescription: 'Electronic Document Management.',
-    fullDescription: 'Electronic Document Management.',
+    fullDescription: 'Go paperless and streamline your operations with our Electronic Document Management System (EDMS). Securely store, organize, and retrieve all your critical documents digitally, improving efficiency and reducing physical storage costs.',
   },
   {
+    slug: 'e-board',
     title: 'E-Board',
     icon: Code,
     shortDescription: 'Digital board solutions.',
-    fullDescription: 'Digital board solutions.',
+    fullDescription: 'Facilitate seamless and secure board meetings with our E-Board solution. This digital platform allows board members to access meeting materials, collaborate, and make decisions in a secure, centralized, and paperless environment.',
   },
   {
+    slug: 'performance-management-system',
     title: 'Performance Management System',
     icon: BrainCircuit,
     shortDescription: 'Track and manage performance.',
-    fullDescription: 'Track and manage performance.',
+    fullDescription: 'Drive organizational growth with our Performance Management System. This tool helps you set goals, track employee performance, provide feedback, and align individual objectives with overall business strategy, fostering a culture of continuous improvement.',
   },
   {
+    slug: 'members-portal',
     title: 'Members Portal',
     icon: Code,
     shortDescription: 'Portal for members.',
-    fullDescription: 'Portal for members.',
+    fullDescription: 'Provide your members with a dedicated online portal to access their accounts, view statements, apply for services, and interact with your institution. Our Members Portal enhances member satisfaction and self-service capabilities.',
   },
   {
+    slug: 'online-loan-form-submission',
     title: 'Online Loan Form Submission',
     icon: Code,
     shortDescription: 'Easy online loan applications.',
-    fullDescription: 'Easy online loan applications.',
+    fullDescription: 'Simplify the loan application process with our online submission system. Customers can apply for loans from anywhere, at any time, through a user-friendly digital form, reducing paperwork and speeding up approval times.',
   },
   {
+    slug: 'e-guarantorship',
     title: 'E-Guarantorship',
     icon: Shield,
     shortDescription: 'Digital guarantorship services.',
-    fullDescription: 'Digital guarantorship services.',
+    fullDescription: 'Facilitate the electronic submission and approval of guarantor information through an efficient and secure e-guarantorship system. This digital process simplifies one of the most critical steps in loan applications, making it faster and more transparent for all parties involved.',
   },
   {
+    slug: 'ict-consultancy',
     title: 'ICT Consultancy',
     icon: Cloud,
     shortDescription: 'Expert ICT advice.',
-    fullDescription: 'Expert ICT advice.',
+    fullDescription: 'Leverage our expertise to optimize your technology strategy. Our ICT consultancy services include strategic planning, system analysis, cybersecurity consulting, cloud solutions, and digital transformation guidance to help you achieve your business objectives.',
   },
   {
+    slug: 'training',
     title: 'Training',
     icon: PenTool,
     shortDescription: 'Professional training services.',
-    fullDescription: 'Professional training services.',
+    fullDescription: 'Equip your team with the skills they need to succeed. We offer professional training on our software solutions and general ICT best practices, ensuring your staff can leverage technology effectively to drive business performance.',
   },
 ];
 

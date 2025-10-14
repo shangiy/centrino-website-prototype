@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ServiceSuggester } from '@/components/service-suggester';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { services } from '@/lib/data';
@@ -25,24 +26,23 @@ export default function ServicesPage() {
         </h2>
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <Card
-              key={service.title}
-              className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-            >
-              <CardHeader className="flex-row items-center gap-4">
-                <div className="bg-primary/10 p-3 rounded-full text-primary">
-                  <service.icon className="w-8 h-8" />
-                </div>
-                <CardTitle className="font-headline text-xl">
-                  {service.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-muted-foreground">
-                  {service.fullDescription}
-                </p>
-              </CardContent>
-            </Card>
+            <Link href={`/services/${service.slug}`} key={service.slug}>
+              <Card className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full">
+                <CardHeader className="flex-row items-center gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full text-primary">
+                    <service.icon className="w-8 h-8" />
+                  </div>
+                  <CardTitle className="font-headline text-xl">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-muted-foreground">
+                    {service.shortDescription}
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </section>
