@@ -128,7 +128,7 @@ export default function ServiceDetailPage({
        {/* CTA Parallax Section */}
        <section
         className="relative py-20 md:py-28 bg-cover bg-center bg-fixed text-primary-foreground"
-        style={{ backgroundImage: "url('/parallax-bg.png')" }}
+        style={{ backgroundImage: "url('/meeting.png')" }}
       >
         <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm"></div>
         <div className="container relative z-10 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-8">
