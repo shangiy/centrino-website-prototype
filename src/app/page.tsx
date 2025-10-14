@@ -40,9 +40,9 @@ export default function Home() {
                 className="absolute inset-0"
                 style={{
                   clipPath:
-                    'path("M315.8,46.7c30.5-2.4,63.8,1.2,79,13.8s3.5,50.3-11.3,75.5s-40.6,48-70.1,54s-64.4-7.4-84.1-28.4 s-26.4-52.8-18.6-80.6s33.8-56,71-62S287.2,49,315.8,46.7z")',
+                    'path("M413.4,142.1c25.4,32.4,14.7,78.2-12.4,106.1c-27.1,27.9-69.8,37.6-107.8,35.6c-38.1-2-71.4-15.8-93.5-40.4c-22.1-24.6-32.9-60-26.2-90.8c6.7-30.8,31-57.1,59.3-71.6c28.3-14.5,60.6-17.1,91.2-10.2C355.8,77.5,388,109.7,413.4,142.1z")',
                   overflow: 'hidden',
-                  transform: 'scale(1.2)',
+                  transform: 'scale(1.2) translate(-10px, 10px)',
                   transformOrigin: 'center',
                 }}
               >
@@ -63,41 +63,71 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section id="services" className="py-20 md:py-28 bg-secondary">
-          <div className="container">
+        <section id="services" className="relative py-20 md:py-28 bg-background">
+          <div className="absolute top-0 left-0 w-full h-32 text-secondary/50 overflow-hidden">
+            <svg
+              viewBox="0 0 1440 120"
+              preserveAspectRatio="none"
+              className="h-full w-full"
+            >
+              <path
+                d="M0,64 C240,110,480,20,720,64 C960,108,1200,20,1440,64"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+          </div>
+           <div className="absolute top-0 left-0 w-full h-32 text-primary overflow-hidden opacity-30">
+            <svg
+              viewBox="0 0 1440 120"
+              preserveAspectRatio="none"
+              className="h-full w-full"
+            >
+              <path
+                d="M0,80 C200,20,400,100,720,80 C1040,60,1240,120,1440,80"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </svg>
+          </div>
+          <div className="container relative">
             <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold font-headline">
-                Comprehensive Solutions for Financial Institutions
+               <div className="flex items-center justify-center gap-2">
+                    <div className="w-3 h-3 bg-primary"></div>
+                    <p className="font-semibold tracking-wider text-sm text-primary">OUR SERVICES</p>
+                    <div className="w-3 h-3 bg-primary"></div>
+                </div>
+              <h2 className="text-3xl font-bold font-headline mt-4">
+                Services We Provide
               </h2>
               <p className="mt-4 text-muted-foreground">
-                From core banking systems to mobile solutions, we provide the
-                tools you need to succeed.
+                We help financial institutions navigate the digital landscape with innovative solutions that enhance member experiences, streamline operations, and drive sustainable growth.
               </p>
             </div>
-            <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {services.slice(0, 6).map((service) => (
-                <div
-                  key={service.title}
-                  className="p-6 bg-card rounded-lg border shadow-sm"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-full text-primary">
-                      <service.icon className="w-6 h-6" />
+                <div key={service.title} className="group flex flex-col items-center text-center">
+                  <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl">
+                    <Image src={`https://picsum.photos/seed/${service.title.replace(/\s+/g, '-')}/400/300`} alt={service.title} fill className="object-cover" data-ai-hint="business technology" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                     <div className="absolute bottom-4 left-4">
+                      <service.icon className="w-8 h-8 text-white/80" />
                     </div>
-                    <div>
-                      <h3 className="text-lg font-bold font-headline">
+                  </div>
+                  <div className="mt-6">
+                      <h3 className="text-xl font-bold font-headline transition-colors group-hover:text-primary">
                         {service.title}
                       </h3>
-                      <p className="mt-1 text-muted-foreground text-sm">
+                      <p className="mt-2 text-muted-foreground text-sm">
                         {service.shortDescription}
                       </p>
                     </div>
-                  </div>
                 </div>
               ))}
             </div>
-            <div className="mt-12 text-center">
-              <Button asChild variant="link" className="text-primary">
+            <div className="mt-16 text-center">
+              <Button asChild>
                 <Link href="/services">
                   View all services <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -107,7 +137,7 @@ export default function Home() {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-20 md:py-28">
+        <section className="py-20 md:py-28 bg-secondary">
           <div className="container grid md:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-lg overflow-hidden aspect-video">
               <Image
