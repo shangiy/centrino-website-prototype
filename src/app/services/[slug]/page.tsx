@@ -124,6 +124,29 @@ export default function ServiceDetailPage({
           </div>
         </div>
       </section>
+
+       {/* CTA Parallax Section */}
+       <section
+        className="relative py-20 md:py-28 bg-cover bg-center bg-fixed text-primary-foreground"
+        style={{ backgroundImage: "url('/parallax-bg.png')" }}
+      >
+        <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm"></div>
+        <div className="container relative z-10 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-8">
+            <div>
+                 <h2 className="text-3xl md:text-4xl font-bold font-headline">
+                    Ready to Transform Your Business?
+                </h2>
+                <p className="mt-2 text-lg opacity-90 max-w-2xl">
+                    Let's discuss how our solutions can help you achieve your goals. Get in touch with our experts today.
+                </p>
+            </div>
+            <Button asChild variant="secondary" size="lg" className="rounded-full font-bold shrink-0">
+                <Link href="/contact">
+                    Contact Us
+                </Link>
+            </Button>
+        </div>
+      </section>
     </div>
   );
 }
