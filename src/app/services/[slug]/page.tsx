@@ -86,6 +86,21 @@ const MobileBankingContent = ({ service }: { service: any }) => (
         )})}
       </Tabs>
     </div>
+     <div className="container mt-20">
+        <h2 className="text-3xl font-bold font-headline text-primary mb-8 text-center">
+            PesaPepe Features
+        </h2>
+        <div className="relative w-full aspect-w-16 aspect-h-9">
+            <Image 
+                src="/PesaPepe-features.png" 
+                alt="PesaPepe Features"
+                layout="responsive"
+                width={1200}
+                height={675}
+                className="rounded-lg shadow-lg"
+            />
+        </div>
+    </div>
   </div>
 );
 
