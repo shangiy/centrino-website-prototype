@@ -14,11 +14,15 @@ import {
   Workflow,
   Scaling,
   Headset,
+  Globe,
+  Smartphone,
+  Server,
 } from 'lucide-react';
 import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export async function generateStaticParams() {
   return services.map((service) => ({
@@ -40,6 +44,52 @@ const featureIcons: { [key: string]: LucideIcon } = {
   default: Landmark,
 };
 
+const MobileBankingContent = ({ service }: { service: any }) => (
+  <div className="py-16 md:py-24 bg-secondary/30">
+    <div className="container text-center">
+      <h2 className="text-3xl font-bold font-headline text-primary mb-4">
+        {service.subTitle}
+      </h2>
+      <p className="text-muted-foreground max-w-2xl mx-auto mb-12">
+        {service.subDescription}
+      </p>
+
+      <Tabs defaultValue={service.mobileBankingFeatures[0].title} className="w-full max-w-4xl mx-auto">
+        <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 h-auto bg-primary/10 p-2 rounded-lg">
+          {service.mobileBankingFeatures.map((feature: any) => (
+             <TabsTrigger key={feature.title} value={feature.title} className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-md py-3 text-lg font-semibold">
+               {feature.title}
+             </TabsTrigger>
+          ))}
+        </TabsList>
+        {service.mobileBankingFeatures.map((feature: any) => {
+            const Icon = feature.icon === 'Globe' ? Globe : feature.icon === 'Smartphone' ? Smartphone : Server;
+            return (
+          <TabsContent key={feature.title} value={feature.title}>
+            <Card className="mt-8 border-none shadow-none bg-transparent">
+              <CardContent className="grid md:grid-cols-2 gap-12 items-center text-left p-8">
+                <div className='space-y-4'>
+                    <div className='flex items-center gap-4'>
+                        <div className="bg-primary/20 p-4 rounded-full">
+                            <Icon className="w-10 h-10 text-primary" />
+                        </div>
+                        <h3 className="text-2xl font-bold font-headline">{feature.title}</h3>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                </div>
+                <div className='relative aspect-video rounded-lg overflow-hidden shadow-lg'>
+                    <Image src={feature.imageUrl} alt={feature.title} fill className="object-cover" />
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+        )})}
+      </Tabs>
+    </div>
+  </div>
+);
+
+
 export default function ServiceDetailPage({
   params,
 }: {
@@ -54,21 +104,26 @@ export default function ServiceDetailPage({
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[40vh] min-h-[300px] w-full flex items-center justify-center text-white bg-cover bg-center bg-fixed"
+       <section className="relative h-[50vh] min-h-[350px] w-full flex items-center justify-start text-white bg-cover bg-center bg-fixed"
         style={{ backgroundImage: `url(${service.imageUrl || `https://picsum.photos/seed/${service.slug}/1200/800`})` }}>
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 text-center container">
-          <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight">
-            {service.title}
-          </h1>
-          <p className="mt-4 max-w-3xl mx-auto text-lg opacity-90">
-            {service.shortDescription}
-          </p>
+        <div className="relative z-10 container">
+            <div className='max-w-xl'>
+                <div className='bg-primary px-4 py-2 inline-block rounded-md mb-4'>
+                    <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tight">
+                        {service.title}
+                    </h1>
+                </div>
+                <p className="mt-2 text-lg md:text-xl opacity-90">
+                    {service.shortDescription}
+                </p>
+            </div>
         </div>
       </section>
 
       {/* Content Section */}
-      <section className="py-16 md:py-24 bg-secondary/30">
+      {service.slug === 'mobile-banking' ? <MobileBankingContent service={service} /> : (
+        <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container">
           <div className="grid md:grid-cols-1 gap-12">
             {/* Features Section */}
@@ -124,6 +179,8 @@ export default function ServiceDetailPage({
           </div>
         </div>
       </section>
+      )}
+
 
        {/* CTA Parallax Section */}
        <section
@@ -150,3 +207,4 @@ export default function ServiceDetailPage({
     </div>
   );
 }
+

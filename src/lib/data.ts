@@ -16,6 +16,16 @@ export interface Service {
   fullDescription: string;
   features: string[];
   imageUrl?: string;
+  subTitle?: string;
+  subDescription?: string;
+  mobileBankingFeatures?: MobileBankingFeature[];
+}
+
+export interface MobileBankingFeature {
+    title: string;
+    description: string;
+    icon: string;
+    imageUrl: string;
 }
 
 export interface Project {
@@ -61,13 +71,32 @@ export const services: Service[] = [
     slug: 'mobile-banking',
     title: 'Mobile Banking',
     icon: Smartphone,
-    shortDescription: 'Banking on the go.',
+    shortDescription: 'Vanguard Financials Core Banking System',
     fullDescription: 'Empower your customers with a secure and feature-rich mobile banking application. Our solution allows users to check balances, transfer funds, pay bills, and access other banking services anytime, anywhere, directly from their smartphones.',
-    features: [
-      'PesaPepe Mobile Banking: offers multiple access points, including:',
-      'USSD: This is a menu-driven solution accessible through our primary shared code, *879#, and a...',
-    ],
+    features: [],
     imageUrl: '/mobile-banking.png',
+    subTitle: 'PesaPepe Mobile Banking',
+    subDescription: 'Pesapepe Mobile Banking offers multiple access points, including:',
+    mobileBankingFeatures: [
+        {
+            title: "Web Portal",
+            description: "Accessible through any web browser, our portal provides a comprehensive dashboard for managing accounts, viewing detailed statements, and initiating complex transactions securely from a desktop or laptop.",
+            icon: "Globe",
+            imageUrl: "https://images.unsplash.com/photo-1585252583373-353393a6c5ab?q=80&w=2070&auto=format&fit=crop"
+        },
+        {
+            title: "Mobile App",
+            description: "Our native mobile application for iOS and Android offers a seamless and intuitive user experience, complete with biometric login, push notifications for alerts, and location-based services to find nearby agents.",
+            icon: "Smartphone",
+            imageUrl: "https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=1950&auto=format&fit=crop"
+        },
+        {
+            title: "USSD",
+            description: "For maximum accessibility, our USSD service (*879#) allows users to perform essential banking functions even without an internet connection, making it ideal for rural areas or users with feature phones.",
+            icon: "Server",
+            imageUrl: "https://images.unsplash.com/photo-1554495568-15b04c851174?q=80&w=2070&auto=format&fit=crop"
+        }
+    ]
   },
   {
     slug: 'agency-banking',
@@ -277,3 +306,4 @@ export const blogPosts: Post[] = [
       'A headless CMS decouples the content management backend from the presentation layer (the "head"). This architectural shift allows developers to use any frontend framework they choose, from websites to mobile apps and IoT devices. It provides unparalleled flexibility, better performance, and enhanced security. For businesses looking to create omnichannel digital experiences, the headless approach is the future of content management.',
   },
 ];
+
