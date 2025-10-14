@@ -6,6 +6,9 @@ import {
   PenTool,
   Shield,
   Smartphone,
+  PiggyBank,
+  FileText as FileTextIcon,
+  HandCoins,
 } from 'lucide-react';
 
 export interface Service {
@@ -19,6 +22,7 @@ export interface Service {
   subTitle?: string;
   subDescription?: string;
   mobileBankingFeatures?: MobileBankingFeature[];
+  agencyBankingFeatures?: AgencyBankingFeature[];
 }
 
 export interface MobileBankingFeature {
@@ -26,6 +30,12 @@ export interface MobileBankingFeature {
     description: string;
     icon: string;
     imageUrl: string;
+}
+
+export interface AgencyBankingFeature {
+  title: string;
+  description: string;
+  icon: LucideIcon;
 }
 
 export interface Project {
@@ -104,10 +114,25 @@ export const services: Service[] = [
     icon: Code,
     shortDescription: 'Extending banking services.',
     fullDescription: 'Expand your reach and serve more customers with our agency banking solution. This system allows you to authorize third-party agents to perform banking transactions on your behalf, bringing financial services closer to underserved communities.',
-    features: [
-      'Balance Inquiry: Empower members to conveniently check their account balances.',
-      'Mini Statement: Provide concise summaries of recent account transactions for enhanced financial...',
-    ],
+    features: [],
+    imageUrl: '/Agency-banking.png',
+    agencyBankingFeatures: [
+      {
+        title: "Balance Inquiry",
+        description: "Empower members to conveniently check their account balances.",
+        icon: PiggyBank
+      },
+      {
+        title: "Mini Statement",
+        description: "Provide concise summaries of recent account transactions for enhanced financial awareness.",
+        icon: FileTextIcon,
+      },
+      {
+        title: "Cash Withdrawal",
+        description: "Enable members to effortlessly withdraw cash from their savings accounts through our agency banking services.",
+        icon: HandCoins
+      }
+    ]
   },
   {
     slug: 'sms-communication',
@@ -306,4 +331,3 @@ export const blogPosts: Post[] = [
       'A headless CMS decouples the content management backend from the presentation layer (the "head"). This architectural shift allows developers to use any frontend framework they choose, from websites to mobile apps and IoT devices. It provides unparalleled flexibility, better performance, and enhanced security. For businesses looking to create omnichannel digital experiences, the headless approach is the future of content management.',
   },
 ];
-

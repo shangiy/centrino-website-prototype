@@ -17,6 +17,9 @@ import {
   Globe,
   Smartphone,
   Server,
+  HandCoins,
+  FileTextIcon,
+  PiggyBank,
 } from 'lucide-react';
 import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
@@ -104,6 +107,36 @@ const MobileBankingContent = ({ service }: { service: any }) => (
   </div>
 );
 
+const AgencyBankingContent = ({ service }: { service: any }) => (
+  <section className="py-16 md:py-24 bg-secondary/30">
+    <div className="container">
+      <div className="grid md:grid-cols-3 gap-8">
+        {service.agencyBankingFeatures.map((feature: any, index: number) => {
+          const Icon = feature.icon;
+          return (
+            <Card
+              key={index}
+              className="bg-card border-l-4 border-primary rounded-xl shadow-lg p-8 text-left group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+            >
+              <CardContent className="p-0 flex flex-col items-start gap-4">
+                <div className="bg-primary/10 text-primary rounded-full p-4">
+                  <Icon className="w-10 h-10" />
+                </div>
+                <h3 className="font-bold font-headline text-xl text-foreground">
+                  {feature.title}
+                </h3>
+                <p className="text-muted-foreground text-base">
+                  {feature.description}
+                </p>
+              </CardContent>
+            </Card>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+);
+
 
 export default function ServiceDetailPage({
   params,
@@ -116,28 +149,14 @@ export default function ServiceDetailPage({
     notFound();
   }
 
-  return (
-    <div>
-      {/* Hero Section */}
-       <section className="relative h-[60vh] min-h-[400px] w-full flex items-center justify-start text-white bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: `url(${service.imageUrl || `https://picsum.photos/seed/${service.slug}/1200/800`})` }}>
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 container">
-            <div className='max-w-xl'>
-                <div className='bg-primary px-4 py-2 inline-block rounded-md mb-4'>
-                    <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tight">
-                        {service.title}
-                    </h1>
-                </div>
-                <p className="mt-2 text-lg md:text-xl opacity-90">
-                    {service.shortDescription}
-                </p>
-            </div>
-        </div>
-      </section>
-
-      {/* Content Section */}
-      {service.slug === 'mobile-banking' ? <MobileBankingContent service={service} /> : (
+  const renderContent = () => {
+    switch(service.slug) {
+      case 'mobile-banking':
+        return <MobileBankingContent service={service} />;
+      case 'agency-banking':
+        return <AgencyBankingContent service={service} />;
+      default:
+        return (
         <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container">
           <div className="grid md:grid-cols-1 gap-12">
@@ -162,7 +181,7 @@ export default function ServiceDetailPage({
                     return (
                       <Card
                         key={index}
-                        className="bg-accent/50 border-0 border-l-4 border-primary rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center group transition-all duration-300 hover:bg-accent/80 hover:shadow-lg min-h-[160px]"
+                        className="bg-accent/50 border-0 border-l-4 border-primary rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center group transition-all duration-300 hover:bg-accent/80 hover:shadow-lg min-h-[180px]"
                       >
                         <CardContent className="p-0 flex flex-col items-center gap-4">
                             <div className="bg-primary/10 text-primary rounded-full p-3">
@@ -194,7 +213,34 @@ export default function ServiceDetailPage({
           </div>
         </div>
       </section>
-      )}
+      )
+    }
+  }
+
+
+  return (
+    <div>
+      {/* Hero Section */}
+       <section className="relative h-[60vh] min-h-[400px] w-full flex items-center justify-start text-white bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: `url(${service.imageUrl || `https://picsum.photos/seed/${service.slug}/1200/800`})` }}>
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 container">
+            <div className='max-w-xl'>
+                <div className='bg-primary px-4 py-2 inline-block rounded-md mb-4'>
+                    <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tight">
+                        {service.title}
+                    </h1>
+                </div>
+                {service.shortDescription && (
+                    <p className="mt-2 text-lg md:text-xl opacity-90">
+                        {service.shortDescription}
+                    </p>
+                )}
+            </div>
+        </div>
+      </section>
+
+      {renderContent()}
 
 
        {/* CTA Parallax Section */}
