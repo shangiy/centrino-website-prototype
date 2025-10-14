@@ -181,7 +181,7 @@ export default function ServiceDetailPage({
                     return (
                       <Card
                         key={index}
-                        className="bg-accent/50 border-0 border-l-4 border-primary rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center group transition-all duration-300 hover:bg-accent/80 hover:shadow-lg min-h-[180px]"
+                        className="bg-card border-0 border-l-4 border-primary rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center group transition-all duration-300 hover:bg-accent/80 hover:shadow-lg min-h-[180px]"
                       >
                         <CardContent className="p-0 flex flex-col items-center gap-4">
                             <div className="bg-primary/10 text-primary rounded-full p-3">
