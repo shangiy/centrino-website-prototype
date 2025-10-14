@@ -67,6 +67,7 @@ export const services: Service[] = [
       'PesaPepe Mobile Banking: offers multiple access points, including:',
       'USSD: This is a menu-driven solution accessible through our primary shared code, *879#, and a...',
     ],
+    imageUrl: '/mobile-banking.png',
   },
   {
     slug: 'agency-banking',
