@@ -25,15 +25,15 @@ export default function ContactPage() {
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span>123 Tech Avenue, Innovation City, 12345</span>
+                <span>Mitsumi Business Park, 65 Muthithi Rd Westlands 35229 - 00100</span>
               </div>
               <div className="flex items-center gap-4">
                 <Phone className="w-5 h-5 text-primary" />
-                <span>+1 (234) 567-890</span>
+                <span>+254 20 2587637</span>
               </div>
               <div className="flex items-center gap-4">
                 <Mail className="w-5 h-5 text-primary" />
-                <span>contact@centrino.tech</span>
+                <span>info@centrino.co.ke</span>
               </div>
             </div>
           </div>
