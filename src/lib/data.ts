@@ -50,7 +50,10 @@ export const services: Service[] = [
       'Customer Relationship Management (CRM)',
       'Loan Management',
       'Security and Compliance',
-      'Reporting and Analytics'
+      'Reporting and Analytics',
+      'Workflow Automation',
+      'Scalability and Flexibility',
+      'Customer Self-Service',
     ],
     imageUrl: '/core-banking.png',
   },

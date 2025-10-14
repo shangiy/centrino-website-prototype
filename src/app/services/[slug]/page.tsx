@@ -10,6 +10,9 @@ import {
   Users,
   ArrowRightLeft,
   type LucideIcon,
+  Workflow,
+  Scaling,
+  Headset,
 } from 'lucide-react';
 import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
@@ -30,6 +33,9 @@ const featureIcons: { [key: string]: LucideIcon } = {
   'Loan Management': Banknote,
   'Security and Compliance': Lock,
   'Reporting and Analytics': FileText,
+  'Workflow Automation': Workflow,
+  'Scalability and Flexibility': Scaling,
+  'Customer Self-Service': Headset,
   default: Landmark,
 };
 
