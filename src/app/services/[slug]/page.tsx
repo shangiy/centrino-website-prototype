@@ -54,18 +54,9 @@ export default function ServiceDetailPage({
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[40vh] min-h-[300px] w-full flex items-center justify-center text-white">
-        <div className="absolute inset-0">
-          <Image
-            src={service.imageUrl || `https://picsum.photos/seed/${service.slug}/1200/800`}
-            alt={service.title}
-            fill
-            className="object-cover"
-            data-ai-hint="business technology"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
+      <section className="relative h-[40vh] min-h-[300px] w-full flex items-center justify-center text-white bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: `url(${service.imageUrl || `https://picsum.photos/seed/${service.slug}/1200/800`})` }}>
+        <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center container">
           <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight">
             {service.title}
