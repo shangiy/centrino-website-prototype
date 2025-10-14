@@ -92,13 +92,13 @@ export default function ServiceDetailPage({
                     return (
                       <Card
                         key={index}
-                        className="bg-accent/50 border-0 border-l-4 border-primary rounded-xl shadow-md p-4 flex flex-col items-center justify-center text-center group transition-all duration-300 hover:bg-accent/80 hover:shadow-lg"
+                        className="bg-accent/50 border-0 border-l-4 border-primary rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center group transition-all duration-300 hover:bg-accent/80 hover:shadow-lg min-h-[160px]"
                       >
                         <CardContent className="p-0 flex flex-col items-center gap-4">
                             <div className="bg-primary/10 text-primary rounded-full p-3">
                                 <Icon className="w-8 h-8" />
                             </div>
-                            <p className="font-semibold text-foreground">
+                            <p className="font-semibold text-foreground text-lg">
                             {feature}
                             </p>
                         </CardContent>
