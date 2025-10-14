@@ -6,6 +6,14 @@ import { ArrowRight, Check } from 'lucide-react';
 import { services } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import StatsCounter from '@/components/stats-counter';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import { Card, CardContent } from '@/components/ui/card';
 
 export default function Home() {
   return (
@@ -78,7 +86,7 @@ export default function Home() {
               />
             </svg>
           </div>
-           <div className="absolute top-0 left-0 w-full h-32 text-primary overflow-hidden opacity-30">
+          <div className="absolute top-0 left-0 w-full h-32 text-primary overflow-hidden opacity-30">
             <svg
               viewBox="0 0 1440 120"
               preserveAspectRatio="none"
@@ -94,38 +102,72 @@ export default function Home() {
           </div>
           <div className="container relative">
             <div className="text-center max-w-3xl mx-auto">
-               <div className="flex items-center justify-center gap-2">
-                    <div className="w-3 h-3 bg-primary"></div>
-                    <p className="font-semibold tracking-wider text-sm text-primary">OUR SERVICES</p>
-                    <div className="w-3 h-3 bg-primary"></div>
-                </div>
+              <div className="flex items-center justify-center gap-2">
+                <div className="w-3 h-3 bg-primary"></div>
+                <p className="font-semibold tracking-wider text-sm text-primary">
+                  OUR SERVICES
+                </p>
+                <div className="w-3 h-3 bg-primary"></div>
+              </div>
               <h2 className="text-3xl font-bold font-headline mt-4">
                 Services We Provide
               </h2>
               <p className="mt-4 text-muted-foreground">
-                We help financial institutions navigate the digital landscape with innovative solutions that enhance member experiences, streamline operations, and drive sustainable growth.
+                We help financial institutions navigate the digital landscape
+                with innovative solutions that enhance member experiences,
+                streamline operations, and drive sustainable growth.
               </p>
             </div>
-            <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {services.slice(0, 6).map((service) => (
-                <div key={service.title} className="group flex flex-col items-center text-center">
-                  <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl">
-                    <Image src={`https://picsum.photos/seed/${service.title.replace(/\s+/g, '-')}/400/300`} alt={service.title} fill className="object-cover" data-ai-hint="business technology" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                     <div className="absolute bottom-4 left-4">
-                      <service.icon className="w-8 h-8 text-white/80" />
-                    </div>
-                  </div>
-                  <div className="mt-6">
-                      <h3 className="text-xl font-bold font-headline transition-colors group-hover:text-primary">
-                        {service.title}
-                      </h3>
-                      <p className="mt-2 text-muted-foreground text-sm">
-                        {service.shortDescription}
-                      </p>
-                    </div>
-                </div>
-              ))}
+            <div className="mt-16">
+              <Carousel
+                opts={{
+                  align: 'start',
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {services.map((service, index) => (
+                    <CarouselItem
+                      key={index}
+                      className="md:basis-1/2 lg:basis-1/3"
+                    >
+                      <div className="p-1">
+                        <Card className="group overflow-hidden">
+                          <CardContent className="flex flex-col items-center text-center p-6">
+                            <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl">
+                              <Image
+                                src={`https://picsum.photos/seed/${service.title.replace(
+                                  /\s+/g,
+                                  '-'
+                                )}/400/300`}
+                                alt={service.title}
+                                fill
+                                className="object-cover"
+                                data-ai-hint="business technology"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                              <div className="absolute bottom-4 left-4">
+                                <service.icon className="w-8 h-8 text-white/80" />
+                              </div>
+                            </div>
+                            <div className="mt-6">
+                              <h3 className="text-xl font-bold font-headline transition-colors group-hover:text-primary">
+                                {service.title}
+                              </h3>
+                              <p className="mt-2 text-muted-foreground text-sm">
+                                {service.shortDescription}
+                              </p>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="hidden sm:flex" />
+                <CarouselNext className="hidden sm:flex" />
+              </Carousel>
             </div>
             <div className="mt-16 text-center">
               <Button asChild>
@@ -136,9 +178,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
-        <StatsCounter />
 
+        <StatsCounter />
 
         {/* Why Choose Us Section */}
         <section className="py-20 md:py-28 bg-secondary">
