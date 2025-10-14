@@ -142,20 +142,20 @@ export default function Home() {
                       className="md:basis-1/2 lg:basis-1/3"
                     >
                       <div className="p-1 h-full">
-                        <Card className="flex flex-col h-full rounded-2xl shadow-lg border border-primary/20 bg-card">
-                          <div className="relative w-full aspect-video">
+                        <Card className="group flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-primary/20 bg-card transition-all duration-300 hover:shadow-2xl">
+                          <Link href={`/services/${service.slug}`} className='block relative w-full aspect-video overflow-hidden'>
                             <Image
                               src={`https://picsum.photos/seed/${service.slug}/400/300`}
                               alt={service.title}
                               fill
-                              className="object-cover rounded-t-2xl"
+                              className="object-cover rounded-t-2xl transition-transform duration-500 ease-in-out group-hover:scale-105"
                               data-ai-hint="business technology"
                             />
-                          </div>
+                          </Link>
                           <CardContent className="p-6 flex flex-col flex-grow">
                             <div className="flex-grow space-y-4">
                               <h3 className="text-xl font-bold font-headline">
-                                {service.title}
+                                 <Link href={`/services/${service.slug}`} className="hover:text-primary transition-colors">{service.title}</Link>
                               </h3>
                               <ul className="space-y-2 text-muted-foreground text-sm">
                                 {service.features.slice(0,3).map((feature) => (
