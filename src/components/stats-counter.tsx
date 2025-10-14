@@ -32,7 +32,7 @@ export default function StatsCounter() {
 
   return (
     <section ref={ref} className="relative py-20 bg-fixed bg-cover bg-center" style={{ backgroundImage: "url('/parallax-bg.png')" }}>
-      <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-primary/70 backdrop-blur-sm"></div>
       <div className="container relative text-primary-foreground">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {stats.map((stat) => (
