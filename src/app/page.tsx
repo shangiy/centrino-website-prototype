@@ -145,7 +145,7 @@ export default function Home() {
                         <Card className="group flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-primary/20 bg-card transition-all duration-300 hover:shadow-2xl">
                           <Link href={`/services/${service.slug}`} className='block relative w-full aspect-video overflow-hidden'>
                             <Image
-                              src={`https://picsum.photos/seed/${service.slug}/400/300`}
+                              src={service.imageUrl || `https://picsum.photos/seed/${service.slug}/400/300`}
                               alt={service.title}
                               fill
                               className="object-cover rounded-t-2xl transition-transform duration-500 ease-in-out group-hover:scale-105"

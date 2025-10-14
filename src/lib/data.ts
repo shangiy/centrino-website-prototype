@@ -15,6 +15,7 @@ export interface Service {
   shortDescription: string;
   fullDescription: string;
   features: string[];
+  imageUrl?: string;
 }
 
 export interface Project {
@@ -48,6 +49,7 @@ export const services: Service[] = [
       'Transaction Processing',
       'Customer Relationship Management (CRM)',
     ],
+    imageUrl: '/core-banking.png',
   },
   {
     slug: 'mobile-banking',
