@@ -119,7 +119,7 @@ export default function ServiceDetailPage({
   return (
     <div>
       {/* Hero Section */}
-       <section className="relative h-[50vh] min-h-[350px] w-full flex items-center justify-start text-white bg-cover bg-center bg-fixed"
+       <section className="relative h-[60vh] min-h-[400px] w-full flex items-center justify-start text-white bg-cover bg-center bg-fixed"
         style={{ backgroundImage: `url(${service.imageUrl || `https://picsum.photos/seed/${service.slug}/1200/800`})` }}>
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 container">
