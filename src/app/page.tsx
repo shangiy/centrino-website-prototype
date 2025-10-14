@@ -132,33 +132,29 @@ export default function Home() {
                       key={index}
                       className="md:basis-1/2 lg:basis-1/3"
                     >
-                      <div className="p-1">
-                        <Card className="group overflow-hidden">
-                          <CardContent className="flex flex-col items-center text-center p-6">
-                            <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl">
+                      <div className="p-1 h-full">
+                        <Card className="flex flex-col h-full rounded-2xl shadow-lg border border-primary/20">
+                          <CardContent className="p-4 flex flex-col flex-grow">
+                             <div className="relative w-full h-48 mb-4">
                               <Image
-                                src={`https://picsum.photos/seed/${service.title.replace(
-                                  /\s+/g,
-                                  '-'
-                                )}/400/300`}
+                                src={`https://picsum.photos/seed/${service.slug}/400/300`}
                                 alt={service.title}
                                 fill
-                                className="object-cover"
+                                className="object-cover rounded-xl"
                                 data-ai-hint="business technology"
                               />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                              <div className="absolute bottom-4 left-4">
-                                <service.icon className="w-8 h-8 text-white/80" />
-                              </div>
                             </div>
-                            <div className="mt-6">
-                              <h3 className="text-xl font-bold font-headline transition-colors group-hover:text-primary">
+                            <div className="flex-grow">
+                              <h3 className="text-xl font-bold mb-2">
                                 {service.title}
                               </h3>
-                              <p className="mt-2 text-muted-foreground text-sm">
+                              <p className="text-muted-foreground text-sm mb-3 text-left">
                                 {service.shortDescription}
                               </p>
                             </div>
+                            <Button asChild className="mt-auto w-fit rounded-full">
+                              <Link href={`/services/${service.slug}`}>Learn More</Link>
+                            </Button>
                           </CardContent>
                         </Card>
                       </div>
