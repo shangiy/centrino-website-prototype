@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Check } from 'lucide-react';
 import { services } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
+import StatsCounter from '@/components/stats-counter';
 
 export default function Home() {
   return (
@@ -135,6 +136,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+        
+        <StatsCounter />
+
 
         {/* Why Choose Us Section */}
         <section className="py-20 md:py-28 bg-secondary">
