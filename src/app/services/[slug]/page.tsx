@@ -1,3 +1,4 @@
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -78,22 +79,9 @@ export default function ServiceDetailPage({
       {/* Content Section */}
       <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container">
-          <div className="grid md:grid-cols-5 gap-12">
-            {/* Left Column - Description */}
-            <div className="md:col-span-2 space-y-6">
-              <h2 className="text-3xl font-bold font-headline text-primary">
-                Solution Overview
-              </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                {service.fullDescription}
-              </p>
-              <Button asChild size="lg" className="w-full">
-                <Link href="/contact">Request a Demo</Link>
-              </Button>
-            </div>
-
-            {/* Right Column - Features */}
-            <div className="md:col-span-3 space-y-6">
+          <div className="grid md:grid-cols-1 gap-12">
+            {/* Features Section */}
+            <div className="space-y-6">
               <h3 className="text-2xl font-bold font-headline text-primary text-center">
                 Key Features
               </h3>
@@ -128,6 +116,19 @@ export default function ServiceDetailPage({
                   })}
                 </div>
               )}
+            </div>
+
+            {/* Description Section */}
+            <div className="space-y-6 mt-12 text-center max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold font-headline text-primary">
+                Solution Overview
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                {service.fullDescription}
+              </p>
+              <Button asChild size="lg">
+                <Link href="/contact">Request a Demo</Link>
+              </Button>
             </div>
           </div>
         </div>
