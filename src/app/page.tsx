@@ -165,13 +165,6 @@ export default function Home() {
                 <CarouselNext className="hidden sm:flex" />
               </Carousel>
             </div>
-            <div className="mt-16 text-center">
-              <Button asChild>
-                <Link href="/services">
-                  View all services <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
           </div>
         </section>
 
