@@ -130,7 +130,7 @@ export default function ServiceDetailPage({
         className="relative py-20 md:py-28 bg-cover bg-center bg-fixed text-primary-foreground"
         style={{ backgroundImage: "url('/meeting.png')" }}
       >
-        <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-primary/80"></div>
         <div className="container relative z-10 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-8">
             <div>
                  <h2 className="text-3xl md:text-4xl font-bold font-headline">
