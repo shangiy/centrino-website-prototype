@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -14,8 +15,13 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
+import Autoplay from 'embla-carousel-autoplay';
+import React from 'react';
 
 export default function Home() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
   return (
     <div className="bg-background text-foreground">
       <main>
@@ -49,7 +55,7 @@ export default function Home() {
                 className="absolute inset-0"
                 style={{
                   clipPath:
-                    'path("M413.4,142.1c25.4,32.4,14.7,78.2-12.4,106.1c-27.1,27.9-69.8,37.6-107.8,35.6c-38.1-2-71.4-15.8-93.5-40.4c-22.1-24.6-32.9-60-26.2-90.8c6.7-30.8,31-57.1,59.3-71.6c28.3-14.5,60.6-17.1,91.2-10.2C355.8,77.5,388,109.7,413.4,142.1z")',
+                    'path("M315.8,46.7c30.5-2.4,63.8,1.2,79,13.8s3.5,50.3-11.3,75.5s-40.6,48-70.1,54s-64.4-7.4-84.1-28.4s-26.4-52.8-18.6-80.6s33.8-56,71-62S287.2,49,315.8,46.7z")',
                   overflow: 'hidden',
                   transform: 'scale(1.2) translate(-10px, 10px)',
                   transformOrigin: 'center',
@@ -124,7 +130,10 @@ export default function Home() {
                   align: 'start',
                   loop: true,
                 }}
+                plugins={[plugin.current]}
                 className="w-full"
+                onMouseEnter={plugin.current.stop}
+                onMouseLeave={plugin.current.reset}
               >
                 <CarouselContent>
                   {services.map((service, index) => (
@@ -133,27 +142,38 @@ export default function Home() {
                       className="md:basis-1/2 lg:basis-1/3"
                     >
                       <div className="p-1 h-full">
-                        <Card className="flex flex-col h-full rounded-2xl shadow-lg border border-primary/20">
-                          <CardContent className="p-4 flex flex-col flex-grow">
-                             <div className="relative w-full h-48 mb-4">
-                              <Image
-                                src={`https://picsum.photos/seed/${service.slug}/400/300`}
-                                alt={service.title}
-                                fill
-                                className="object-cover rounded-xl"
-                                data-ai-hint="business technology"
-                              />
-                            </div>
-                            <div className="flex-grow">
-                              <h3 className="text-xl font-bold mb-2">
+                        <Card className="flex flex-col h-full rounded-2xl shadow-lg border border-primary/20 bg-card">
+                          <div className="relative w-full aspect-video">
+                            <Image
+                              src={`https://picsum.photos/seed/${service.slug}/400/300`}
+                              alt={service.title}
+                              fill
+                              className="object-cover rounded-t-2xl"
+                              data-ai-hint="business technology"
+                            />
+                          </div>
+                          <CardContent className="p-6 flex flex-col flex-grow">
+                            <div className="flex-grow space-y-4">
+                              <h3 className="text-xl font-bold font-headline">
                                 {service.title}
                               </h3>
-                              <p className="text-muted-foreground text-sm mb-3 text-left">
-                                {service.shortDescription}
-                              </p>
+                              <ul className="space-y-2 text-muted-foreground text-sm">
+                                {service.features.slice(0,3).map((feature) => (
+                                  <li key={feature} className="flex items-start">
+                                    <Check className="w-4 h-4 mr-2 mt-1 text-primary flex-shrink-0" />
+                                    <span>{feature}</span>
+                                  </li>
+                                ))}
+                              </ul>
                             </div>
-                            <Button asChild className="mt-auto w-fit rounded-full">
-                              <Link href={`/services/${service.slug}`}>Learn More</Link>
+                            <Button
+                              asChild
+                              variant="default"
+                              className="mt-6 w-fit rounded-full bg-primary text-primary-foreground"
+                            >
+                              <Link href={`/services/${service.slug}`}>
+                                Learn More
+                              </Link>
                             </Button>
                           </CardContent>
                         </Card>
