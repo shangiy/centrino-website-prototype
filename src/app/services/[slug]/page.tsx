@@ -1,6 +1,7 @@
 
 
 
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -116,12 +117,12 @@ const AgencyBankingContent = ({service}: {service: any}) => (
           {service.agencyBankingFeatures.map((feature: any) => {
             const Icon = feature.icon
             return (
-              <Card key={feature.title} className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full p-6 text-center items-center bg-card border-0 border-l-4 border-primary rounded-xl shadow-md group">
-                  <div className="bg-primary/10 text-primary rounded-full p-3 mb-4">
+              <Card key={feature.title} className="group flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full p-6 text-center items-center bg-card hover:bg-white border-0 border-l-4 border-primary rounded-xl shadow-md">
+                  <div className="bg-primary/10 text-primary rounded-full p-3 mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     <Icon className="w-8 h-8" />
                   </div>
                 <CardHeader className="p-0 mb-2">
-                  <CardTitle className="font-headline text-xl">
+                  <CardTitle className="font-headline text-xl group-hover:text-primary transition-colors duration-300">
                     {feature.title}
                   </CardTitle>
                 </CardHeader>
@@ -222,7 +223,7 @@ export default function ServiceDetailPage({
   return (
     <div>
       {/* Hero Section */}
-       <section className="relative h-screen w-full flex items-center justify-start text-white"
+       <section className="relative h-screen min-h-[500px] w-full flex items-center justify-start text-white"
         >
         <div className="absolute inset-0">
              <Image 
