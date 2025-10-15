@@ -214,7 +214,7 @@ export const services: Service[] = [
       {
         title: 'Bulk Message Sending Capabilities',
         description: 'Ability to send many SMS messages to multiple recipients at once.',
-        icon: SmsIcon,
+        icon: MessageSquarePlus,
       },
       {
         title: 'Scheduled Messaging',
@@ -247,7 +247,7 @@ export const services: Service[] = [
     slug: 'edms',
     title: 'EDMS',
     icon: FileTextIcon,
-    shortDescription: 'Electronic Document Management.',
+    shortDescription: 'Electronic Document Management System.',
     fullDescription: 'Go paperless and streamline your operations with our Electronic Document Management System (EDMS). Securely store, organize, and retrieve all your critical documents digitally, improving efficiency and reducing physical storage costs.',
     features: ['Secure Document Storage', 'Easy Retrieval', 'Version Control'],
     imageUrl: '/EDMS-parallax.png',
