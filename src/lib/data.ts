@@ -138,7 +138,10 @@ export const services: Service[] = [
     icon: Users,
     shortDescription: 'Extending banking services.',
     fullDescription: 'Expand your reach and serve more customers with our agency banking solution. This system allows you to authorize third-party agents to perform banking transactions on your behalf, bringing financial services closer to underserved communities.',
-    features: [],
+    features: [
+      'Balance Inquiry: Empower members to conveniently check their account balances.',
+      'Mini Statement: Provide concise summaries of recent account transactions for enhanced financial...',
+    ],
     imageUrl: '/Agency-banking.png',
     agencyBankingFeatures: [
       {
@@ -436,3 +439,6 @@ export const blogPosts: Post[] = [
       'A headless CMS decouples the content management backend from the presentation layer (the "head"). This architectural shift allows developers to use any frontend framework they choose, from websites to mobile apps and IoT devices. It provides unparalleled flexibility, better performance, and enhanced security. For businesses looking to create omnichannel digital experiences, the headless approach is the future of content management.',
   },
 ];
+
+
+    
