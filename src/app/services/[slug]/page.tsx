@@ -7,6 +7,7 @@
 
 
 
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -309,7 +310,7 @@ export default function ServiceDetailPage({
                         {service.title}
                     </h1>
                 </div>
-                {service.shortDescription && (
+                {service.slug !== 'e-board' && service.shortDescription && (
                     <p className="mt-2 text-lg md:text-xl opacity-90">
                         {service.shortDescription}
                     </p>
