@@ -283,6 +283,7 @@ export const services: Service[] = [
     shortDescription: 'Portal for members.',
     fullDescription: 'Provide your members with a dedicated online portal to access their accounts, view statements, apply for services, and interact with your institution. Our Members Portal enhances member satisfaction and self-service capabilities.',
     features: ['Account Access', 'View Statements', 'Apply for Services'],
+    imageUrl: '/Members-Portal.png',
   },
   {
     slug: 'online-loan-form-submission',
@@ -446,6 +447,7 @@ export const blogPosts: Post[] = [
     
 
     
+
 
 
 
