@@ -358,7 +358,7 @@ export default function Home() {
               </div>
               <div className="relative rounded-lg overflow-hidden aspect-square">
                 <Image
-                  src="https://images.unsplash.com/photo-1554224155-8d044b3a2613?q=80&w=2070&auto=format&fit=crop"
+                  src="/Customer-Service.png"
                   alt="Man working at computer"
                   fill
                   className="object-cover"
