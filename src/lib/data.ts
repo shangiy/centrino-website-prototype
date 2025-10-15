@@ -274,6 +274,7 @@ export const services: Service[] = [
     shortDescription: 'Track and manage performance.',
     fullDescription: 'Drive organizational growth with our Performance Management System. This tool helps you set goals, track employee performance, provide feedback, and align individual objectives with overall business strategy, fostering a culture of continuous improvement.',
     features: ['Goal Setting', 'Performance Tracking', 'Feedback Management'],
+    imageUrl: '/Perf-M-S.png',
   },
   {
     slug: 'members-portal',
@@ -445,5 +446,6 @@ export const blogPosts: Post[] = [
     
 
     
+
 
 
