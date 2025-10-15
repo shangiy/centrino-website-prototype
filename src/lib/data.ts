@@ -299,7 +299,7 @@ export const services: Service[] = [
     fullDescription: 'Provide your members with a dedicated online portal to access their accounts, view statements, apply for services, and interact with your institution. Our Members Portal enhances member satisfaction and self-service capabilities.',
     features: [
       'Real-time Account Updates: Stay informed with live snapshots of account balances, recent transactions, and detailed account statements.',
-      'Loan Services: Explore guaranteed loans, track loan...',
+      'Loan Services: Explore guaranteed loans, track loan details, including guarantors, and monitor the progress of in-process loan applications.',
     ],
     imageUrl: '/Members-Portal.png',
     membersPortalFeatures: [
@@ -339,7 +339,10 @@ export const services: Service[] = [
     icon: FileTextIcon,
     shortDescription: 'Easy online loan applications.',
     fullDescription: 'Simplify the loan application process with our online submission system. Customers can apply for loans from anywhere, at any time, through a user-friendly digital form, reducing paperwork and speeding up approval times.',
-    features: ['Digital Loan Forms', '24/7 Accessibility', 'Faster Approvals'],
+    features: [
+      'Streamlined Onboarding: Effortlessly bring new members into the system through a simplified and efficient online onboarding process.',
+      'Digital Forms: Utilize online forms to...'
+    ],
     imageUrl: '/Online Loan Form Submission.png',
   },
   {
@@ -496,6 +499,7 @@ export const blogPosts: Post[] = [
     
 
     
+
 
 
 
