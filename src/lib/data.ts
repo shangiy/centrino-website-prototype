@@ -209,6 +209,7 @@ export const services: Service[] = [
     shortDescription: 'FIKIWA SMS System',
     fullDescription: 'Stay connected with your customers through our reliable SMS communication platform. Send transaction alerts, marketing messages, and important notifications quickly and efficiently, enhancing customer engagement and security.',
     features: ['Transaction Alerts', 'Marketing Messages', 'Important Notifications'],
+    imageUrl: '/sms-communication.png',
     smsCommunicationFeatures: [
       {
         title: 'Bulk Message Sending Capabilities',
@@ -249,6 +250,7 @@ export const services: Service[] = [
     shortDescription: 'Electronic Document Management.',
     fullDescription: 'Go paperless and streamline your operations with our Electronic Document Management System (EDMS). Securely store, organize, and retrieve all your critical documents digitally, improving efficiency and reducing physical storage costs.',
     features: ['Secure Document Storage', 'Easy Retrieval', 'Version Control'],
+    imageUrl: '/EDMS-parallax.png',
   },
   {
     slug: 'e-board',
