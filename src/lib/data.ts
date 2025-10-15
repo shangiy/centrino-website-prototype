@@ -134,7 +134,7 @@ export const services: Service[] = [
   {
     slug: 'agency-banking',
     title: 'Agency Banking',
-    icon: Code,
+    icon: Users,
     shortDescription: 'Extending banking services.',
     fullDescription: 'Expand your reach and serve more customers with our agency banking solution. This system allows you to authorize third-party agents to perform banking transactions on your behalf, bringing financial services closer to underserved communities.',
     features: [],
@@ -205,10 +205,10 @@ export const services: Service[] = [
   {
     slug: 'sms-communication',
     title: 'SMS Communication',
-    icon: Code,
+    icon: SmsIcon,
     shortDescription: 'Reliable SMS services.',
     fullDescription: 'Stay connected with your customers through our reliable SMS communication platform. Send transaction alerts, marketing messages, and important notifications quickly and efficiently, enhancing customer engagement and security.',
-    features: [],
+    features: ['Transaction Alerts', 'Marketing Messages', 'Important Notifications'],
     smsCommunicationFeatures: [
       {
         title: 'Bulk Message Sending Capabilities',
@@ -245,7 +245,7 @@ export const services: Service[] = [
   {
     slug: 'edms',
     title: 'EDMS',
-    icon: Code,
+    icon: FileTextIcon,
     shortDescription: 'Electronic Document Management.',
     fullDescription: 'Go paperless and streamline your operations with our Electronic Document Management System (EDMS). Securely store, organize, and retrieve all your critical documents digitally, improving efficiency and reducing physical storage costs.',
     features: ['Secure Document Storage', 'Easy Retrieval', 'Version Control'],
@@ -253,7 +253,7 @@ export const services: Service[] = [
   {
     slug: 'e-board',
     title: 'E-Board',
-    icon: Code,
+    icon: Users,
     shortDescription: 'Digital board solutions.',
     fullDescription: 'Facilitate seamless and secure board meetings with our E-Board solution. This digital platform allows board members to access meeting materials, collaborate, and make decisions in a secure, centralized, and paperless environment.',
     features: ['Secure Meeting Materials', 'Digital Collaboration', 'Paperless Meetings'],
@@ -269,7 +269,7 @@ export const services: Service[] = [
   {
     slug: 'members-portal',
     title: 'Members Portal',
-    icon: Code,
+    icon: UserCog,
     shortDescription: 'Portal for members.',
     fullDescription: 'Provide your members with a dedicated online portal to access their accounts, view statements, apply for services, and interact with your institution. Our Members Portal enhances member satisfaction and self-service capabilities.',
     features: ['Account Access', 'View Statements', 'Apply for Services'],
@@ -277,7 +277,7 @@ export const services: Service[] = [
   {
     slug: 'online-loan-form-submission',
     title: 'Online Loan Form Submission',
-    icon: Code,
+    icon: FileTextIcon,
     shortDescription: 'Easy online loan applications.',
     fullDescription: 'Simplify the loan application process with our online submission system. Customers can apply for loans from anywhere, at any time, through a user-friendly digital form, reducing paperwork and speeding up approval times.',
     features: ['Digital Loan Forms', '24/7 Accessibility', 'Faster Approvals'],
