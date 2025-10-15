@@ -21,11 +21,15 @@ import { services } from '@/lib/data';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us'},
-  { href: '/portfolio', label: 'Portfolio' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/about', label: 'About Us' },
 ];
+
+const trailingNavLinks = [
+    { href: '/contact', label: 'Contact' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/portfolio', label: 'Portfolio' },
+    { href: '/career', label: 'Career' },
+]
 
 const ListItem = (({ className, title, ...props }) => {
   return (
@@ -94,7 +98,7 @@ export function Header() {
                         <ListItem
                           key={component.title}
                           title={component.title}
-                          href="/services"
+                          href={`/services/${component.slug}`}
                         />
                       ))}
                     </ul>
@@ -103,7 +107,7 @@ export function Header() {
                         <ListItem
                           key={component.title}
                           title={component.title}
-                          href="/services"
+                          href={`/services/${component.slug}`}
                         />
                       ))}
                     </ul>
@@ -112,6 +116,18 @@ export function Header() {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
+           {trailingNavLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={cn(
+                'inline-flex items-center justify-center rounded-md bg-transparent px-4 py-2 text-base font-semibold text-foreground/80 transition-transform duration-200 ease-in-out hover:scale-95 hover:text-foreground',
+                pathname === link.href ? 'text-primary' : ''
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
         <div className="flex flex-1 items-center justify-end gap-4">
            <a href="tel:+254202587637" className="hidden md:flex items-center gap-2 text-foreground/80 font-semibold hover:text-primary transition-colors">
@@ -141,7 +157,7 @@ export function Header() {
                   </Link>
                 </div>
                 <nav className="flex flex-col space-y-4 mt-6">
-                  {navLinks.map((link) => (
+                  {[...navLinks, ...trailingNavLinks].map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
@@ -161,7 +177,7 @@ export function Header() {
                   {services.map((service) => (
                      <Link
                       key={service.title}
-                      href={'/services'}
+                      href={`/services/${service.slug}`}
                       className='text-foreground/80 pl-4 text-base hover:text-primary'
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
