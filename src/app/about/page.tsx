@@ -179,7 +179,7 @@ export default function AboutPage() {
           className="relative py-20 bg-cover bg-center bg-fixed text-primary-foreground"
           style={{ backgroundImage: "url('/Partner with Us.png')" }}
         >
-          <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-primary/80"></div>
           <div className="container relative z-10 py-20 text-center">
             <h2 className="text-3xl font-bold font-headline">Ready to Start Your Project?</h2>
             <p className="mt-4 max-w-xl mx-auto text-primary-foreground/90">
