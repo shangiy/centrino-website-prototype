@@ -264,7 +264,7 @@ export const services: Service[] = [
     icon: Users,
     shortDescription: 'A software solution designed to enhance the efficiency and collaboration of corporate or organizational boards. It facilitates digital document management, meeting scheduling, secure access controls, and electronic voting.',
     fullDescription: 'Facilitate seamless and secure board meetings with our E-Board solution. This digital platform allows board members to access meeting materials, collaborate, and make decisions in a secure, centralized, and paperless environment.',
-    features: ['Secure Meeting Materials', 'Digital Collaboration', 'Paperless Meetings'],
+    features: ['A software solution designed to enhance the efficiency and collaboration of corporate or organizational boards. It facilitates digital document management, meeting scheduling, secure access controls, electroni...'],
     imageUrl: '/E-Board.png',
   },
   {
@@ -445,4 +445,5 @@ export const blogPosts: Post[] = [
     
 
     
+
 
