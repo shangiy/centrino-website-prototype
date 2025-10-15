@@ -8,6 +8,7 @@
 
 
 
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -233,6 +234,45 @@ export default function ServiceDetailPage({
         return <SmsCommunicationContent service={service} />;
       case 'edms':
         return <EdmsContent />;
+      case 'performance-management-system':
+        return (
+          <section className="py-16 md:py-24 bg-background">
+            <div className="container grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <h2 className="text-3xl font-bold font-headline">
+                  Performance Management System:
+                </h2>
+                <div className="text-muted-foreground space-y-4">
+                  <p>
+                    A Performance Management System is a strategic approach to
+                    aligning individual and team performance with organizational
+                    goals.
+                  </p>
+                  <p>
+                    It involves setting clear and measurable objectives,
+                    providing continuous feedback, conducting regular
+                    performance assessments, and fostering employee development.
+                  </p>
+                  <p>
+                    Recognition and rewards are used to motivate high
+                    performance, and data-driven insights guide
+                    decision-making. The system aims to engage employees,
+                    encourage continuous improvement, and enhance overall
+                    organizational effectiveness.
+                  </p>
+                </div>
+              </div>
+              <div className="relative rounded-lg overflow-hidden aspect-video shadow-lg">
+                <Image
+                  src={service.imageUrl || ''}
+                  alt={service.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </section>
+        );
       default:
         return (
         <section className="py-16 md:py-24 bg-secondary/30">

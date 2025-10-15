@@ -271,7 +271,7 @@ export const services: Service[] = [
     slug: 'performance-management-system',
     title: 'Performance Management System',
     icon: BrainCircuit,
-    shortDescription: 'Track and manage performance.',
+    shortDescription: 'A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals.',
     fullDescription: 'Drive organizational growth with our Performance Management System. This tool helps you set goals, track employee performance, provide feedback, and align individual objectives with overall business strategy, fostering a culture of continuous improvement.',
     features: ['A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and Measurable objectives. Providing...'],
     imageUrl: '/Perf-M-S.png',
@@ -446,6 +446,7 @@ export const blogPosts: Post[] = [
     
 
     
+
 
 
 
