@@ -273,7 +273,7 @@ export const services: Service[] = [
     icon: BrainCircuit,
     shortDescription: 'Track and manage performance.',
     fullDescription: 'Drive organizational growth with our Performance Management System. This tool helps you set goals, track employee performance, provide feedback, and align individual objectives with overall business strategy, fostering a culture of continuous improvement.',
-    features: ['Goal Setting', 'Performance Tracking', 'Feedback Management'],
+    features: ['A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and Measurable objectives. Providing...'],
     imageUrl: '/Perf-M-S.png',
   },
   {
@@ -319,7 +319,7 @@ export const services: Service[] = [
   {
     slug: 'training',
     title: 'Training',
-    icon: PenTool,
+icon: PenTool,
     shortDescription: 'Professional training services.',
     fullDescription: 'Equip your team with the skills they need to succeed. We offer professional training on our software solutions and general ICT best practices, ensuring your staff can leverage technology effectively to drive business performance.',
     features: ['Software Training', 'ICT Best Practices', 'Custom Workshops'],
@@ -446,6 +446,7 @@ export const blogPosts: Post[] = [
     
 
     
+
 
 
 
