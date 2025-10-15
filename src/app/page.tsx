@@ -17,6 +17,7 @@ import {
 import { Card, CardContent } from '@/components/ui/card';
 import Autoplay from 'embla-carousel-autoplay';
 import React from 'react';
+import Testimonials from '@/components/testimonials';
 
 export default function Home() {
   const plugin = React.useRef(
@@ -234,6 +235,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <Testimonials />
 
         {/* Why Choose Us Section */}
         <section className="py-20 md:py-28 bg-secondary">
