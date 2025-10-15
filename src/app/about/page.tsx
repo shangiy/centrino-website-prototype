@@ -59,6 +59,39 @@ export default function AboutPage() {
         </section>
 
         <StatsCounter />
+        <section className="py-20 md:py-28 bg-background">
+          <div className="container grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+               <div className="flex items-center gap-2">
+                <p className="font-semibold tracking-wider text-sm text-primary uppercase">
+                  Philosophy
+                </p>
+              </div>
+              <h2 className="text-3xl font-bold font-headline">Technologies leverages over a decade of expertise</h2>
+              <div className="text-muted-foreground space-y-4">
+                <p>
+                  To provide cutting-edge technology solutions that empower Microfinance Institutions, SACCOs, and other financial institutions. We strive to elevate operational efficiency, enhance the customer experience, and foster overall growth by delivering innovative, scalable, and client-centric solutions.
+                </p>
+                <p>
+                  Our journey has been marked by continuous learning, adaptability, and a relentless pursuit of excellence. This wealth of experience positions us as industry leaders, uniquely equipped to address the diverse and evolving needs of financial institutions in today's dynamic environment.
+                </p>
+              </div>
+              <Button asChild variant="outline">
+                <Link href="/services">Browse Services</Link>
+              </Button>
+            </div>
+             <div className="relative rounded-lg overflow-hidden aspect-[4/3] shadow-lg group">
+              <Image
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop"
+                alt="Business meeting"
+                fill
+                className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                data-ai-hint="business meeting"
+              />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="bg-primary text-primary-foreground">
