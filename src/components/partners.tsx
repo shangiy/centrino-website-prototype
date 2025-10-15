@@ -9,11 +9,13 @@ import {
 import Autoplay from 'embla-carousel-autoplay';
 
 const partners = [
-  { src: '/eset-logo.png', alt: 'Eset Logo' },
-  { src: '/zoho-logo.png', alt: 'Zoho Logo' },
-  { src: '/zamupay-logo.png', alt: 'Zamupay Logo' },
-  { src: '/applied-principles-logo.png', alt: 'Applied Principles Logo' },
-  { src: '/safaricom-logo.png', alt: 'Safaricom Logo' },
+  { src: '/eset-P.png', alt: 'Eset Logo' },
+  { src: '/zoho.png', alt: 'Zoho Logo' },
+  { src: '/zamupay-P.png', alt: 'Zamupay Logo' },
+  { src: '/applied P consulting.png', alt: 'Applied Principles Consulting Logo' },
+  { src: '/safaricom-P.png', alt: 'Safaricom Logo' },
+  { src: '/pycs-P.png', alt: 'Pycs Logo' },
+  { src: '/comztech-P.png', alt: 'Comztech Logo' },
 ];
 
 export default function Partners() {
