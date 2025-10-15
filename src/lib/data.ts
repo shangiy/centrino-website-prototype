@@ -272,9 +272,9 @@ export const services: Service[] = [
     title: 'Performance Management System',
     icon: BrainCircuit,
     shortDescription: 'A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals.',
-    fullDescription: 'Drive organizational growth with our Performance Management System. This tool helps you set goals, track employee performance, provide feedback, and align individual objectives with overall business strategy, fostering a culture of continuous improvement.',
+    fullDescription: 'A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and measurable objectives, providing continuous feedback, conducting regular performance assessments, and fostering employee development. Recognition and rewards are used to motivate high performance, and data-driven insights guide decision-making. The system aims to engage employees, encourage continuous improvement, and enhance overall organizational effectiveness.',
     features: ['A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and Measurable objectives. Providing...'],
-    imageUrl: '/Perf-M-S.png',
+    imageUrl: '/PMS.png',
   },
   {
     slug: 'members-portal',
@@ -446,6 +446,7 @@ export const blogPosts: Post[] = [
     
 
     
+
 
 
 
