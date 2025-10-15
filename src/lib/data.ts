@@ -274,7 +274,7 @@ export const services: Service[] = [
     shortDescription: '',
     fullDescription: 'A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and measurable objectives, providing continuous feedback, conducting regular performance assessments, and fostering employee development. Recognition and rewards are used to motivate high performance, and data-driven insights guide decision-making. The system aims to engage employees, encourage continuous improvement, and enhance overall organizational effectiveness.',
     features: ['A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and Measurable objectives. Providing...'],
-    imageUrl: '/PMS.png',
+    imageUrl: '/Perf-M-S.png',
   },
   {
     slug: 'members-portal',
@@ -447,6 +447,7 @@ export const blogPosts: Post[] = [
     
 
     
+
 
 
 
