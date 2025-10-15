@@ -3,6 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { Building, Gem, Target, Users } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import StatsCounter from '@/components/stats-counter';
 
 const stats = [
   { value: '10+', label: 'Years of Experience' },
@@ -56,6 +57,8 @@ export default function AboutPage() {
                 </div>
             </div>
         </section>
+
+        <StatsCounter />
 
         {/* CTA Section */}
         <section className="bg-primary text-primary-foreground">

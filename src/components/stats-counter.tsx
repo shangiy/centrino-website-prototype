@@ -17,11 +17,27 @@ function Counter({ to }: { to: number }) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (count < to) {
-      const timeout = setTimeout(() => setCount(count + 1), 50);
-      return () => clearTimeout(timeout);
-    }
-  }, [count, to]);
+    let animationFrameId: number;
+    const start = 0;
+    const duration = 2000; // 2 seconds
+    let startTime: number | null = null;
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = timestamp - startTime;
+      const current = Math.min(Math.floor((progress / duration) * to) + start, to);
+      setCount(current);
+
+      if (progress < duration) {
+        animationFrameId = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrameId = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [to]);
+
 
   return <span ref={ref}>{count}+</span>;
 }
