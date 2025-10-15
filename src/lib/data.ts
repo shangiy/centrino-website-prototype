@@ -530,7 +530,7 @@ export const blogPosts: Post[] = [
     slug: 'building-resilient-web-applications',
     title: 'The Principles of Building Resilient Web Applications',
     author: 'Mushangi Patrick',
-    date: '2024-06-28',
+    date: '2025-06-28',
     imageId: 'blog-post-2',
     excerpt:
       "In today's digital world, application downtime is not an option. Learn the key principles for building resilient, fault-tolerant systems.",
@@ -565,6 +565,7 @@ export const blogPosts: Post[] = [
     
 
     
+
 
 
 
