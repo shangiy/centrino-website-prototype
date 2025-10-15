@@ -262,7 +262,7 @@ export const services: Service[] = [
     slug: 'e-board',
     title: 'E-Board',
     icon: Users,
-    shortDescription: 'A software solution designed to enhance the efficiency and collaboration of corporate or organizational boards. It facilitates digital document management, meeting scheduling, secure access controls, and electronic voting.',
+    shortDescription: '',
     fullDescription: 'Facilitate seamless and secure board meetings with our E-Board solution. This digital platform allows board members to access meeting materials, collaborate, and make decisions in a secure, centralized, and paperless environment.',
     features: ['A software solution designed to enhance the efficiency and collaboration of corporate or organizational boards. It facilitates digital document management, meeting scheduling, secure access controls, electroni...'],
     imageUrl: '/E-Board.png',
@@ -271,7 +271,7 @@ export const services: Service[] = [
     slug: 'performance-management-system',
     title: 'Performance Management System',
     icon: BrainCircuit,
-    shortDescription: 'A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals.',
+    shortDescription: '',
     fullDescription: 'A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and measurable objectives, providing continuous feedback, conducting regular performance assessments, and fostering employee development. Recognition and rewards are used to motivate high performance, and data-driven insights guide decision-making. The system aims to engage employees, encourage continuous improvement, and enhance overall organizational effectiveness.',
     features: ['A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and Measurable objectives. Providing...'],
     imageUrl: '/PMS.png',
@@ -446,6 +446,7 @@ export const blogPosts: Post[] = [
     
 
     
+
 
 
 
