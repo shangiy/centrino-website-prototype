@@ -238,6 +238,27 @@ export default function Home() {
 
         <Testimonials />
 
+        {/* CTA Parallax Section */}
+        <section
+          className="relative py-24 md:py-32 bg-cover bg-center bg-fixed text-primary-foreground"
+          style={{ backgroundImage: "url('/consultation.png')" }}
+        >
+          <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm"></div>
+          <div className="container relative z-10 text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold font-headline">
+              Ready to Transform Your Financial Institution?
+            </h2>
+            <p className="mt-4 text-lg text-primary-foreground/90">
+              Contact us today for a free consultation and discover how our innovative technology solutions can help you achieve your goals.
+            </p>
+            <Button asChild variant="secondary" size="lg" className="mt-8 rounded-full font-bold">
+              <Link href="/contact">
+                Let's Get Started
+              </Link>
+            </Button>
+          </div>
+        </section>
+
         {/* Why Choose Us Section */}
         <section className="py-20 md:py-28 bg-secondary">
           <div className="container grid md:grid-cols-2 gap-12 items-center">
