@@ -14,6 +14,11 @@ import {
   UserPlus,
   CheckCircle,
   ArrowRightLeft,
+  Banknote,
+  Users,
+  Fingerprint,
+  Contact,
+  CreditCard,
 } from 'lucide-react';
 
 export interface Service {
@@ -152,20 +157,30 @@ export const services: Service[] = [
         description: "Allow agents to register new members pending approval in the core banking system, ensuring a smooth onboarding experience.",
         icon: UserPlus,
       },
-      {
-        title: "Agent Float Inquiry",
-        description: "Provide agents with the capability to check their available float for efficient transaction processing.",
-        icon: CheckCircle,
+       {
+        title: "POS Statement",
+        description: "Generate detailed statements for point-of-sale transactions within a specified date range.",
+        icon: CreditCard
+      },
+       {
+        title: "Customer KYC Details Management",
+        description: "Empower members to update their KYC information conveniently through our agency banking application.",
+        icon: Contact
       },
       {
-        title: "Agent Commission Inquiry",
-        description: "Offer agents real-time access to commission information, enhancing transparency and motivation.",
-        icon: CheckCircle,
-      },
-      {
-        title: "Account Transfer",
-        description: "Enable members to transfer funds effortlessly from their savings accounts to other designated accounts.",
+        title: "Alternate Channel Management",
+        description: "Assist members in managing alternate channels, including the ability to stop compromised channels for enhanced security.",
         icon: ArrowRightLeft,
+      },
+      {
+        title: "Member Education Register Management",
+        description: "Facilitate education and awareness programs for members by enabling agents and staff to mark attendance registers via our POS devices.",
+        icon: Users,
+      },
+      {
+        title: "Biometric Management",
+        description: "Support the seamless updating of biometric data on supported devices such as IDEMIA and Datamini tablets, ensuring accurate and secure member identification.",
+        icon: Fingerprint,
       },
     ]
   },

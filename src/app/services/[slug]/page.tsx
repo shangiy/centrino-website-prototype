@@ -1,5 +1,6 @@
 
 
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,6 +19,8 @@ import {
   Globe,
   Smartphone,
   Server,
+  User,
+  Fingerprint,
 } from 'lucide-react';
 import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
@@ -42,6 +45,7 @@ const featureIcons: { [key: string]: LucideIcon } = {
   'Workflow Automation': Workflow,
   'Scalability and Flexibility': Scaling,
   'Customer Self-Service': Headset,
+  'Biometric Management': Fingerprint,
   default: Landmark,
 };
 
