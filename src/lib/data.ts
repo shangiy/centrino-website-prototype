@@ -210,7 +210,7 @@ export const services: Service[] = [
     shortDescription: 'FIKIWA SMS System',
     fullDescription: 'Stay connected with your customers through our reliable SMS communication platform. Send transaction alerts, marketing messages, and important notifications quickly and efficiently, enhancing customer engagement and security.',
     features: ['Transaction Alerts', 'Marketing Messages', 'Important Notifications'],
-    imageUrl: '/sms-communication.png',
+    imageUrl: '/SMS-Communication.png',
     smsCommunicationFeatures: [
       {
         title: 'Bulk Message Sending Capabilities',
