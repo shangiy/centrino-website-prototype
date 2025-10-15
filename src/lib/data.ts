@@ -182,6 +182,11 @@ export const services: Service[] = [
         description: "Support the seamless updating of biometric data on supported devices such as IDEMIA and Datamini tablets, ensuring accurate and secure member identification.",
         icon: Fingerprint,
       },
+      {
+        title: "Account Transfer",
+        description: "Enable secure and instant funds transfer between accounts through authorized agents.",
+        icon: ArrowRightLeft,
+      },
     ]
   },
   {
