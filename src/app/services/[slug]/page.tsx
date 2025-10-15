@@ -2,6 +2,7 @@
 
 
 
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -139,6 +140,35 @@ const AgencyBankingContent = ({service}: {service: any}) => (
   </section>
 );
 
+const SmsCommunicationContent = ({service}: {service: any}) => (
+  <section className="py-16 md:py-24 bg-secondary/30">
+    <div className="container">
+       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {service.smsCommunicationFeatures.map((feature: any) => {
+            const Icon = feature.icon
+            return (
+              <Card key={feature.title} className="group flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full p-6 text-center items-center bg-card hover:bg-white border-0 border-l-4 border-primary rounded-xl shadow-md">
+                  <div className="bg-primary/10 text-primary rounded-full p-3 mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                    <Icon className="w-8 h-8" />
+                  </div>
+                <CardHeader className="p-0 mb-2">
+                  <CardTitle className="font-headline text-xl group-hover:text-primary transition-colors duration-300">
+                    {feature.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-0 flex-grow">
+                  <p className="text-muted-foreground">
+                    {feature.description}
+                  </p>
+                </CardContent>
+              </Card>
+            )
+          })}
+        </div>
+    </div>
+  </section>
+);
+
 
 export default function ServiceDetailPage({
   params,
@@ -157,6 +187,8 @@ export default function ServiceDetailPage({
         return <MobileBankingContent service={service} />;
       case 'agency-banking':
         return <AgencyBankingContent service={service} />;
+      case 'sms-communication':
+        return <SmsCommunicationContent service={service} />;
       default:
         return (
         <section className="py-16 md:py-24 bg-secondary/30">

@@ -19,6 +19,11 @@ import {
   Fingerprint,
   Contact,
   CreditCard,
+  MessageSquarePlus,
+  CalendarClock,
+  LineChart,
+  UserCog,
+  Repeat,
 } from 'lucide-react';
 
 export interface Service {
@@ -33,6 +38,7 @@ export interface Service {
   subDescription?: string;
   mobileBankingFeatures?: MobileBankingFeature[];
   agencyBankingFeatures?: AgencyBankingFeature[];
+  smsCommunicationFeatures?: SmsCommunicationFeature[];
 }
 
 export interface MobileBankingFeature {
@@ -43,6 +49,12 @@ export interface MobileBankingFeature {
 }
 
 export interface AgencyBankingFeature {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}
+
+export interface SmsCommunicationFeature {
   title: string;
   description: string;
   icon: LucideIcon;
@@ -195,7 +207,39 @@ export const services: Service[] = [
     icon: Code,
     shortDescription: 'Reliable SMS services.',
     fullDescription: 'Stay connected with your customers through our reliable SMS communication platform. Send transaction alerts, marketing messages, and important notifications quickly and efficiently, enhancing customer engagement and security.',
-    features: ['Transaction Alerts', 'Marketing Messages', 'Important Notifications'],
+    features: [],
+    smsCommunicationFeatures: [
+      {
+        title: 'Bulk Message Sending Capabilities',
+        description: 'Ability to send many SMS messages to multiple recipients at once.',
+        icon: MessageSquarePlus,
+      },
+      {
+        title: 'Scheduled Messaging',
+        description: 'Feature allowing users to schedule SMS messages for a future date and time.',
+        icon: CalendarClock,
+      },
+      {
+        title: 'Delivery Reports',
+        description: 'Real-time delivery reports providing information on the status of sent messages, including delivery success or failure.',
+        icon: LineChart,
+      },
+      {
+        title: 'Sender ID Customization',
+        description: 'Option for users to customize the sender ID, ensuring branding and recognition.',
+        icon: UserCog,
+      },
+      {
+        title: 'API Integration',
+        description: 'API (Application Programming Interface) for seamless integration with business applications, websites, or software.',
+        icon: Code,
+      },
+      {
+        title: 'Two-Way Messaging',
+        description: 'Capability for two-way communication, allowing recipients to reply to messages, facilitating customer engagement.',
+        icon: Repeat,
+      },
+    ],
   },
   {
     slug: 'edms',
