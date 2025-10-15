@@ -291,7 +291,7 @@ export const services: Service[] = [
     slug: 'e-board',
     title: 'E-Board',
     icon: Users,
-    shortDescription: 'A software solution designed to enhance the efficiency and collaboration of corporate or organizational boards. It facilitates digital document management, meeting scheduling, secure access controls, electroni...',
+    shortDescription: '',
     fullDescription: 'Facilitate seamless and secure board meetings with our E-Board solution. This digital platform allows board members to access meeting materials, collaborate, and make decisions in a secure, centralized, and paperless environment.',
     features: ['A software solution designed to enhance the efficiency and collaboration of corporate or organizational boards. It facilitates digital document management, meeting scheduling, secure access controls, electroni...'],
     imageUrl: '/E-Board.png',
@@ -300,9 +300,9 @@ export const services: Service[] = [
     slug: 'performance-management-system',
     title: 'Performance Management System',
     icon: BrainCircuit,
-    shortDescription: 'A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and measurable objectives, providing...',
+    shortDescription: '',
     fullDescription: 'A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and measurable objectives, providing continuous feedback, conducting regular performance assessments, and fostering employee development. Recognition and rewards are used to motivate high performance, and data-driven insights guide decision-making. The system aims to engage employees, encourage continuous improvement, and enhance overall organizational effectiveness.',
-    features: ['A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and measurable objectives. Providing...'],
+    features: ['A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and measurable objectives, providing...'],
     imageUrl: '/PMS.png',
   },
   {
@@ -351,7 +351,7 @@ export const services: Service[] = [
     slug: 'online-loan-form-submission',
     title: 'Online Loan Form Submission',
     icon: FileTextIcon,
-    shortDescription: 'Streamlined Onboarding, Digital Forms, Document Submission...',
+    shortDescription: '',
     fullDescription: 'Simplify the loan application process with our online submission system. Customers can apply for loans from anywhere, at any time, through a user-friendly digital form, reducing paperwork and speeding up approval times.',
     features: [
       'Streamlined Onboarding: Effortlessly bring new members into the system through a simplified and efficient online onboarding process.',
@@ -565,6 +565,7 @@ export const blogPosts: Post[] = [
     
 
     
+
 
 
 
