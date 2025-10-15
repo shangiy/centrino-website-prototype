@@ -107,7 +107,7 @@ export const services: Service[] = [
     icon: Smartphone,
     shortDescription: 'PesaPepe Mobile Banking: Pesapepe Mobile Banking offers multiple access points, including:',
     fullDescription: 'Empower your customers with a secure and feature-rich mobile banking application. Our solution allows users to check balances, transfer funds, pay bills, and access other banking services anytime, anywhere, directly from their smartphones.',
-    features: ["USSD: This is a menu-driven solution accessible through our primary shared code, *879#, and a..."],
+    features: ["Pesapepe features a web portal made available to Sacco administrators and other users. It enables them to manage the service, monitor real-time transaction......","USSD: This is a menu-driven solution accessible through our primary shared code, *879#, and a..."],
     imageUrl: '/mobile-banking.png',
     subTitle: 'PesaPepe Mobile Banking',
     subDescription: 'Pesapepe Mobile Banking offers multiple access points, including:',
@@ -440,5 +440,7 @@ export const blogPosts: Post[] = [
   },
 ];
 
+
+    
 
     
