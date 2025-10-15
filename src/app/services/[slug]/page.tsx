@@ -13,6 +13,7 @@
 
 
 
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -46,6 +47,13 @@ import {
   UserCog,
   Code,
   Repeat,
+  FileCheck,
+  FileDigit,
+  FileUp,
+  LockKeyhole,
+  SmartphoneNfc,
+  DatabaseZap,
+  CheckCircle,
 } from 'lucide-react';
 import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
@@ -417,7 +425,7 @@ export default function ServiceDetailPage({
                         {service.title}
                     </h1>
                 </div>
-                {service.slug !== 'e-board' && service.slug !== 'performance-management-system' && service.shortDescription && (
+                {service.slug !== 'e-board' && service.slug !== 'performance-management-system' && service.slug !== 'online-loan-form-submission' && service.shortDescription && (
                     <p className="mt-2 text-lg md:text-xl opacity-90">
                         {service.shortDescription}
                     </p>
