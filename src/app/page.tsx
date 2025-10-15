@@ -190,6 +190,16 @@ export default function Home() {
 
         <StatsCounter />
 
+        <section className="py-20 md:py-28 text-center bg-background">
+          <div className="container max-w-4xl">
+            <h2 className="text-3xl font-bold font-headline text-primary">Empowering Financial Success Through Technology</h2>
+            <h3 className="text-2xl font-bold font-headline mt-4 mb-6">Our Expertise</h3>
+            <p className="text-lg text-muted-foreground">
+              Centrino Technologies, specializes in empowering financial institutions, particularly Microfinance Institutions (MFIs) and Savings, Credit Cooperatives (SACCOs), and various financial institutions with cutting-edge technology solutions.
+            </p>
+          </div>
+        </section>
+
         {/* Why Choose Us Section */}
         <section className="py-20 md:py-28 bg-secondary">
           <div className="container grid md:grid-cols-2 gap-12 items-center">
