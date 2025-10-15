@@ -93,6 +93,48 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Vision Section */}
+        <section
+          className="relative py-20 bg-cover bg-center"
+          style={{ backgroundImage: "url('/vision-bg.png')" }}
+        >
+          <div className="absolute inset-0 bg-primary/80 backdrop-brightness-75"></div>
+          <div className="container relative z-10 grid md:grid-cols-2 items-center gap-12 text-primary-foreground">
+            <div className="md:col-start-2">
+              <h2 className="text-4xl font-bold font-headline mb-4">
+                Our Vision
+              </h2>
+              <p className="text-lg opacity-90">
+                Simplifying complex needs through Innovative solutions that
+                fosters business and community growth.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Mission Section */}
+        <section className="py-20 md:py-28 bg-[#52002d] text-white">
+          <div className="container grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold font-headline">Our Mission</h2>
+              <p className="text-lg opacity-90">
+                To empower organisations to thrive through innovative fintech
+                solutions that simplify complex needs, enable seamless
+                integration, and foster excellence.
+              </p>
+            </div>
+            <div className="relative rounded-lg overflow-hidden aspect-[4/3] shadow-lg">
+              <Image
+                src="/mission.png"
+                alt="Our Mission"
+                fill
+                className="object-cover"
+                data-ai-hint="business woman"
+              />
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="bg-primary text-primary-foreground">
           <div className="container py-20 text-center">
