@@ -144,16 +144,44 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Core Values Section */}
+        <section className="py-20 md:py-28 bg-primary text-primary-foreground">
+          <div className="container grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative rounded-lg overflow-hidden aspect-[4/3] shadow-lg">
+              <Image
+                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2232&auto=format&fit=crop"
+                alt="Our Core Values"
+                fill
+                className="object-cover"
+                data-ai-hint="team collaboration"
+              />
+            </div>
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold font-headline">Our Core Values</h2>
+              <p className="text-lg opacity-90">
+                These core values, represented by the acronym " ICE-SIG,"
+                define the ethical guidelines and behaviors that guide Centrino
+                Technologies' culture and decision-making. They reflect our
+                commitment to Innovation, Excellence, client-centricity,
+                integrity, Seamlessness, and Global Impact, providing a clear
+                and focused framework for our organization's actions and
+                interactions.
+              </p>
+            </div>
+          </div>
+        </section>
+
+
         {/* CTA Section */}
-        <section className="bg-primary text-primary-foreground">
+        <section className="bg-secondary text-foreground">
           <div className="container py-20 text-center">
             <h2 className="text-3xl font-bold font-headline">Ready to Start Your Project?</h2>
-            <p className="mt-4 max-w-xl mx-auto opacity-80">
+            <p className="mt-4 max-w-xl mx-auto text-muted-foreground">
               Let's work together to build the next generation of financial technology.
             </p>
             <Button
               asChild
-              variant="secondary"
+              variant="default"
               className="mt-8 rounded-full font-bold"
             >
               <Link
