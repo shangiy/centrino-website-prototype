@@ -34,70 +34,25 @@ export default function AboutPage() {
     <div className="bg-background text-foreground">
       <main>
         {/* Hero Section */}
-        <section className="relative py-24 md:py-32 bg-gradient-to-r from-purple-50/10 via-pink-50/10 to-purple-100/20">
+        <section className="relative py-24 md:py-32 bg-gradient-to-b from-purple-100/30 to-background">
           <div className="container mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight">
-              About <span className="text-primary">Centrino Technologies</span>
+              About Us
             </h1>
-            <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-              Leveraging over a decade of expertise to provide cutting-edge technology solutions that empower Microfinance Institutions, SACCOs, and other financial institutions.
-            </p>
           </div>
         </section>
 
-        {/* Mission and Vision Section */}
+        {/* Content Section */}
         <section className="py-20 md:py-28">
-            <div className="container grid md:grid-cols-2 gap-12 items-center">
-                <div className='space-y-6'>
-                    <div className="flex items-center gap-2">
-                        <div className="w-3 h-3 bg-primary"></div>
-                        <p className="font-semibold tracking-wider text-sm text-primary">OUR PURPOSE</p>
-                    </div>
-                    <h2 className='text-3xl font-bold font-headline'>Our Mission & Vision</h2>
-                    <p className='text-muted-foreground'>
-                        Our mission is to empower financial institutions with innovative, reliable, and secure software solutions that simplify complex needs, enhance customer experiences, and drive sustainable growth. We envision a future where technology seamlessly connects institutions with their members, fostering financial inclusion and prosperity for all.
+            <div className="container max-w-4xl mx-auto text-center space-y-8">
+                <h2 className='text-3xl font-bold font-headline'>Welcome To Centrino Technologies</h2>
+                <div className='text-muted-foreground text-lg space-y-6'>
+                    <p>
+                        Centrino Technologies Ltd, with over a decade of experience in the financial technology landscape, stands as a beacon of technological innovation, offering tailored solutions to financial institutions Our unwavering commitment to excellence has positioned us as a trusted partner for institutions seeking advanced and customized technology solutions.
                     </p>
-                </div>
-                 <div className="relative rounded-lg overflow-hidden aspect-video">
-                    <Image src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwbWVldGluZ3xlbnwwfHx8fDE3NTk4ODEzNTR8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Team meeting" fill className="object-cover" data-ai-hint="team meeting" />
-                </div>
-            </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-20 bg-secondary">
-          <div className="container">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              {stats.map((stat) => (
-                <div key={stat.label}>
-                  <p className="text-4xl md:text-5xl font-bold text-primary">{stat.value}</p>
-                  <p className="mt-2 text-muted-foreground">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        
-        {/* Core Values Section */}
-        <section className="py-20 md:py-28">
-            <div className="container text-center max-w-4xl">
-                <div className="flex items-center justify-center gap-2">
-                    <div className="w-3 h-3 bg-primary"></div>
-                    <p className="font-semibold tracking-wider text-sm text-primary">OUR VALUES</p>
-                </div>
-                <h2 className='text-3xl font-bold font-headline mt-4 mb-12'>The Principles That Guide Us</h2>
-                <div className="grid md:grid-cols-3 gap-12">
-                    {values.map((value) => {
-                        const Icon = value.icon;
-                        return (
-                        <div key={value.title} className="flex flex-col items-center">
-                            <div className="bg-primary/10 p-4 rounded-full">
-                                <Icon className="w-8 h-8 text-primary" />
-                            </div>
-                            <h3 className="text-xl font-bold font-headline mt-6 mb-2">{value.title}</h3>
-                            <p className="text-muted-foreground">{value.description}</p>
-                        </div>
-                    )})}
+                    <p>
+                       With a primary focus on empowering Microfinance Institutions (MFIs), Savings and Credit Cooperatives (SACCOs), and various financial institutions, Centrino Technologies has consistently delivered state-of-the-art products and services that redefine the way financial institutions operate and interact with their customers.
+                    </p>
                 </div>
             </div>
         </section>
