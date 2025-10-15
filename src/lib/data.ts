@@ -9,6 +9,11 @@ import {
   PiggyBank,
   FileText as FileTextIcon,
   HandCoins,
+  DollarSign,
+  UserCheck,
+  UserPlus,
+  CheckCircle,
+  ArrowRightLeft,
 } from 'lucide-react';
 
 export interface Service {
@@ -131,7 +136,37 @@ export const services: Service[] = [
         title: "Cash Withdrawal",
         description: "Enable members to effortlessly withdraw cash from their savings accounts through our agency banking services.",
         icon: HandCoins
-      }
+      },
+      {
+        title: "Cash Deposit",
+        description: "Facilitate seamless cash deposits and loan repayments for members using our agency banking platform.",
+        icon: DollarSign,
+      },
+      {
+        title: "Know Your Customer (KYC)",
+        description: "Streamline the KYC process by assisting in the collection of essential member information such as passport, signature, and identification card (front and back).",
+        icon: UserCheck,
+      },
+      {
+        title: "Member Onboarding",
+        description: "Allow agents to register new members pending approval in the core banking system, ensuring a smooth onboarding experience.",
+        icon: UserPlus,
+      },
+      {
+        title: "Agent Float Inquiry",
+        description: "Provide agents with the capability to check their available float for efficient transaction processing.",
+        icon: CheckCircle,
+      },
+      {
+        title: "Agent Commission Inquiry",
+        description: "Offer agents real-time access to commission information, enhancing transparency and motivation.",
+        icon: CheckCircle,
+      },
+      {
+        title: "Account Transfer",
+        description: "Enable members to transfer funds effortlessly from their savings accounts to other designated accounts.",
+        icon: ArrowRightLeft,
+      },
     ]
   },
   {
