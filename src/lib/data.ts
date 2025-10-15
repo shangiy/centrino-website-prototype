@@ -249,7 +249,9 @@ export const services: Service[] = [
     icon: FileTextIcon,
     shortDescription: 'Electronic Document Management System.',
     fullDescription: 'Go paperless and streamline your operations with our Electronic Document Management System (EDMS). Securely store, organize, and retrieve all your critical documents digitally, improving efficiency and reducing physical storage costs.',
-    features: ['Secure Document Storage', 'Easy Retrieval', 'Version Control'],
+    features: [
+      'Creation, organization, storage retrieval, and management of digital documents within an organization.',
+    ],
     imageUrl: '/EDMS-parallax.png',
   },
   {
