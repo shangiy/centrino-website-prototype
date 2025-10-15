@@ -18,6 +18,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Autoplay from 'embla-carousel-autoplay';
 import React from 'react';
 import Testimonials from '@/components/testimonials';
+import Partners from '@/components/partners';
 
 export default function Home() {
   const plugin = React.useRef(
@@ -321,6 +322,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <Partners />
       </main>
     </div>
   );
