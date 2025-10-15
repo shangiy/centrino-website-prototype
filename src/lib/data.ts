@@ -25,6 +25,9 @@ import {
   LineChart,
   UserCog,
   Repeat,
+  Wallet,
+  Receipt,
+  Calculator,
 } from 'lucide-react';
 import { SmsIcon } from '@/components/icons';
 
@@ -34,13 +37,25 @@ export interface Service {
   icon: LucideIcon;
   shortDescription: string;
   fullDescription: string;
-  features: string[];
+  features: (string | FeatureDetail)[];
   imageUrl?: string;
   subTitle?: string;
   subDescription?: string;
   mobileBankingFeatures?: MobileBankingFeature[];
   agencyBankingFeatures?: AgencyBankingFeature[];
   smsCommunicationFeatures?: SmsCommunicationFeature[];
+  membersPortalFeatures?: MembersPortalFeature[];
+}
+
+export interface FeatureDetail {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}
+
+export interface MembersPortalFeature {
+  title: string;
+  description: string;
 }
 
 export interface MobileBankingFeature {
@@ -262,7 +277,7 @@ export const services: Service[] = [
     slug: 'e-board',
     title: 'E-Board',
     icon: Users,
-    shortDescription: '',
+    shortDescription: 'A software solution designed to enhance the efficiency and collaboration of corporate or organizational boards. It facilitates digital document management, meeting scheduling, secure access controls, electroni...',
     fullDescription: 'Facilitate seamless and secure board meetings with our E-Board solution. This digital platform allows board members to access meeting materials, collaborate, and make decisions in a secure, centralized, and paperless environment.',
     features: ['A software solution designed to enhance the efficiency and collaboration of corporate or organizational boards. It facilitates digital document management, meeting scheduling, secure access controls, electroni...'],
     imageUrl: '/E-Board.png',
@@ -271,7 +286,7 @@ export const services: Service[] = [
     slug: 'performance-management-system',
     title: 'Performance Management System',
     icon: BrainCircuit,
-    shortDescription: '',
+    shortDescription: 'A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and Measurable objectives. Providing...',
     fullDescription: 'A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and measurable objectives, providing continuous feedback, conducting regular performance assessments, and fostering employee development. Recognition and rewards are used to motivate high performance, and data-driven insights guide decision-making. The system aims to engage employees, encourage continuous improvement, and enhance overall organizational effectiveness.',
     features: ['A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and Measurable objectives. Providing...'],
     imageUrl: '/Perf-M-S.png',
@@ -282,8 +297,38 @@ export const services: Service[] = [
     icon: UserCog,
     shortDescription: 'Portal for members.',
     fullDescription: 'Provide your members with a dedicated online portal to access their accounts, view statements, apply for services, and interact with your institution. Our Members Portal enhances member satisfaction and self-service capabilities.',
-    features: ['Account Access', 'View Statements', 'Apply for Services'],
+    features: [],
     imageUrl: '/Members-Portal.png',
+    membersPortalFeatures: [
+      {
+        title: 'Real-time account updates',
+        description: 'Stay informed with live snapshots of account balances, recent transactions, and detailed account statements.',
+      },
+      {
+        title: 'Loan services',
+        description: 'Explore guaranteed loans, track loan details, including guarantors, and monitor the progress of in-process loan applications.',
+      },
+      {
+        title: 'Track running fixed deposits.',
+        description: '',
+      },
+      {
+        title: 'Alternate channel management',
+        description: 'Stay informed on active alternate channels.',
+      },
+      {
+        title: 'Loan calculator',
+        description: 'Estimate loan repayment amounts and terms effortlessly.',
+      },
+      {
+        title: 'Financial documentation',
+        description: 'Easily download dividend slips for investment-related transactions',
+      },
+      {
+        title: 'Employee services',
+        description: 'Streamline staff administrative processes with digital leave applications and convenient access to digital payslips.',
+      },
+    ]
   },
   {
     slug: 'online-loan-form-submission',
@@ -447,6 +492,7 @@ export const blogPosts: Post[] = [
     
 
     
+
 
 
 

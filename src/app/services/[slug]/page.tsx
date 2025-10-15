@@ -11,6 +11,7 @@
 
 
 
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -214,6 +215,33 @@ const EdmsContent = () => (
     </section>
 );
 
+const MembersPortalContent = ({ service }: { service: any }) => (
+  <section className="py-16 md:py-24 bg-secondary/30">
+    <div className="container">
+      <h2 className="text-3xl font-bold font-headline text-primary mb-12 text-center">
+        Key Features
+      </h2>
+      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {service.membersPortalFeatures.map((feature: any) => (
+          <Card
+            key={feature.title}
+            className="group flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full p-6 bg-card hover:bg-white border-0 border-l-4 border-primary rounded-xl shadow-md"
+          >
+            <CardHeader className="p-0 mb-2">
+              <CardTitle className="font-headline text-xl group-hover:text-primary transition-colors duration-300">
+                {feature.title}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-0 flex-grow">
+              <p className="text-muted-foreground">{feature.description}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 
 export default function ServiceDetailPage({
   params,
@@ -236,6 +264,8 @@ export default function ServiceDetailPage({
         return <SmsCommunicationContent service={service} />;
       case 'edms':
         return <EdmsContent />;
+      case 'members-portal':
+        return <MembersPortalContent service={service} />;
       case 'performance-management-system':
         return (
           <section className="py-16 md:py-24 bg-background">
@@ -285,9 +315,9 @@ export default function ServiceDetailPage({
               <h3 className="text-2xl font-bold font-headline text-primary text-center">
                 Key Features
               </h3>
-              {service.features && service.features.length > 0 && (
+              {service.features && Array.isArray(service.features) && service.features.length > 0 && typeof service.features[0] === 'string' && (
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {service.features.map((feature, index) => {
+                  {(service.features as string[]).map((feature, index) => {
                     const Icon =
                       Object.keys(featureIcons).find((key) =>
                         feature.includes(key)
