@@ -15,6 +15,7 @@
 
 
 
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -340,7 +341,7 @@ export default function ServiceDetailPage({
               </div>
               <div className="relative rounded-lg overflow-hidden aspect-video shadow-lg">
                 <Image
-                  src={service.imageUrl || ''}
+                  src="/PMS.png"
                   alt={service.title}
                   fill
                   className="object-cover"
