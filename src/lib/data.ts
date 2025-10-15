@@ -297,7 +297,10 @@ export const services: Service[] = [
     icon: UserCog,
     shortDescription: 'Portal for members.',
     fullDescription: 'Provide your members with a dedicated online portal to access their accounts, view statements, apply for services, and interact with your institution. Our Members Portal enhances member satisfaction and self-service capabilities.',
-    features: [],
+    features: [
+      'Real-time Account Updates: Stay informed with live snapshots of account balances, recent transactions, and detailed account statements.',
+      'Loan Services: Explore guaranteed loans, track loan...',
+    ],
     imageUrl: '/Members-Portal.png',
     membersPortalFeatures: [
       {
@@ -492,6 +495,7 @@ export const blogPosts: Post[] = [
     
 
     
+
 
 
 
