@@ -100,7 +100,16 @@ export default function AboutPage() {
         >
           <div className="absolute inset-0 bg-primary/80 backdrop-brightness-75"></div>
           <div className="container relative z-10 grid md:grid-cols-2 items-center gap-12 text-primary-foreground">
-            <div className="md:col-start-2">
+            <div className="relative rounded-lg overflow-hidden aspect-[4/3] shadow-lg">
+                <Image
+                    src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1974&auto=format&fit=crop"
+                    alt="Our Vision"
+                    fill
+                    className="object-cover"
+                    data-ai-hint="team vision"
+                />
+            </div>
+            <div>
               <h2 className="text-4xl font-bold font-headline mb-4">
                 Our Vision
               </h2>
