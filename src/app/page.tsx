@@ -324,7 +324,61 @@ export default function Home() {
         </section>
 
         <Partners />
+
+        <section className="py-12 md:py-20 bg-background">
+          <div
+            className="container max-w-6xl mx-auto rounded-lg"
+            style={{
+              backgroundImage: "url('/circuit-board.svg')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <div className="grid md:grid-cols-2 gap-8 items-center bg-secondary/90 p-8 md:p-12 rounded-lg">
+              <div className="space-y-6">
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-primary"></div>
+                  <p className="font-semibold tracking-wider text-sm text-primary uppercase">
+                    Start Work With Us
+                  </p>
+                </div>
+                <h2 className="text-4xl font-bold font-headline">
+                  Your Trusted Financial Technology Partner
+                </h2>
+                <p className="text-muted-foreground">
+                  Emphasize the long-term value Centrino provides with ongoing
+                  support, partnership, and a commitment to your success. From
+                  core banking systems to mobile applications, we deliver
+                  innovative and reliable services to drive your business
+                  forward.
+                </p>
+                <Button asChild size="lg">
+                  <Link href="/contact">Let's Get Started</Link>
+                </Button>
+              </div>
+              <div className="relative rounded-lg overflow-hidden aspect-square">
+                <Image
+                  src="https://images.unsplash.com/photo-1554224155-8d044b3a2613?q=80&w=2070&auto=format&fit=crop"
+                  alt="Man working at computer"
+                  fill
+                  className="object-cover"
+                  data-ai-hint="person working"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="bg-primary text-primary-foreground mt-0">
+            <div className="container max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 text-center py-6 px-8 rounded-b-lg">
+              <p className="font-semibold">Fast 24/7 Customer Service</p>
+              <p className="font-semibold border-t md:border-t-0 md:border-l border-primary-foreground/30 pt-4 md:pt-0">
+                Save time & valuable money
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
 }
+
+    
