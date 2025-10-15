@@ -3,6 +3,7 @@
 
 
 
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -169,6 +170,30 @@ const SmsCommunicationContent = ({service}: {service: any}) => (
   </section>
 );
 
+const EdmsContent = () => (
+    <section className="py-16 md:py-24 bg-background">
+        <div className="container grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+                <h2 className='text-3xl font-bold font-headline'>Electronic Document Management System</h2>
+                <div className='text-muted-foreground space-y-4'>
+                    <p>
+                        a software solution that facilitates the creation, organization, storage, retrieval, and management of digital documents within an organization.
+                    </p>
+                    <p>
+                        It streamlines document-centric processes, enhances collaboration, ensures version control, and promotes secure access to information. Key features include document capture, indexing, workflow automation, versioning, and security protocols.
+                    </p>
+                    <p>
+                        EDMS aims to reduce paper dependency, improve efficiency, and enhance compliance with document-related regulations.
+                    </p>
+                </div>
+            </div>
+            <div className="relative rounded-lg overflow-hidden aspect-video shadow-lg">
+                <Image src="/EDMS.png" alt="Electronic Document Management System" fill className="object-cover" />
+            </div>
+        </div>
+    </section>
+);
+
 
 export default function ServiceDetailPage({
   params,
@@ -189,6 +214,8 @@ export default function ServiceDetailPage({
         return <AgencyBankingContent service={service} />;
       case 'sms-communication':
         return <SmsCommunicationContent service={service} />;
+      case 'edms':
+        return <EdmsContent />;
       default:
         return (
         <section className="py-16 md:py-24 bg-secondary/30">
