@@ -25,6 +25,7 @@ import {
   UserCog,
   Repeat,
 } from 'lucide-react';
+import { SmsIcon } from '@/components/icons';
 
 export interface Service {
   slug: string;
@@ -212,7 +213,7 @@ export const services: Service[] = [
       {
         title: 'Bulk Message Sending Capabilities',
         description: 'Ability to send many SMS messages to multiple recipients at once.',
-        icon: MessageSquarePlus,
+        icon: SmsIcon,
       },
       {
         title: 'Scheduled Messaging',
