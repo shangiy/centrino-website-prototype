@@ -4,6 +4,7 @@ import { Building, Gem, Target, Users } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import StatsCounter from '@/components/stats-counter';
+import Testimonials from '@/components/testimonials';
 
 const stats = [
   { value: '10+', label: 'Years of Experience' },
@@ -171,6 +172,7 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <Testimonials />
 
         {/* CTA Section */}
         <section className="bg-secondary text-foreground">
