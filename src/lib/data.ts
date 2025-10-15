@@ -251,7 +251,7 @@ export const services: Service[] = [
     slug: 'edms',
     title: 'EDMS',
     icon: FileTextIcon,
-    shortDescription: 'Electronic Document Management System.',
+    shortDescription: 'a software solution that facilitates the creation, organization, storage, retrieval, and management of digital documents within an organization.',
     fullDescription: 'Go paperless and streamline your operations with our Electronic Document Management System (EDMS). Securely store, organize, and retrieve all your critical documents digitally, improving efficiency and reducing physical storage costs.',
     features: [
       'a software solution that facilitates the creation, organization, storage, retrieval, and management of digital documents within an organization.',
@@ -262,7 +262,7 @@ export const services: Service[] = [
     slug: 'e-board',
     title: 'E-Board',
     icon: Users,
-    shortDescription: 'Digital board solutions.',
+    shortDescription: 'A software solution designed to enhance the efficiency and collaboration of corporate or organizational boards. It facilitates digital document management, meeting scheduling, secure access controls, and electronic voting.',
     fullDescription: 'Facilitate seamless and secure board meetings with our E-Board solution. This digital platform allows board members to access meeting materials, collaborate, and make decisions in a secure, centralized, and paperless environment.',
     features: ['Secure Meeting Materials', 'Digital Collaboration', 'Paperless Meetings'],
   },
