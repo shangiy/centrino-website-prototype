@@ -529,7 +529,7 @@ export const blogPosts: Post[] = [
   {
     slug: 'building-resilient-web-applications',
     title: 'The Principles of Building Resilient Web Applications',
-    author: 'Maria Garcia',
+    author: 'Mushangi Patrick',
     date: '2024-06-28',
     imageId: 'blog-post-2',
     excerpt:
@@ -565,6 +565,7 @@ export const blogPosts: Post[] = [
     
 
     
+
 
 
 
