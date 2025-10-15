@@ -4,6 +4,7 @@
 
 
 
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -24,6 +25,19 @@ import {
   Server,
   User,
   Fingerprint,
+  PiggyBank,
+  HandCoins,
+  DollarSign,
+  UserCheck,
+  UserPlus,
+  CreditCard,
+  Contact,
+  MessageSquarePlus,
+  CalendarClock,
+  LineChart,
+  UserCog,
+  Code,
+  Repeat,
 } from 'lucide-react';
 import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
@@ -322,7 +336,7 @@ export default function ServiceDetailPage({
         <div className="container relative z-10 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-8">
             <div>
                  <h2 className="text-3xl md:text-4xl font-bold font-headline">
-                    Whether It’s Small Apps Or Larger Cloud-based Applications, We Have The Requisite Experience And Expertise
+                    Ready to Partner with Us?
                 </h2>
             </div>
             <Button asChild variant="secondary" size="lg" className="rounded-full font-bold shrink-0">
