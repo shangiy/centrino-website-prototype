@@ -28,6 +28,13 @@ import {
   Wallet,
   Receipt,
   Calculator,
+  FileCheck,
+  FileDigit,
+  DatabaseZap,
+  LockKeyhole,
+  SmartphoneNfc,
+  Layers,
+  FileUp,
 } from 'lucide-react';
 import { SmsIcon } from '@/components/icons';
 
@@ -45,6 +52,7 @@ export interface Service {
   agencyBankingFeatures?: AgencyBankingFeature[];
   smsCommunicationFeatures?: SmsCommunicationFeature[];
   membersPortalFeatures?: MembersPortalFeature[];
+  onlineLoanSubmissionFeatures?: OnlineLoanSubmissionFeature[];
 }
 
 export interface FeatureDetail {
@@ -56,6 +64,12 @@ export interface FeatureDetail {
 export interface MembersPortalFeature {
   title: string;
   description: string;
+}
+
+export interface OnlineLoanSubmissionFeature {
+    title: string;
+    description: string;
+    icon: LucideIcon;
 }
 
 export interface MobileBankingFeature {
@@ -286,16 +300,16 @@ export const services: Service[] = [
     slug: 'performance-management-system',
     title: 'Performance Management System',
     icon: BrainCircuit,
-    shortDescription: 'A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and Measurable objectives. Providing...',
+    shortDescription: 'A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and measurable objectives, providing...',
     fullDescription: 'A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and measurable objectives, providing continuous feedback, conducting regular performance assessments, and fostering employee development. Recognition and rewards are used to motivate high performance, and data-driven insights guide decision-making. The system aims to engage employees, encourage continuous improvement, and enhance overall organizational effectiveness.',
-    features: ['A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and Measurable objectives. Providing...'],
-    imageUrl: '/Perf-M-S.png',
+    features: ['A Performance Management System is a strategic approach to aligning individual and team performance with organizational goals. It involves setting clear and measurable objectives. Providing...'],
+    imageUrl: '/PMS.png',
   },
   {
     slug: 'members-portal',
     title: 'Members Portal',
     icon: UserCog,
-    shortDescription: 'Portal for members.',
+    shortDescription: 'Real-time account updates, Loan services, Track running fixed deposits.',
     fullDescription: 'Provide your members with a dedicated online portal to access their accounts, view statements, apply for services, and interact with your institution. Our Members Portal enhances member satisfaction and self-service capabilities.',
     features: [
       'Real-time Account Updates: Stay informed with live snapshots of account balances, recent transactions, and detailed account statements.',
@@ -337,11 +351,63 @@ export const services: Service[] = [
     slug: 'online-loan-form-submission',
     title: 'Online Loan Form Submission',
     icon: FileTextIcon,
-    shortDescription: 'Easy online loan applications.',
+    shortDescription: 'Streamlined Onboarding, Digital Forms, Document Submission...',
     fullDescription: 'Simplify the loan application process with our online submission system. Customers can apply for loans from anywhere, at any time, through a user-friendly digital form, reducing paperwork and speeding up approval times.',
     features: [
       'Streamlined Onboarding: Effortlessly bring new members into the system through a simplified and efficient online onboarding process.',
       'Digital Forms: Utilize online forms to...'
+    ],
+    onlineLoanSubmissionFeatures: [
+      {
+        title: "Streamlined Onboarding",
+        description: "Effortlessly bring new members into the system through a simplified and efficient online onboarding process.",
+        icon: UserPlus
+      },
+      {
+        title: "Digital Forms",
+        description: "Utilize online forms to gather necessary information from new members, eliminating the need for paper-based processes.",
+        icon: FileDigit
+      },
+      {
+        title: "Document Submission",
+        description: "Enable members to submit required documents electronically, reducing manual paperwork and expediting the onboarding timeline.",
+        icon: FileUp
+      },
+      {
+        title: "Automated Verification",
+        description: "Implement automated verification processes to ensure accuracy and completeness of member information.",
+        icon: FileCheck
+      },
+      {
+        title: "Secure Data Transmission",
+        description: "Ensure the security of member data during the online onboarding process through encrypted and protected data transmission channels.",
+        icon: LockKeyhole
+      },
+      {
+        title: "User-Friendly Interface",
+        description: "Provide a user-friendly interface for members to navigate the online onboarding system easily.",
+        icon: Users
+      },
+      {
+        title: "Real-time Updates",
+        description: "Keep members informed about the onboarding progress with real-time updates and notifications.",
+        icon: CalendarClock
+      },
+      {
+        title: "Compliance Integration",
+        description: "Integrate compliance checks and validations into the onboarding system to adhere to regulatory requirements.",
+        icon: CheckCircle
+      },
+      {
+        title: "Mobile Accessibility",
+        description: "Enable members to complete the onboarding process using mobile devices for added convenience and flexibility.",
+        icon: SmartphoneNfc
+      },
+      {
+        title: "Seamless Integration",
+        description: "Integrate the online member onboarding system with other relevant platforms and databases within the organization.",
+        icon: DatabaseZap
+      }
     ],
     imageUrl: '/Online Loan Form Submission.png',
   },
@@ -499,6 +565,7 @@ export const blogPosts: Post[] = [
     
 
     
+
 
 
 
