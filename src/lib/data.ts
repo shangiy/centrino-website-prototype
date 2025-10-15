@@ -340,6 +340,7 @@ export const services: Service[] = [
     shortDescription: 'Easy online loan applications.',
     fullDescription: 'Simplify the loan application process with our online submission system. Customers can apply for loans from anywhere, at any time, through a user-friendly digital form, reducing paperwork and speeding up approval times.',
     features: ['Digital Loan Forms', '24/7 Accessibility', 'Faster Approvals'],
+    imageUrl: '/Online Loan Form Submission.png',
   },
   {
     slug: 'e-guarantorship',
@@ -495,6 +496,7 @@ export const blogPosts: Post[] = [
     
 
     
+
 
 
 
