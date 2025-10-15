@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { useScroll, useTransform, motion } from 'framer-motion';
+import Image from 'next/image';
 
 const stats = [
   { value: 100, label: 'Projects' },
@@ -25,15 +27,38 @@ function Counter({ to }: { to: number }) {
 }
 
 export default function StatsCounter() {
-  const { ref, inView } = useInView({
+  const { ref: inViewRef, inView } = useInView({
     threshold: 0.5,
     triggerOnce: true,
   });
 
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start end', 'end start'],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ['-20%', '20%']);
+
+
   return (
-    <section ref={ref} className="relative py-20 bg-fixed bg-cover bg-center" style={{ backgroundImage: "url('/parallax-bg.png')" }}>
+    <section 
+        ref={sectionRef} 
+        className="relative py-20 overflow-hidden"
+    >
+        <motion.div 
+            className="absolute inset-0 z-0"
+            style={{ y }}
+        >
+            <Image
+                src="/parallax-bg.png"
+                alt="Parallax background"
+                fill
+                className="object-cover"
+                quality={100}
+            />
+      </motion.div>
       <div className="absolute inset-0 bg-primary/70 backdrop-blur-sm"></div>
-      <div className="container relative text-primary-foreground">
+      <div ref={inViewRef} className="container relative text-primary-foreground">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {stats.map((stat) => (
             <div key={stat.label}>
