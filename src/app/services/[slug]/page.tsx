@@ -1,4 +1,5 @@
 
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -24,7 +25,7 @@ import {
 import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export async function generateStaticParams() {
@@ -107,32 +108,30 @@ const MobileBankingContent = ({ service }: { service: any }) => (
   </div>
 );
 
-const AgencyBankingContent = ({ service }: { service: any }) => (
+const AgencyBankingContent = () => (
   <section className="py-16 md:py-24 bg-secondary/30">
     <div className="container">
-      <div className="grid md:grid-cols-3 gap-8">
-        {service.agencyBankingFeatures.map((feature: any, index: number) => {
-          const Icon = feature.icon;
-          return (
-            <Card
-              key={index}
-              className="bg-card border-l-4 border-primary rounded-xl shadow-lg p-8 text-left group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
-            >
-              <CardContent className="p-0 flex flex-col items-start gap-4">
-                <div className="bg-primary/10 text-primary rounded-full p-4">
-                  <Icon className="w-10 h-10" />
-                </div>
-                <h3 className="font-bold font-headline text-xl text-foreground">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground text-base">
-                  {feature.description}
-                </p>
-              </CardContent>
-            </Card>
-          );
-        })}
-      </div>
+       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => (
+            <Link href={`/services/${service.slug}`} key={service.slug}>
+              <Card className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full">
+                <CardHeader className="flex-row items-center gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full text-primary">
+                    <service.icon className="w-8 h-8" />
+                  </div>
+                  <CardTitle className="font-headline text-xl">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-muted-foreground">
+                    {service.shortDescription}
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </div>
     </div>
   </section>
 );
@@ -154,7 +153,7 @@ export default function ServiceDetailPage({
       case 'mobile-banking':
         return <MobileBankingContent service={service} />;
       case 'agency-banking':
-        return <AgencyBankingContent service={service} />;
+        return <AgencyBankingContent />;
       default:
         return (
         <section className="py-16 md:py-24 bg-secondary/30">
@@ -221,7 +220,7 @@ export default function ServiceDetailPage({
   return (
     <div>
       {/* Hero Section */}
-       <section className="relative h-[60vh] min-h-[400px] w-full flex items-center justify-start text-white bg-cover bg-center bg-fixed"
+       <section className="relative h-screen w-full flex items-center justify-start text-white bg-cover bg-center bg-fixed"
         style={{ backgroundImage: `url(${service.imageUrl || `https://picsum.photos/seed/${service.slug}/1200/800`})` }}>
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 container">
