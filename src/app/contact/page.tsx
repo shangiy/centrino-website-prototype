@@ -69,7 +69,7 @@ export default function ContactPage() {
       </div>
       <section>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.831358913926!2d36.80733831526489!3d-1.27402699907143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17540a776567%3A0x49909723223883a8!2sMitsumi%20Business%20Park!5e0!3m2!1sen!2ske!4v1688622142250!5m2!1sen!2ske"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.831358913926!2d36.80733831526489!3d-1.27402699907143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17540a776567%3A0x8e8334418f158957!2sCentrino%20Technologies%20Limited!5e0!3m2!1sen!2ske!4v1688622142250!5m2!1sen!2ske"
           width="100%"
           height="450"
           style={{ border: 0 }}
