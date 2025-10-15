@@ -18,9 +18,6 @@ import {
   Globe,
   Smartphone,
   Server,
-  HandCoins,
-  FileTextIcon,
-  PiggyBank,
 } from 'lucide-react';
 import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
@@ -108,29 +105,30 @@ const MobileBankingContent = ({ service }: { service: any }) => (
   </div>
 );
 
-const AgencyBankingContent = () => (
+const AgencyBankingContent = ({service}: {service: any}) => (
   <section className="py-16 md:py-24 bg-secondary/30">
     <div className="container">
        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <Link href={`/services/${service.slug}`} key={service.slug}>
-              <Card className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full">
-                <CardHeader className="flex-row items-center gap-4">
-                  <div className="bg-primary/10 p-3 rounded-full text-primary">
-                    <service.icon className="w-8 h-8" />
+          {service.agencyBankingFeatures.map((feature: any) => {
+            const Icon = feature.icon
+            return (
+              <Card key={feature.title} className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full p-6 text-center items-center bg-card border-0 border-l-4 border-primary rounded-xl shadow-md group">
+                  <div className="bg-primary/10 text-primary rounded-full p-3 mb-4">
+                    <Icon className="w-8 h-8" />
                   </div>
+                <CardHeader className="p-0 mb-2">
                   <CardTitle className="font-headline text-xl">
-                    {service.title}
+                    {feature.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="flex-grow">
+                <CardContent className="p-0 flex-grow">
                   <p className="text-muted-foreground">
-                    {service.shortDescription}
+                    {feature.description}
                   </p>
                 </CardContent>
               </Card>
-            </Link>
-          ))}
+            )
+          })}
         </div>
     </div>
   </section>
@@ -153,7 +151,7 @@ export default function ServiceDetailPage({
       case 'mobile-banking':
         return <MobileBankingContent service={service} />;
       case 'agency-banking':
-        return <AgencyBankingContent />;
+        return <AgencyBankingContent service={service} />;
       default:
         return (
         <section className="py-16 md:py-24 bg-secondary/30">
@@ -220,8 +218,17 @@ export default function ServiceDetailPage({
   return (
     <div>
       {/* Hero Section */}
-       <section className="relative h-screen w-full flex items-center justify-start text-white bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: `url(${service.imageUrl || `https://picsum.photos/seed/${service.slug}/1200/800`})` }}>
+       <section className="relative h-screen w-full flex items-center justify-start text-white"
+        >
+        <div className="absolute inset-0">
+             <Image 
+                src={service.imageUrl || `https://picsum.photos/seed/${service.slug}/1200/800`} 
+                alt={service.title} 
+                fill
+                className="object-cover"
+                priority
+            />
+        </div>
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 container">
             <div className='max-w-xl'>
