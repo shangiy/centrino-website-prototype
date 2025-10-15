@@ -16,6 +16,8 @@ const partners = [
   { src: '/safaricom-P.png', alt: 'Safaricom Logo' },
   { src: '/pycs-P.png', alt: 'Pycs Logo' },
   { src: '/comztech-P.png', alt: 'Comztech Logo' },
+  { src: '/presta.png', alt: 'Presta Logo' },
+  { src: '/serianu.png', alt: 'Serianu Logo' },
 ];
 
 export default function Partners() {
