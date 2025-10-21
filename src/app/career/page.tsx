@@ -116,12 +116,12 @@ export default function CareerPage() {
       </section>
 
       {/* Perks Section */}
-        <section className="py-20 md:py-28 bg-secondary">
+        <section className="py-20 md:py-28 bg-secondary/30">
           <div className="container text-center">
-            <h2 className="text-3xl font-bold font-headline mb-12">Why You'll Love Working Here</h2>
+            <h2 className="text-3xl font-bold font-headline mb-12">Perks of Working with Us</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {perks.map((perk, index) => (
-                    <div key={index} className="flex flex-col items-center text-center">
+                    <div key={index} className="flex flex-col items-center text-center p-6 bg-card rounded-lg shadow-md border border-primary/10">
                         <div className="bg-primary/10 text-primary p-4 rounded-full mb-4">
                             <perk.icon className="w-8 h-8" />
                         </div>
