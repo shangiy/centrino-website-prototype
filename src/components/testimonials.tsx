@@ -85,7 +85,7 @@ export default function Testimonials() {
   );
 
   return (
-    <section className="pt-12 pb-20 md:pb-28 bg-background overflow-hidden">
+    <section className="py-20 bg-background overflow-hidden">
       <div className="container relative">
         <div className="flex items-center gap-8 mb-12">
             <CircuitIcon className="text-primary hidden md:block flex-shrink-0" />
@@ -138,7 +138,7 @@ export default function Testimonials() {
               </CarouselItem>
             ))}
           </CarouselContent>
-           <div className="absolute -bottom-10 right-1/2 translate-x-1/2 md:right-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:translate-x-8 flex items-center gap-2">
+           <div className="absolute -bottom-10 right-0 left-0 md:left-auto md:right-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:translate-x-8 flex items-center justify-center md:justify-start gap-2">
             <CarouselPrevious className="static translate-y-0" />
             <CarouselNext className="static translate-y-0" />
           </div>
