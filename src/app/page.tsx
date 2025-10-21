@@ -146,21 +146,26 @@ export default function Home() {
                       className="md:basis-1/2 lg:basis-1/3"
                     >
                       <div className="p-1 h-full">
-                        <Card className="flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-primary/20 bg-card transition-all duration-300 group hover:shadow-2xl">
-                          <div className="relative w-full aspect-video overflow-hidden">
-                            <Image
-                              src={service.imageUrl || `https://picsum.photos/seed/${service.slug}/400/300`}
-                              alt={service.title}
-                              fill
-                              className="object-cover transition-transform duration-300 group-hover:scale-105"
-                              data-ai-hint="business technology"
-                            />
-                          </div>
-                          <CardContent className="p-6 flex flex-col flex-grow items-start text-left w-full">
-                              <h3 className="text-xl font-bold font-headline text-foreground group-hover:text-primary transition-colors w-full">
-                                {service.title}
-                              </h3>
-                              <p className="text-sm text-muted-foreground mt-2 flex-grow">
+                        <Card className="group flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border-none bg-card transition-all duration-300 hover:shadow-2xl">
+                          <Link href={`/services/${service.slug}`} className="block group">
+                              <div className="relative w-full aspect-video overflow-hidden rounded-t-2xl">
+                                <Image
+                                  src={service.imageUrl || `https://picsum.photos/seed/${service.slug}/400/300`}
+                                  alt={service.title}
+                                  fill
+                                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                  data-ai-hint="business technology"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                                <div className="absolute bottom-0 left-0 p-6">
+                                    <h3 className="text-2xl font-bold font-headline text-white">
+                                      {service.title}
+                                    </h3>
+                                </div>
+                              </div>
+                          </Link>
+                          <CardContent className="p-6 flex flex-col flex-grow">
+                              <p className="text-muted-foreground mt-2 flex-grow">
                                 {service.shortDescription}
                               </p>
                               <Button asChild className="mt-4 rounded-full">
@@ -308,14 +313,14 @@ export default function Home() {
 
         <section className="py-12 md:py-20 bg-background">
           <div
-            className="container max-w-6xl mx-auto rounded-lg"
+            className="container max-w-6xl mx-auto rounded-lg overflow-hidden"
             style={{
               backgroundImage: "url('/circuit-board.svg')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
-            <div className="grid md:grid-cols-2 gap-8 items-center bg-secondary/90 p-8 md:p-12 rounded-lg">
+            <div className="grid md:grid-cols-2 gap-8 items-center bg-secondary/90 p-8 md:p-12">
               <div className="space-y-6">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-primary"></div>
@@ -347,33 +352,17 @@ export default function Home() {
                 />
               </div>
             </div>
-          </div>
-          <div className="bg-primary text-primary-foreground mt-0">
-            <div className="container max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 text-center py-6 px-8 rounded-b-lg">
-              <p className="font-semibold">Fast 24/7 Customer Service</p>
-              <p className="font-semibold border-t md:border-t-0 md:border-l border-primary-foreground/30 pt-4 md:pt-0">
-                Save time & valuable money
-              </p>
+             <div className="bg-primary text-primary-foreground">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center py-6 px-8">
+                <p className="font-semibold">Fast 24/7 Customer Service</p>
+                <p className="font-semibold border-t md:border-t-0 md:border-l border-primary-foreground/30 pt-4 md:pt-0">
+                  Save time & valuable money
+                </p>
+              </div>
             </div>
           </div>
         </section>
       </main>
     </div>
   );
-
-    
-
-
-
-
-
-
-    
-
-
-
-    
-
-    
-
-
+}
