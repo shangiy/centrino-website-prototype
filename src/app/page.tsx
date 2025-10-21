@@ -21,6 +21,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import React from 'react';
 import Testimonials from '@/components/testimonials';
 import Partners from '@/components/partners';
+import { RevolvingGlobeIcon } from '@/components/icons';
 
 export default function Home() {
   const plugin = React.useRef(
@@ -49,7 +50,10 @@ export default function Home() {
                 <div className='w-2 h-2 bg-primary' />
                 <p>WELCOME TO CENTRINO TECHNOLOGIES</p>
               </div>
-              <p className="text-sm text-muted-foreground text-center md:text-left -mt-4">www.centrino.co.ke</p>
+              <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-muted-foreground -mt-4">
+                <RevolvingGlobeIcon />
+                <span>www.centrino.co.ke</span>
+              </div>
               <h1 className="text-5xl md:text-6xl font-bold leading-tight">
                 Smarter Tech Solutions for <span className='text-primary'>Financial Institutions</span>
               </h1>
