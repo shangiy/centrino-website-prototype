@@ -146,30 +146,28 @@ export default function Home() {
                       className="md:basis-1/2 lg:basis-1/3"
                     >
                       <div className="p-1 h-full">
-                        <Link href={`/services/${service.slug}`} className="block group h-full">
-                          <Card className="flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-primary/20 bg-card transition-all duration-300 group-hover:shadow-2xl">
-                            <div className="relative w-full aspect-video overflow-hidden">
-                              <Image
-                                src={service.imageUrl || `https://picsum.photos/seed/${service.slug}/400/300`}
-                                alt={service.title}
-                                fill
-                                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                data-ai-hint="business technology"
-                              />
-                            </div>
-                            <CardContent className="p-6 flex flex-col flex-grow items-start text-left w-full">
-                                <h3 className="text-xl font-bold font-headline text-foreground group-hover:text-primary transition-colors w-full">
-                                  {service.title}
-                                </h3>
-                                <p className="text-sm text-muted-foreground mt-2 flex-grow">
-                                  {service.shortDescription}
-                                </p>
-                                <Button asChild className="mt-4 rounded-full">
-                                  <Link href={`/services/${service.slug}`}>Learn More</Link>
-                                </Button>
-                            </CardContent>
-                          </Card>
-                        </Link>
+                        <Card className="flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-primary/20 bg-card transition-all duration-300 group hover:shadow-2xl">
+                          <div className="relative w-full aspect-video overflow-hidden">
+                            <Image
+                              src={service.imageUrl || `https://picsum.photos/seed/${service.slug}/400/300`}
+                              alt={service.title}
+                              fill
+                              className="object-cover transition-transform duration-300 group-hover:scale-105"
+                              data-ai-hint="business technology"
+                            />
+                          </div>
+                          <CardContent className="p-6 flex flex-col flex-grow items-start text-left w-full">
+                              <h3 className="text-xl font-bold font-headline text-foreground group-hover:text-primary transition-colors w-full">
+                                {service.title}
+                              </h3>
+                              <p className="text-sm text-muted-foreground mt-2 flex-grow">
+                                {service.shortDescription}
+                              </p>
+                              <Button asChild className="mt-4 rounded-full">
+                                <Link href={`/services/${service.slug}`}>Learn More</Link>
+                              </Button>
+                          </CardContent>
+                        </Card>
                       </div>
                     </CarouselItem>
                   ))}
@@ -336,5 +334,7 @@ export default function Home() {
     
 
 
+
+    
 
     
