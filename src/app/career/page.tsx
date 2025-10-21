@@ -9,33 +9,6 @@ import { Badge } from '@/components/ui/badge';
 import { Briefcase, Building, Code, Cpu, ExternalLink, GraduationCap, MapPin, Palette, Rocket, Users, Zap, Upload, File as FileIcon, X } from 'lucide-react';
 import React, { useState } from 'react';
 
-const openPositions = [
-  {
-    title: 'Senior Frontend Developer',
-    location: 'Nairobi, Kenya',
-    type: 'Full-time',
-    category: 'Engineering',
-    icon: Code,
-    description: 'We are looking for an experienced Frontend Developer to build and maintain our web applications. You will work with modern technologies like React, Next.js, and TypeScript.'
-  },
-  {
-    title: 'Lead Backend Engineer',
-    location: 'Remote',
-    type: 'Full-time',
-    category: 'Engineering',
-    icon: Cpu,
-    description: 'Join our team to lead the development of our scalable backend systems. Expertise in Node.js, GraphQL, and microservices is required.'
-  },
-  {
-    title: 'UI/UX Designer',
-    location: 'Nairobi, Kenya',
-    type: 'Contract',
-    category: 'Design',
-    icon: Palette,
-    description: 'Create intuitive and visually appealing interfaces for our suite of products. A strong portfolio in fintech or complex applications is a plus.'
-  },
-];
-
 const perks = [
     {
         icon: Zap,
@@ -156,40 +129,48 @@ export default function CareerPage() {
                   Inquire About Opportunities
                 </Link>
               </Button>
-              <Button
-                variant="outline"
-                className="font-bold border-white text-white hover:bg-white hover:text-primary"
-                size="lg"
-                asChild
-              >
-                <label htmlFor="document-upload" className="cursor-pointer">
-                  <Upload className="mr-2 h-5 w-5" />
-                  Upload Document
-                </label>
-              </Button>
-              <input type="file" id="document-upload" className="hidden" onChange={handleFileChange} />
             </div>
-             {selectedFile && (
-              <div className="mt-4 p-3 bg-white/10 rounded-lg flex items-center justify-between text-sm">
-                <div className="flex items-center gap-2">
-                  <FileIcon className="w-5 h-5" />
-                  <span className="font-medium truncate">{selectedFile.name}</span>
-                </div>
-                <label htmlFor="document-upload" className="cursor-pointer text-white hover:underline font-semibold ml-4">
-                    Change
-                </label>
+            
+          </div>
+           <div className="flex flex-col gap-4">
+              <div className="relative rounded-lg overflow-hidden aspect-video shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop"
+                  alt="Students learning"
+                  fill
+                  className="object-cover"
+                  data-ai-hint="students learning"
+                />
               </div>
-            )}
-          </div>
-           <div className="relative rounded-lg overflow-hidden aspect-video shadow-lg">
-            <Image
-              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop"
-              alt="Students learning"
-              fill
-              className="object-cover"
-              data-ai-hint="students learning"
-            />
-          </div>
+              <div className='bg-black/20 p-6 rounded-lg text-center'>
+                  <p className='mb-4 text-primary-foreground/90'>
+                    You can drop your resume, attachment documents, university logbook, and national ID here.
+                  </p>
+                  <Button
+                    variant="outline"
+                    className="font-bold border-white text-white hover:bg-white hover:text-primary w-full"
+                    size="lg"
+                    asChild
+                  >
+                    <label htmlFor="document-upload" className="cursor-pointer">
+                      <Upload className="mr-2 h-5 w-5" />
+                      Upload Document
+                    </label>
+                  </Button>
+                  <input type="file" id="document-upload" className="hidden" onChange={handleFileChange} />
+                  {selectedFile && (
+                  <div className="mt-4 p-3 bg-white/10 rounded-lg flex items-center justify-between text-sm">
+                    <div className="flex items-center gap-2">
+                      <FileIcon className="w-5 h-5" />
+                      <span className="font-medium truncate">{selectedFile.name}</span>
+                    </div>
+                    <label htmlFor="document-upload" className="cursor-pointer text-white hover:underline font-semibold ml-4">
+                        Change
+                    </label>
+                  </div>
+                )}
+              </div>
+            </div>
         </div>
       </section>
 
