@@ -100,7 +100,7 @@ export default function Home() {
               className="h-full w-full"
             >
               <path
-                d="M0,64 C240,110,480,20,720,64 C960,108,1200,20,1440,64"
+                d="M0,80 C240,150,480,-20,720,80 C960,180,1200,-20,1440,80"
                 fill="currentColor"
                 stroke="none"
               />
@@ -113,7 +113,7 @@ export default function Home() {
               className="h-full w-full"
             >
               <path
-                d="M0,80 C200,20,400,100,720,80 C1040,60,1240,120,1440,80"
+                d="M0,90 C200,-10,400,160,720,90 C1040,20,1240,180,1440,90"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
