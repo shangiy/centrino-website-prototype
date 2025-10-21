@@ -77,9 +77,9 @@ export default function Home() {
                   mass: 1,
                   y: {
                     type: "tween",
-                    ease: [0.3, 1.2, 0.9, 1.05, 0.95, 1.02, 0.98, 1],
+                    ease: [0.3, 1.2, 0.9, 1.05],
                     duration: 1.8,
-                    times: [0, 0.2, 0.4, 0.6, 0.75, 0.85, 0.95, 1]
+                    times: [0, 0.4, 0.75, 1]
                   }
                 }}
                 className="hidden md:flex justify-center items-center"
@@ -98,12 +98,12 @@ export default function Home() {
           </div>
           <div className="absolute bottom-0 left-0 w-full h-20 text-accent overflow-hidden">
             <svg viewBox="0 0 1440 100" preserveAspectRatio="none" className="h-full w-full">
-              <path d="M0,60 C200,20,400,120,720,60 C1040,0,1240,120,1440,60 V100 H0 Z" fill="currentColor" />
+              <path d="M0,70 C240,10,480,110,720,70 C960,10,1200,110,1440,70 V100 H0 Z" fill="currentColor" />
             </svg>
           </div>
           <div className="absolute bottom-0 left-0 w-full h-20 text-primary/30 overflow-hidden">
             <svg viewBox="0 0 1440 100" preserveAspectRatio="none" className="h-full w-full">
-              <path d="M0,70 C240,10,480,110,720,70 C960,10,1200,110,1440,70 V100 H0 Z" fill="currentColor" />
+              <path d="M0,80 C200,20,400,120,720,80 C1040,20,1240,120,1440,80 V100 H0 Z" fill="currentColor" />
             </svg>
           </div>
         </section>
@@ -370,9 +370,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-    
-
-    
-
