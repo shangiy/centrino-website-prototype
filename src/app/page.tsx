@@ -180,6 +180,43 @@ export default function Home() {
         </section>
 
         <StatsCounter />
+
+        <section className="py-20 md:py-28 bg-background">
+          <div className="container grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold font-headline">
+                Empowering Financial Success Through Technology
+              </h2>
+              <h3 className="text-xl font-bold">Our Expertise</h3>
+              <p className="text-muted-foreground">
+                Centrino Technologies, specializes in empowering financial
+                institutions, particularly Microfinance Institutions (MFIs) and
+                Savings, Credit Cooperatives (SACCOs), and various financial
+                institutions with cutting-edge technology solutions.
+              </p>
+              <ul className="space-y-3">
+                {expertiseItems.map((item, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-primary flex-shrink-0" />
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button asChild>
+                <Link href="/about">Discover More</Link>
+              </Button>
+            </div>
+            <div className="relative rounded-lg overflow-hidden aspect-video shadow-xl">
+              <Image
+                src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?q=80&w=2070&auto=format&fit=crop"
+                alt="Technician working in a server room"
+                fill
+                className="object-cover"
+                data-ai-hint="technician server room"
+              />
+            </div>
+          </div>
+        </section>
         
         <Testimonials />
 
