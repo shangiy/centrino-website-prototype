@@ -310,13 +310,14 @@ export default function Home() {
         <section className="py-12 md:py-20 bg-background">
           <div
             className="container max-w-6xl mx-auto rounded-lg overflow-hidden"
-            style={{
-              backgroundImage: "url('/circuit-board.svg')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
           >
-            <div className="grid md:grid-cols-2 gap-8 items-center bg-secondary/90 p-8 md:p-12">
+             <div className="grid md:grid-cols-2 gap-8 items-center bg-secondary/90 p-8 md:p-12"
+                 style={{
+                    backgroundImage: "url('/circuit-board.svg')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+             >
               <div className="space-y-6">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-primary"></div>
