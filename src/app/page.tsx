@@ -77,7 +77,7 @@ export default function Home() {
                         stiffness: 100,
                         delay: 0.2
                     }}
-                     className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden"
+                     className="relative w-80 h-80 md:w-96 md:h-96 lg:w-[480px] lg:h-[480px] rounded-full overflow-hidden"
                 >
                     <Image
                     src="/landingpage-image.png"
