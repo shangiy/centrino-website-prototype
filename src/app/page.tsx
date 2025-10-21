@@ -157,14 +157,14 @@ export default function Home() {
                                 data-ai-hint="business technology"
                               />
                             </div>
-                            <CardContent className="p-6 flex flex-col flex-grow items-start text-center w-full">
+                            <CardContent className="p-6 flex flex-col flex-grow items-start text-left w-full">
                                 <h3 className="text-xl font-bold font-headline text-foreground group-hover:text-primary transition-colors w-full">
                                   {service.title}
                                 </h3>
                                 <p className="text-sm text-muted-foreground mt-2 flex-grow">
                                   {service.shortDescription}
                                 </p>
-                                <Button asChild className="mt-4 rounded-full self-center">
+                                <Button asChild className="mt-4 rounded-full">
                                   <Link href={`/services/${service.slug}`}>Learn More</Link>
                                 </Button>
                             </CardContent>
@@ -335,3 +335,6 @@ export default function Home() {
 
     
 
+
+
+    
