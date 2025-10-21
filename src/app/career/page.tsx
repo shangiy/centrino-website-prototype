@@ -112,53 +112,6 @@ export default function CareerPage() {
             </div>
           </div>
         </section>
-
-      {/* Open Positions Section */}
-      <section className="py-20 md:py-28">
-        <div className="container">
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold font-headline">Open Positions</h2>
-            <p className="mt-4 text-muted-foreground">
-              We're always looking for talented people to join our team. Browse our current openings below.
-            </p>
-          </div>
-
-          <div className="mt-16 space-y-8">
-            {openPositions.map((position) => (
-              <Card key={position.title} className="transition-all duration-300 hover:shadow-lg hover:border-primary/30">
-                <CardContent className="p-6 grid md:grid-cols-4 items-center gap-6">
-                    <div className="md:col-span-3">
-                        <div className='flex items-center gap-4 mb-2'>
-                            <position.icon className='w-6 h-6 text-primary' />
-                            <h3 className="text-xl font-bold font-headline hover:text-primary transition-colors">
-                                <Link href="#">{position.title}</Link>
-                            </h3>
-                        </div>
-                        <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-                            <div className="flex items-center gap-2">
-                                <MapPin className="w-4 h-4" />
-                                <span>{position.location}</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Briefcase className="w-4 h-4" />
-                                <span>{position.type}</span>
-                            </div>
-                        </div>
-                        <p className='text-muted-foreground'>{position.description}</p>
-                    </div>
-                    <div className="flex md:justify-end">
-                        <Button asChild>
-                            <Link href="#">
-                            Apply Now <ExternalLink className="ml-2 w-4 h-4" />
-                            </Link>
-                        </Button>
-                    </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
       
       {/* Internships & Attachments Section */}
       <section
