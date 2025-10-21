@@ -62,7 +62,7 @@ export default function Home() {
               </p>
               <Button asChild>
                 <Link
-                  href="/about-us"
+                  href="/about"
                 >
                   Discover More
                 </Link>
@@ -147,8 +147,8 @@ export default function Home() {
                     >
                       <div className="p-1 h-full">
                         <Link href={`/services/${service.slug}`} className="block group h-full">
-                          <Card className="flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border-none bg-card transition-all duration-300 group-hover:shadow-2xl">
-                            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+                          <Card className="flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-primary/20 bg-card transition-all duration-300 group-hover:shadow-2xl">
+                            <div className="relative w-full aspect-video overflow-hidden">
                               <Image
                                 src={service.imageUrl || `https://picsum.photos/seed/${service.slug}/400/300`}
                                 alt={service.title}
@@ -157,16 +157,16 @@ export default function Home() {
                                 data-ai-hint="business technology"
                               />
                             </div>
-                            <CardContent className="p-6 flex flex-col flex-grow items-start">
-                                <h3 className="text-xl font-bold font-headline text-foreground group-hover:text-primary transition-colors">
+                            <CardContent className="p-6 flex flex-col flex-grow items-start text-center w-full">
+                                <h3 className="text-xl font-bold font-headline text-foreground group-hover:text-primary transition-colors w-full">
                                   {service.title}
                                 </h3>
                                 <p className="text-sm text-muted-foreground mt-2 flex-grow">
                                   {service.shortDescription}
                                 </p>
-                                <div className="mt-4 text-primary font-semibold flex items-center gap-2">
-                                    Learn More <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                                </div>
+                                <Button asChild className="mt-4 rounded-full self-center">
+                                  <Link href={`/services/${service.slug}`}>Learn More</Link>
+                                </Button>
                             </CardContent>
                           </Card>
                         </Link>
@@ -174,8 +174,8 @@ export default function Home() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="hidden sm:flex bg-primary text-primary-foreground hover:bg-white hover:text-primary border-primary" />
-                <CarouselNext className="hidden sm:flex bg-primary text-primary-foreground hover:bg-white hover:text-primary border-primary" />
+                <CarouselPrevious className="hidden sm:flex" />
+                <CarouselNext className="hidden sm:flex" />
               </Carousel>
             </div>
           </div>
@@ -334,3 +334,4 @@ export default function Home() {
 
 
     
+

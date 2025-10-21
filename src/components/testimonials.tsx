@@ -138,7 +138,7 @@ export default function Testimonials() {
               </CarouselItem>
             ))}
           </CarouselContent>
-           <div className="absolute -bottom-4 right-1/2 translate-x-1/2 md:right-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:translate-x-0 flex items-center gap-2">
+           <div className="absolute -bottom-10 right-1/2 translate-x-1/2 md:right-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:translate-x-8 flex items-center gap-2">
             <CarouselPrevious className="static translate-y-0" />
             <CarouselNext className="static translate-y-0" />
           </div>
