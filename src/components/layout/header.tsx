@@ -22,7 +22,7 @@ import { services } from '@/lib/data';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/about-us', label: 'About Us' },
+  { href: '/about', label: 'About Us' },
 ];
 
 const trailingNavLinks = [
