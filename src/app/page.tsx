@@ -42,7 +42,7 @@ export default function Home() {
     <div className="bg-background text-foreground">
       <main>
         {/* Hero Section */}
-        <section className="relative w-full overflow-hidden bg-gradient-to-r from-background to-accent text-foreground py-20 md:py-32">
+        <section className="relative w-full overflow-hidden bg-gradient-to-r from-background via-purple-50 to-purple-100 text-foreground py-20 md:py-32">
           <div className="container relative z-10 grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-6 text-center md:text-left">
                <div className='flex items-center gap-2 font-semibold justify-center md:justify-start text-primary'>
@@ -77,7 +77,7 @@ export default function Home() {
                   mass: 1,
                   y: {
                     type: "tween",
-                    ease: [0.3, 1.2, 0.9, 1.05],
+                    ease: [0.3, 0.8, 0.5, 1],
                     duration: 1.8,
                     times: [0, 0.4, 0.75, 1]
                   }
