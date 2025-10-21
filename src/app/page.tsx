@@ -86,7 +86,7 @@ export default function Home() {
               >
                 <div className="relative w-96 h-96 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden shadow-2xl">
                     <Image
-                        src="/landingpage-image.png"
+                        src="/landingpage_image.png"
                         alt="Creative Design"
                         fill
                         className="object-cover"
