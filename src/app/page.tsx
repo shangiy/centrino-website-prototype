@@ -77,13 +77,13 @@ export default function Home() {
                         stiffness: 100,
                         delay: 0.2
                     }}
-                     className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
+                     className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden"
                 >
                     <Image
                     src="/landingpage-image.png"
                     alt="Creative Design"
                     fill
-                    className="object-contain"
+                    className="object-cover"
                     data-ai-hint="abstract design"
                     />
                 </motion.div>
@@ -172,7 +172,7 @@ export default function Home() {
                                  <Link href={`/services/${service.slug}`} className="hover:text-primary transition-colors">{service.title}</Link>
                               </h3>
                               <ul className="space-y-2 text-muted-foreground text-sm">
-                                {service.features.slice(0,3).map((feature) => (
+                                {Array.isArray(service.features) && service.features.slice(0,3).map((feature) => (
                                   <li key={typeof feature === 'string' ? feature : feature.title} className="flex items-start">
                                     <Check className="w-4 h-4 mr-2 mt-1 text-primary flex-shrink-0" />
                                     <span>{typeof feature === 'string' ? feature : feature.title}</span>
@@ -244,7 +244,7 @@ export default function Home() {
           className="relative py-24 md:py-32 bg-cover bg-center bg-fixed text-primary-foreground"
           style={{ backgroundImage: "url('/consultation.png')" }}
         >
-          <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-primary/80"></div>
           <div className="container relative z-10 text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">
               Ready to Transform Your Financial Institution?
