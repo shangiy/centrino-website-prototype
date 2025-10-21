@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Building, Gem, Target, Users } from 'lucide-react';
@@ -39,7 +40,7 @@ export default function AboutPage() {
         <section className="relative py-24 md:py-32 bg-gradient-to-b from-purple-100/30 to-background">
           <div className="container mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight">
-              About Us
+              About Centrino
             </h1>
           </div>
         </section>

@@ -62,7 +62,7 @@ export default function Home() {
               </p>
               <Button asChild>
                 <Link
-                  href="/about"
+                  href="/about-us"
                 >
                   Discover More
                 </Link>
@@ -76,11 +76,12 @@ export default function Home() {
                 }}
                 transition={{
                   y: {
-                    type: 'spring',
-                    stiffness: 100,
+                    type: "spring",
+                    stiffness: 50,
                     damping: 10,
                     mass: 1,
-                    bounce: 0.5,
+                    bounce: 0.25,
+                    velocity: 2
                   },
                   opacity: {
                     duration: 0.5
@@ -370,3 +371,4 @@ export default function Home() {
   );
 
     
+
