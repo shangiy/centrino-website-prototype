@@ -5,6 +5,29 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { services } from '@/lib/data';
 
+const whyChooseUsData = [
+  {
+    title: 'Hiring',
+    description: 'We hire a highly skilled workforce dedicated to staying abreast of the latest industry trends and technological advancements. Our team is committed to providing top-notch services and support to ensure the seamless integration and functioning of our technologies within your financial institution.'
+  },
+  {
+    title: 'Industry Expertise',
+    description: 'With years of specialization in SACCO solutions, we bring unparalleled industry knowledge to every partnership.'
+  },
+  {
+    title: 'Innovation',
+    description: 'Our commitment to continuous investment in cutting-edge technology ensures that our solutions are always at the forefront of industry advancements.'
+  },
+  {
+    title: 'Customer-Centric Approach',
+    description: 'We understand that every SACCO is unique. Our solutions are tailored to meet the specific organizational needs and challenges of each client.'
+  },
+  {
+    title: 'Reliability',
+    description: 'Centrino Technologies Ltd has a proven track record in delivering robust, scalable, and reliable systems that stand the test of time.'
+  }
+];
+
 export default function AboutUsPage() {
   const featuredServices = services.filter(service => 
     ['core-banking', 'mobile-banking', 'agency-banking'].includes(service.slug)
@@ -147,6 +170,33 @@ export default function AboutUsPage() {
             </div>
         </section>
 
+        {/* Why Choose Us Section */}
+        <section className="py-20 md:py-28 bg-background">
+          <div className="container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-headline">
+                Why Choose Centrino Technologies?
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+              {whyChooseUsData.map((item, index) => (
+                <Card 
+                  key={item.title} 
+                  className={`bg-card shadow-lg border-primary/20 p-6 rounded-2xl ${index === 0 ? 'lg:col-span-1' : ''} ${index === 3 ? 'lg:col-span-1' : ''}`}
+                >
+                  <CardHeader>
+                    <CardTitle className="font-headline text-2xl text-primary">{item.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      {item.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
