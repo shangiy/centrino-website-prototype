@@ -181,7 +181,7 @@ export default function Home() {
 
         <StatsCounter />
 
-        <section className="py-20 md:py-28 bg-background">
+        <section className="py-20 bg-background">
           <div className="container grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">
@@ -375,3 +375,4 @@ export default function Home() {
     
 
     
+
