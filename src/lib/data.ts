@@ -187,7 +187,7 @@ export const services: Service[] = [
     shortDescription: 'Engage with your customers effectively through our reliable SMS communication platform.',
     fullDescription: 'Our SMS Communication platform provides a powerful tool for sending transactional alerts, marketing messages, and notifications to your customers. It is reliable, scalable, and easy to integrate.',
     features: ['Transactional Alerts', 'Promotional Messages', 'Two-Way Communication', 'Delivery Reports', 'API Integration'],
-    imageUrl: 'https://images.unsplash.com/photo-1588056094258-2e3a6a12115e?q=80&w=1974&auto=format&fit=crop',
+    imageUrl: '/SMS-Communication.png',
     smsCommunicationFeatures: [
         { title: 'Instant Notifications', description: 'Send real-time SMS alerts for transactions, approvals, and other important events.', icon: MessageSquarePlus },
         { title: 'Scheduled Messaging', description: 'Schedule bulk SMS campaigns for marketing or announcements at the optimal time.', icon: CalendarClock },
@@ -222,7 +222,7 @@ export const services: Service[] = [
     shortDescription: 'Align employee performance with organizational goals with our intuitive PMS.',
     fullDescription: 'Our Performance Management System helps organizations to set goals, track progress, and evaluate employee performance effectively. It fosters a culture of continuous feedback and development, driving business success.',
     features: ['Goal Setting & Tracking', 'Performance Reviews', '360-Degree Feedback', 'Development Plans', 'Reporting & Analytics'],
-    imageUrl: '/Perf-M-S.png'
+    imageUrl: '/PMS.png'
   },
   {
     slug: 'members-portal',
