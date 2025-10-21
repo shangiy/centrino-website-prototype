@@ -76,12 +76,12 @@ export default function Home() {
                 }}
                 transition={{
                   y: {
-                    type: "spring",
+                    type: 'spring',
                     stiffness: 50,
                     damping: 10,
                     mass: 1,
                     bounce: 0.25,
-                    velocity: 2
+                    velocity: 2,
                   },
                   opacity: {
                     duration: 0.5
@@ -371,4 +371,5 @@ export default function Home() {
   );
 
     
+
 
