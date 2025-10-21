@@ -14,7 +14,7 @@ export default function AboutUsPage() {
     <div className="bg-background text-foreground">
       <main>
         {/* Hero Section */}
-        <section className="py-20 md:py-28">
+        <section className="py-12 md:py-20">
           <div className="container">
             <div className="text-center mb-16">
                  <div className="inline-block rounded-full bg-primary/10 px-4 py-2 mb-4">
