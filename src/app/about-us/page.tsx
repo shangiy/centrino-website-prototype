@@ -10,6 +10,10 @@ export default function AboutUsPage() {
     ['core-banking', 'mobile-banking', 'agency-banking'].includes(service.slug)
   );
 
+  const additionalServices = services.filter(service => 
+    ['sms-communication', 'edms', 'e-board', 'performance-management-system', 'members-portal', 'online-loan-form-submission'].includes(service.slug)
+  );
+
   return (
     <div className="bg-background text-foreground">
       <main>
@@ -87,6 +91,28 @@ export default function AboutUsPage() {
                             <Button asChild variant="outline">
                                 <Link href={`/services/${service.slug}`}>
                                     {service.title === 'Core Banking' ? 'View Service' : 'Browse Service'}
+                                </Link>
+                            </Button>
+                        </Card>
+                    ))}
+                </div>
+                <div className="grid md:grid-cols-3 gap-8 mt-8">
+                    {additionalServices.map((service) => (
+                        <Card key={service.slug} className="group flex flex-col items-center text-center p-6 bg-card shadow-lg border-primary/20 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 rounded-2xl">
+                             <div className="bg-primary/10 text-primary rounded-full p-4 mb-4">
+                                <service.icon className="w-10 h-10" />
+                            </div>
+                            <CardHeader>
+                                <CardTitle className="font-headline text-2xl">{service.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent className="flex-grow">
+                                <p className="text-muted-foreground">
+                                    {service.shortDescription}
+                                </p>
+                            </CardContent>
+                            <Button asChild variant="outline">
+                                <Link href={`/services/${service.slug}`}>
+                                    Browse Service
                                 </Link>
                             </Button>
                         </Card>
