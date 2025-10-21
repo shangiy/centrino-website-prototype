@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Check } from 'lucide-react';
@@ -40,17 +41,15 @@ export default function Home() {
     <div className="bg-background text-foreground">
       <main>
         {/* Hero Section */}
-        <section className="relative w-full overflow-hidden bg-gradient-to-tr from-pink-500 via-yellow-400 to-purple-600 text-white py-20 px-6 md:px-16 lg:px-24">
-          {/* Gradient Overlay Blur for Futuristic Feel */}
+        <section className="relative w-full overflow-hidden bg-gradient-to-tr from-pink-500 via-yellow-400 to-purple-600 text-white py-20 md:py-32">
           <div className="absolute inset-0 backdrop-blur-3xl bg-gradient-to-br from-purple-600/20 to-pink-400/10"></div>
-          <div className="relative flex items-center justify-center text-center gap-10 max-w-7xl mx-auto z-10 py-12">
-            {/* LEFT CONTENT */}
-            <div className="space-y-6 text-center">
+          <div className="container relative z-10 grid md:grid-cols-2 gap-10 items-center">
+            <div className="space-y-6 text-center md:text-left">
               <h1 className="text-5xl md:text-6xl font-bold leading-tight">
                 Design <br />
                 <span className="text-yellow-300">is a formal response</span>
               </h1>
-              <p className="text-lg max-w-md mx-auto text-white/90">
+              <p className="text-lg max-w-md mx-auto md:mx-0 text-white/90">
                 A forward-thinking approach to visual communication and creative
                 problem-solving for modern businesses.
               </p>
@@ -60,6 +59,42 @@ export default function Home() {
               >
                 Let’s Begin
               </Link>
+            </div>
+            <div className="relative flex items-center justify-center">
+                <motion.div
+                    initial={{ opacity: 0, x: 100, y: -100 }}
+                    animate={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ 
+                        duration: 0.8,
+                        delay: 0.2,
+                        ease: "easeOut",
+                        type: "spring",
+                        stiffness: 50,
+                        damping: 10
+                    }}
+                >
+                    <motion.div
+                        animate={{
+                            y: [0, -20, 0, -10, 0],
+                        }}
+                        transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            repeatType: "reverse",
+                            ease: "easeInOut",
+                            delay: 1
+                        }}
+                        className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
+                    >
+                        <Image
+                        src="https://picsum.photos/seed/hero-image/500/500"
+                        alt="Creative Design"
+                        fill
+                        className="object-contain rounded-full shadow-2xl"
+                        data-ai-hint="abstract design"
+                        />
+                    </motion.div>
+                </motion.div>
             </div>
           </div>
         </section>
