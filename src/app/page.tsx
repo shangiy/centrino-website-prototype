@@ -43,7 +43,7 @@ export default function Home() {
       <main>
         {/* Hero Section */}
         <section className="relative w-full overflow-hidden bg-gradient-to-r from-background to-accent text-foreground pt-20 md:pt-32 pb-16 md:pb-24">
-          <div className="container relative z-10 grid md:grid-cols-2 gap-10 items-center">
+          <div className="container relative z-10 grid md:grid-cols-1 gap-10 items-center">
             <div className="space-y-6 text-center md:text-left">
                <div className='flex items-center gap-2 font-semibold justify-center md:justify-start text-primary'>
                 <div className='w-2 h-2 bg-primary' />
@@ -62,33 +62,6 @@ export default function Home() {
                   Discover More
                 </Link>
               </Button>
-            </div>
-            <div className="relative flex items-center justify-center">
-                <motion.div
-                    initial={{ opacity: 0, x: 200, y: -200 }}
-                    animate={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{
-                        type: 'spring',
-                        stiffness: 50,
-                        damping: 10,
-                        mass: 1,
-                        restDelta: 0.001,
-                        restSpeed: 0.001,
-                        velocity: 0,
-                        delay: 0.2
-                    }}
-                     className="relative w-80 h-80 md:w-96 md:h-96 lg:w-[480px] lg:h-[480px]"
-                >
-                    <div className='relative w-full h-full rounded-full overflow-hidden'>
-                        <Image
-                        src="/landingpage-image.png"
-                        alt="Creative Design"
-                        fill
-                        className="object-cover"
-                        data-ai-hint="abstract design"
-                        />
-                    </div>
-                </motion.div>
             </div>
           </div>
           <div className="absolute bottom-0 left-0 w-full h-20 text-accent overflow-hidden">
