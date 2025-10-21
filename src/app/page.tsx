@@ -1,3 +1,4 @@
+
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -62,38 +63,27 @@ export default function Home() {
             </div>
             <div className="relative flex items-center justify-center">
                 <motion.div
-                    initial={{ opacity: 0, x: 100, y: -100 }}
-                    animate={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ 
-                        duration: 0.8,
-                        delay: 0.2,
-                        ease: "easeOut",
-                        type: "spring",
-                        stiffness: 50,
-                        damping: 10
+                    initial={{ opacity: 0, x: 100, y: -200 }}
+                    animate={{ 
+                        opacity: 1, 
+                        x: 0, 
+                        y: 0 
                     }}
+                    transition={{
+                        type: 'spring',
+                        damping: 8,
+                        stiffness: 100,
+                        delay: 0.2
+                    }}
+                     className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
                 >
-                    <motion.div
-                        animate={{
-                            y: [0, -20, 0, -10, 0],
-                        }}
-                        transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            repeatType: "reverse",
-                            ease: "easeInOut",
-                            delay: 1
-                        }}
-                        className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
-                    >
-                        <Image
-                        src="https://picsum.photos/seed/hero-image/500/500"
-                        alt="Creative Design"
-                        fill
-                        className="object-contain rounded-full shadow-2xl"
-                        data-ai-hint="abstract design"
-                        />
-                    </motion.div>
+                    <Image
+                    src="https://picsum.photos/seed/hero-image/500/500"
+                    alt="Creative Design"
+                    fill
+                    className="object-contain rounded-full shadow-2xl"
+                    data-ai-hint="abstract design"
+                    />
                 </motion.div>
             </div>
           </div>
@@ -388,5 +378,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
