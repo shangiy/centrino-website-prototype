@@ -147,24 +147,20 @@ export default function Home() {
                     >
                       <div className="p-1 h-full">
                         <Card className="group flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border-none bg-card transition-all duration-300 hover:shadow-2xl">
-                          <Link href={`/services/${service.slug}`} className="block group">
-                              <div className="relative w-full aspect-video overflow-hidden rounded-t-2xl">
-                                <Image
-                                  src={service.imageUrl || `https://picsum.photos/seed/${service.slug}/400/300`}
-                                  alt={service.title}
-                                  fill
-                                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                  data-ai-hint="business technology"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                                <div className="absolute bottom-0 left-0 p-6">
-                                    <h3 className="text-2xl font-bold font-headline text-white">
-                                      {service.title}
-                                    </h3>
-                                </div>
-                              </div>
-                          </Link>
-                          <CardContent className="p-6 flex flex-col flex-grow">
+                           <div className="relative w-full aspect-video overflow-hidden rounded-t-2xl">
+                            <Image
+                              src={service.imageUrl || `https://picsum.photos/seed/${service.slug}/400/300`}
+                              alt={service.title}
+                              fill
+                              className="object-cover transition-transform duration-300 group-hover:scale-105"
+                              data-ai-hint="business technology"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                          </div>
+                          <CardContent className="p-6 flex flex-col flex-grow items-start text-left w-full">
+                              <h3 className="text-2xl font-bold font-headline text-foreground">
+                                {service.title}
+                              </h3>
                               <p className="text-muted-foreground mt-2 flex-grow">
                                 {service.shortDescription}
                               </p>
@@ -208,7 +204,7 @@ export default function Home() {
                 ))}
               </ul>
               <Button asChild>
-                <Link href="/about">Discover More</Link>
+                <Link href="/about-us">Discover More</Link>
               </Button>
             </div>
             <div className="relative rounded-lg overflow-hidden aspect-video shadow-xl">
@@ -251,7 +247,7 @@ export default function Home() {
           <div className="container grid md:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-lg overflow-hidden aspect-video">
               <Image
-                src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmaW50ZWNofGVufDB8fHx8MTc1OTgxNjYwOXww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/net fin.png"
                 alt="Financial technology dashboard"
                 fill
                 className="object-cover"
