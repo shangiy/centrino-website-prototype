@@ -147,30 +147,28 @@ export default function Home() {
                     >
                       <div className="p-1 h-full">
                         <Link href={`/services/${service.slug}`} className="block group h-full">
-                          <Card className="relative flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-transparent hover:border-primary bg-card transition-all duration-300">
-                            <div className='absolute inset-0'>
+                          <Card className="flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-border bg-card transition-all duration-300">
+                             <div className="relative w-full aspect-[4/3]">
                               <Image
                                 src={service.imageUrl || `https://picsum.photos/seed/${service.slug}/400/300`}
                                 alt={service.title}
                                 fill
-                                className="object-cover rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-105"
+                                className="object-cover rounded-t-2xl"
                                 data-ai-hint="business technology"
                               />
-                               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                             </div>
-                            <CardContent className="relative p-6 flex flex-col flex-grow justify-end text-white">
-                                <div className="bg-primary/80 text-primary-foreground h-14 w-14 rounded-lg flex items-center justify-center mb-4">
-                                  <service.icon className="h-8 w-8" />
-                                </div>
-                                <h3 className="text-xl font-bold font-headline text-white">
+                            <CardContent className="p-6 flex flex-col flex-grow">
+                                <h3 className="text-xl font-bold font-headline text-foreground">
                                   {service.title}
                                 </h3>
-                                <p className="text-sm text-white/80 mt-2 flex-grow">
+                                <p className="text-sm text-muted-foreground mt-2 flex-grow">
                                   {service.shortDescription}
                                 </p>
-                                <div className="mt-4 text-white font-semibold flex items-center gap-2">
-                                  Learn More <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                                </div>
+                                <Button asChild className="mt-4 w-fit rounded-full">
+                                  <span className="flex items-center gap-2">
+                                    Learn More <ArrowRight className="w-4 h-4" />
+                                  </span>
+                                </Button>
                             </CardContent>
                           </Card>
                         </Link>
