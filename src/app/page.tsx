@@ -42,24 +42,26 @@ export default function Home() {
     <div className="bg-background text-foreground">
       <main>
         {/* Hero Section */}
-        <section className="relative w-full overflow-hidden bg-gradient-to-tr from-pink-500 via-yellow-400 to-purple-600 text-white py-20 md:py-32">
-          <div className="absolute inset-0 backdrop-blur-3xl bg-gradient-to-br from-purple-600/20 to-pink-400/10"></div>
+        <section className="relative w-full overflow-hidden bg-gradient-to-r from-background to-accent text-foreground py-20 md:py-32">
           <div className="container relative z-10 grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-6 text-center md:text-left">
+               <div className='flex items-center gap-2 font-semibold justify-center md:justify-start text-primary'>
+                <div className='w-2 h-2 bg-primary' />
+                <p>WELCOME TO CENTRINO TECHNOLOGIES</p>
+              </div>
               <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                Design <br />
-                <span className="text-yellow-300">is a formal response</span>
+                Smarter Tech Solutions for <span className='text-primary'>Financial Institutions</span>
               </h1>
-              <p className="text-lg max-w-md mx-auto md:mx-0 text-white/90">
-                A forward-thinking approach to visual communication and creative
-                problem-solving for modern businesses.
+              <p className="text-lg max-w-md mx-auto md:mx-0 text-muted-foreground">
+                We empower financial institutions with innovative software solutions to simplify complex needs, enhance customer experiences, and drive growth.
               </p>
-              <Link
-                href="/about"
-                className="inline-block px-6 py-3 rounded-full bg-white text-pink-600 font-semibold hover:bg-yellow-300 hover:text-purple-800 transition-all duration-300 shadow-md"
-              >
-                Let’s Begin
-              </Link>
+              <Button asChild>
+                <Link
+                  href="/about"
+                >
+                  Discover More
+                </Link>
+              </Button>
             </div>
             <div className="relative flex items-center justify-center">
                 <motion.div
@@ -378,7 +380,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
