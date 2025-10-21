@@ -265,7 +265,7 @@ export const services: Service[] = [
     shortDescription: 'Digitize and streamline the guarantor process for faster loan approvals.',
     fullDescription: 'Our E-Guarantor ship system automates the process of guarantor identification, verification, and commitment. It reduces delays, minimizes fraud, and provides a transparent and efficient experience for both borrowers and guarantors.',
     features: ['Online Guarantor Invitation', 'Digital Consent', 'Automated Verification', 'Real-time Status Updates', 'Secure Audit Trail'],
-    imageUrl: 'https://images.unsplash.com/photo-1628348068343-c6302b75b1d7?q=80&w=1974&auto=format&fit=crop'
+    imageUrl: '/e-guarantorship.png'
   },
   {
     slug: 'ict-consultancy',
@@ -431,3 +431,4 @@ export const blogPosts: Post[] = [
 
 
     
+
