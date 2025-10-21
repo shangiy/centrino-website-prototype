@@ -85,7 +85,7 @@ export default function Testimonials() {
   );
 
   return (
-    <section className="py-20 md:py-28 bg-background overflow-hidden">
+    <section className="pt-12 pb-20 md:pb-28 bg-background overflow-hidden">
       <div className="container relative">
         <div className="flex items-center gap-8 mb-12">
             <CircuitIcon className="text-primary hidden md:block flex-shrink-0" />
