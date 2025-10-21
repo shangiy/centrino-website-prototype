@@ -130,7 +130,7 @@ export const services: Service[] = [
     shortDescription: 'Robust and scalable core banking solutions for modern financial institutions.',
     fullDescription: 'Our Core Banking system is the backbone for financial institutions, providing a comprehensive suite of tools for managing accounts, transactions, and customer relationships. It is designed for scalability, security, and compliance.',
     features: ['Account Management', 'Transaction Processing', 'Customer Relationship Management (CRM)', 'Loan Management', 'Security and Compliance', 'Reporting and Analytics'],
-    imageUrl: 'https://images.unsplash.com/photo-1560415755-bd80d06eda60?q=80&w=2070&auto=format&fit=crop'
+    imageUrl: '/core-banking.png'
   },
   {
     slug: 'mobile-banking',
@@ -139,7 +139,7 @@ export const services: Service[] = [
     shortDescription: 'Empower your customers with a secure and feature-rich mobile banking experience.',
     fullDescription: 'Our mobile banking solution, PesaPepe, offers a seamless and intuitive user experience. It enables customers to perform a wide range of banking activities on the go, from checking balances to transferring funds and paying bills.',
     features: ['Real-time Balance Inquiry', 'Fund Transfers', 'Bill Payments', 'Mini-Statement Requests', 'Biometric Authentication'],
-    imageUrl: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=2070&auto=format&fit=crop',
+    imageUrl: '/mobile-banking.png',
     subTitle: 'Mobile Banking (PesaPepe)',
     subDescription: 'PesaPepe is our premier mobile banking platform, available on USSD, Android, and iOS, providing a comprehensive and secure banking experience on the go.',
     mobileBankingFeatures: [
@@ -170,7 +170,7 @@ export const services: Service[] = [
     shortDescription: 'Expand your reach and serve more customers with our agency banking platform.',
     fullDescription: 'Our Agency Banking solution empowers financial institutions to extend their services through a network of agents. This increases accessibility for customers in remote areas and reduces operational costs.',
     features: ['Cash-in/Cash-out', 'Account Opening', 'Bill Payments', 'Fund Transfers', 'Agent Management'],
-    imageUrl: 'https://images.unsplash.com/photo-1561414927-6d8659a24834?q=80&w=2070&auto=format&fit=crop',
+    imageUrl: '/Agency-banking.png',
     agencyBankingFeatures: [
       { title: 'Member Registration', description: 'Agents can register new members quickly and securely, expanding your customer base.', icon: UserPlus },
       { title: 'Deposits', description: 'Facilitate member deposits through a network of trusted agents.', icon: PiggyBank },
@@ -204,7 +204,7 @@ export const services: Service[] = [
     shortDescription: 'Streamline your document management with our Electronic Document Management System.',
     fullDescription: 'Our Electronic Document Management System (EDMS) helps organizations to digitize, store, manage, and track electronic documents. It improves efficiency, enhances security, and ensures compliance.',
     features: ['Document Digitization', 'Secure Storage', 'Version Control', 'Advanced Search', 'Audit Trails'],
-    imageUrl: 'https://images.unsplash.com/photo-1586953208448-3151cf794034?q=80&w=1964&auto=format&fit=crop'
+    imageUrl: '/EDMS.png'
   },
   {
     slug: 'e-board',
@@ -213,7 +213,7 @@ export const services: Service[] = [
     shortDescription: 'A secure and efficient platform for managing board meetings and documents.',
     fullDescription: 'Our E-Board solution digitizes the entire board meeting process, from creating agendas and compiling board packs to tracking action items. It enhances governance, improves collaboration, and saves valuable time for board members.',
     features: ['Agenda Management', 'Digital Board Packs', 'Secure Document Sharing', 'Meeting Minutes', 'Action Item Tracking'],
-    imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop'
+    imageUrl: '/E-Board.png'
   },
   {
     slug: 'performance-management-system',
@@ -222,7 +222,7 @@ export const services: Service[] = [
     shortDescription: 'Align employee performance with organizational goals with our intuitive PMS.',
     fullDescription: 'Our Performance Management System helps organizations to set goals, track progress, and evaluate employee performance effectively. It fosters a culture of continuous feedback and development, driving business success.',
     features: ['Goal Setting & Tracking', 'Performance Reviews', '360-Degree Feedback', 'Development Plans', 'Reporting & Analytics'],
-    imageUrl: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=2070&auto=format&fit=crop'
+    imageUrl: '/Perf-M-S.png'
   },
   {
     slug: 'members-portal',
@@ -231,7 +231,7 @@ export const services: Service[] = [
     shortDescription: 'Provide your members with a secure and convenient online self-service portal.',
     fullDescription: 'Our Members Portal allows your members to access their account information, view statements, apply for loans, and perform other self-service functions online, anytime. It enhances member satisfaction and reduces the workload on your staff.',
     features: ['Account Overview', 'Statement Downloads', 'Loan Applications', 'Profile Management', 'Secure Messaging'],
-    imageUrl: 'https://images.unsplash.com/photo-1556740772-1a28a2a7f2d5?q=80&w=2070&auto=format&fit=crop',
+    imageUrl: '/Members-Portal.png',
     membersPortalFeatures: [
       { title: 'Account Overview', description: 'Members can view their account balances, transaction history, and loan statuses in real-time.' },
       { title: 'Statement Downloads', description: 'Allow members to securely download their account statements in various formats like PDF.' },
@@ -248,7 +248,7 @@ export const services: Service[] = [
     shortDescription: 'Simplify the loan application process with our online submission platform.',
     fullDescription: 'Our Online Loan Form Submission platform allows customers to apply for loans online, upload required documents, and track the status of their application. It streamlines the lending process, reduces paperwork, and improves turnaround time.',
     features: ['Customizable Forms', 'Document Upload', 'Application Tracking', 'E-Signature', 'Integration with Core Banking'],
-    imageUrl: 'https://images.unsplash.com/photo-1560520450-4d241517c8a3?q=80&w=2070&auto=format&fit=crop',
+    imageUrl: '/Online Loan Form Submission.png',
     onlineLoanSubmissionFeatures: [
         { title: 'Online Application', description: 'Customizable loan application forms that are easy for members to fill out and submit online.', icon: FileCheck },
         { title: 'Digital Signatures', description: 'Securely capture electronic signatures on application forms and loan agreements.', icon: FileDigit },
@@ -428,3 +428,6 @@ export const blogPosts: Post[] = [
 
 
 
+
+
+    

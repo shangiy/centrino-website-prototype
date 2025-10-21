@@ -146,41 +146,34 @@ export default function Home() {
                       className="md:basis-1/2 lg:basis-1/3"
                     >
                       <div className="p-1 h-full">
-                        <Card className="group flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-primary/20 bg-card transition-all duration-300 hover:shadow-2xl">
-                          <Link href={`/services/${service.slug}`} className='block relative w-full aspect-video overflow-hidden'>
-                            <Image
-                              src={service.imageUrl || `https://picsum.photos/seed/${service.slug}/400/300`}
-                              alt={service.title}
-                              fill
-                              className="object-cover rounded-t-2xl transition-transform duration-500 ease-in-out group-hover:scale-105"
-                              data-ai-hint="business technology"
-                            />
-                          </Link>
-                          <CardContent className="p-6 flex flex-col flex-grow">
-                            <div className="flex-grow space-y-4">
-                              <h3 className="text-xl font-bold font-headline">
-                                 <Link href={`/services/${service.slug}`} className="hover:text-primary transition-colors">{service.title}</Link>
-                              </h3>
-                              <ul className="space-y-2 text-muted-foreground text-sm">
-                                {Array.isArray(service.features) && service.features.slice(0,3).map((feature) => (
-                                  <li key={typeof feature === 'string' ? feature : feature.title} className="flex items-start">
-                                    <Check className="w-4 h-4 mr-2 mt-1 text-primary flex-shrink-0" />
-                                    <span>{typeof feature === 'string' ? feature : feature.title}</span>
-                                  </li>
-                                ))}
-                              </ul>
+                        <Link href={`/services/${service.slug}`} className="block group h-full">
+                          <Card className="relative flex flex-col h-full overflow-hidden rounded-2xl shadow-lg border border-transparent hover:border-primary bg-card transition-all duration-300">
+                            <div className='absolute inset-0'>
+                              <Image
+                                src={service.imageUrl || `https://picsum.photos/seed/${service.slug}/400/300`}
+                                alt={service.title}
+                                fill
+                                className="object-cover rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-105"
+                                data-ai-hint="business technology"
+                              />
+                               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                             </div>
-                            <Button
-                              asChild
-                              variant="default"
-                              className="mt-6 w-fit rounded-full bg-primary text-primary-foreground"
-                            >
-                              <Link href={`/services/${service.slug}`}>
-                                Learn More
-                              </Link>
-                            </Button>
-                          </CardContent>
-                        </Card>
+                            <CardContent className="relative p-6 flex flex-col flex-grow justify-end text-white">
+                                <div className="bg-primary/80 text-primary-foreground h-14 w-14 rounded-lg flex items-center justify-center mb-4">
+                                  <service.icon className="h-8 w-8" />
+                                </div>
+                                <h3 className="text-xl font-bold font-headline text-white">
+                                  {service.title}
+                                </h3>
+                                <p className="text-sm text-white/80 mt-2 flex-grow">
+                                  {service.shortDescription}
+                                </p>
+                                <div className="mt-4 text-white font-semibold flex items-center gap-2">
+                                  Learn More <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                                </div>
+                            </CardContent>
+                          </Card>
+                        </Link>
                       </div>
                     </CarouselItem>
                   ))}
@@ -342,3 +335,6 @@ export default function Home() {
 
 
 
+
+
+    
