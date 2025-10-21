@@ -42,7 +42,7 @@ export default function Home() {
     <div className="bg-background text-foreground">
       <main>
         {/* Hero Section */}
-        <section className="relative w-full overflow-hidden bg-gradient-to-r from-background to-accent text-foreground py-20 md:py-32">
+        <section className="relative w-full overflow-hidden bg-gradient-to-r from-background to-accent text-foreground pt-20 md:pt-32 pb-16 md:pb-24">
           <div className="container relative z-10 grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-6 text-center md:text-left">
                <div className='flex items-center gap-2 font-semibold justify-center md:justify-start text-primary'>
@@ -89,37 +89,20 @@ export default function Home() {
                 </motion.div>
             </div>
           </div>
+          <div className="absolute bottom-0 left-0 w-full h-20 text-accent overflow-hidden">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none" className="h-full w-full">
+              <path d="M0,50 C240,0,480,100,720,50 C960,0,1200,100,1440,50 V100 H0 Z" fill="currentColor" />
+            </svg>
+          </div>
+          <div className="absolute bottom-0 left-0 w-full h-20 text-primary/30 overflow-hidden">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none" className="h-full w-full">
+              <path d="M0,60 C200,20,400,120,720,60 C1040,0,1240,120,1440,60 V100 H0 Z" fill="currentColor" />
+            </svg>
+          </div>
         </section>
 
         {/* Services Section */}
-        <section id="services" className="relative py-20 md:py-28 bg-background">
-          <div className="absolute top-0 left-0 w-full h-32 text-secondary/50 overflow-hidden">
-            <svg
-              viewBox="0 0 1440 120"
-              preserveAspectRatio="none"
-              className="h-full w-full"
-            >
-              <path
-                d="M0,80 C240,150,480,-20,720,80 C960,180,1200,-20,1440,80"
-                fill="currentColor"
-                stroke="none"
-              />
-            </svg>
-          </div>
-          <div className="absolute top-0 left-0 w-full h-32 text-primary overflow-hidden opacity-30">
-            <svg
-              viewBox="0 0 1440 120"
-              preserveAspectRatio="none"
-              className="h-full w-full"
-            >
-              <path
-                d="M0,90 C200,-10,400,160,720,90 C1040,20,1240,180,1440,90"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-          </div>
+        <section id="services" className="relative pt-20 md:pt-28 pb-20 md:pb-28 bg-accent">
           <div className="container relative">
             <div className="text-center max-w-3xl mx-auto">
               <div className="flex items-center justify-center gap-2">
