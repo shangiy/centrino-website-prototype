@@ -1,10 +1,13 @@
 
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Briefcase, Building, Code, Cpu, ExternalLink, GraduationCap, MapPin, Palette, Rocket, Users, Zap, Upload } from 'lucide-react';
+import { Briefcase, Building, Code, Cpu, ExternalLink, GraduationCap, MapPin, Palette, Rocket, Users, Zap, Upload, File as FileIcon, X } from 'lucide-react';
+import React, { useState } from 'react';
 
 const openPositions = [
   {
@@ -57,6 +60,23 @@ const perks = [
 ]
 
 export default function CareerPage() {
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files[0]) {
+      setSelectedFile(event.target.files[0]);
+    }
+  };
+
+  const handleRemoveFile = () => {
+    setSelectedFile(null);
+    const fileInput = document.getElementById('document-upload') as HTMLInputElement;
+    if (fileInput) {
+      fileInput.value = '';
+    }
+  };
+
+
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
@@ -147,8 +167,19 @@ export default function CareerPage() {
                   Upload Document
                 </label>
               </Button>
-              <input type="file" id="document-upload" className="hidden" />
+              <input type="file" id="document-upload" className="hidden" onChange={handleFileChange} />
             </div>
+             {selectedFile && (
+              <div className="mt-4 p-3 bg-white/10 rounded-lg flex items-center justify-between text-sm">
+                <div className="flex items-center gap-2">
+                  <FileIcon className="w-5 h-5" />
+                  <span className="font-medium truncate">{selectedFile.name}</span>
+                </div>
+                <label htmlFor="document-upload" className="cursor-pointer text-white hover:underline font-semibold ml-4">
+                    Change
+                </label>
+              </div>
+            )}
           </div>
            <div className="relative rounded-lg overflow-hidden aspect-video shadow-lg">
             <Image
