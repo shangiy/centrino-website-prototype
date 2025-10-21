@@ -1,5 +1,8 @@
 
 import Image from 'next/image';
+import StatsCounter from '@/components/stats-counter';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function AboutPage() {
   return (
@@ -28,6 +31,61 @@ export default function AboutPage() {
                 With a primary focus on empowering Microfinance Institutions (MFIs), Savings and Credit Cooperatives (SACCOs), and various financial institutions, Centrino Technologies has consistently delivered state-of-the-art products and services that redefine the way financial institutions operate and interact with their customers.
               </p>
             </div>
+          </div>
+        </section>
+
+        <StatsCounter />
+
+        <section className="py-20 md:py-28 bg-background">
+          <div className="container grid md:grid-cols-2 gap-12 items-center">
+             <div className="space-y-6">
+              <div className="flex items-center gap-2">
+                <p className="font-semibold tracking-wider text-sm text-primary uppercase">
+                  Philosophy
+                </p>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold font-headline">
+                Technologies leverages over a decade of expertise
+              </h2>
+              <div className="text-muted-foreground space-y-4">
+                <p>
+                  To provide cutting-edge technology solutions that empower Microfinance Institutions, SACCOs, and other financial institutions. We strive to elevate operational efficiency, enhance the customer experience, and foster overall growth by delivering innovative, scalable, and client-centric solutions.
+                </p>
+                <p>
+                  Our journey has been marked by continuous learning, adaptability, and a relentless pursuit of excellence. This wealth of experience positions us as industry leaders, uniquely equipped to address the diverse and evolving needs of financial institutions in today's dynamic environment.
+                </p>
+              </div>
+            </div>
+            <div className="relative rounded-lg overflow-hidden aspect-video shadow-lg">
+              <Image
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+                alt="Our Philosophy"
+                fill
+                className="object-cover"
+                data-ai-hint="team meeting"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Parallax Section */}
+        <section
+          className="relative py-24 md:py-32 bg-cover bg-center bg-fixed text-primary-foreground"
+          style={{ backgroundImage: "url('/consultation.png')" }}
+        >
+          <div className="absolute inset-0 bg-primary/80"></div>
+          <div className="container relative z-10 text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold font-headline">
+              Ready to Transform Your Financial Institution?
+            </h2>
+            <p className="mt-4 text-lg text-primary-foreground/90">
+              Contact us today for a free consultation and discover how our innovative technology solutions can help you achieve your goals.
+            </p>
+            <Button asChild variant="secondary" size="lg" className="mt-8 rounded-full font-bold">
+              <Link href="/contact">
+                Let's Get Started
+              </Link>
+            </Button>
           </div>
         </section>
       </main>
