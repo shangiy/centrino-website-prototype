@@ -1,80 +1,34 @@
 
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { Check } from 'lucide-react';
 
 export default function AboutPage() {
-    const expertiseItems = [
-    "MIS for the microfinance sector",
-    "E-Business (B2C, B2B, B2E, C2B etc.)",
-    "E-Collaboration",
-    "Workflow, content, document, and knowledge management",
-    "Communications middleware",
-    "Network management ICT security",
-    "Broadband, mobile, and satellite ICT applications",
-    "Outsourcing services, etc.",
-  ];
-
   return (
     <div className="bg-background text-foreground">
       <main>
-        <section className="py-20 md:py-28 bg-background">
-          <div className="container grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold font-headline">Empowering Financial Success Through Technology</h2>
-              <h3 className="text-2xl font-bold font-headline text-primary">Our Expertise</h3>
-              <p className="text-muted-foreground">
-                Centrino Technologies, specializes in empowering financial institutions, particularly Microfinance Institutions (MFIs) and Savings, Credit Cooperatives (SACCOs), and various financial institutions with cutting-edge technology solutions.
-              </p>
-               <ul className="space-y-3">
-                {expertiseItems.map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0 mr-3 mt-1" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button asChild>
-                <Link href="/about-us">Discover More</Link>
-              </Button>
-            </div>
-             <div className="relative rounded-lg overflow-hidden aspect-[4/5] shadow-lg group">
-              <Image
-                src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=2070&auto=format&fit=crop"
-                alt="Financial technology expert"
-                fill
-                className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                data-ai-hint="fintech expert"
-              />
-               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-            </div>
+        {/* Hero Section */}
+        <section className="py-12 md:py-20 bg-secondary/10">
+          <div className="container text-center">
+            <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tight">
+              About Us
+            </h1>
           </div>
         </section>
-        
-        <section className="py-20 md:py-28 bg-secondary/30">
-            <div className="container grid md:grid-cols-2 gap-12 items-center">
-                 <div className="relative rounded-lg overflow-hidden aspect-video shadow-lg group">
-                    <Image
-                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
-                        alt="Team collaborating"
-                        fill
-                        className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                        data-ai-hint="team collaboration"
-                    />
-                     <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
-                </div>
-                <div className="space-y-6">
-                    <h2 className="text-3xl font-bold font-headline">About Us</h2>
-                    <p className="text-muted-foreground">
-                        Centrino Technologies places a particular emphasis on empowering financial
-                        institutions, recognizing their crucial role in financial inclusion and community
-                        development. Our solutions are carefully crafted to address the specific challenges
-                        faced by these institutions, offering a suite of technologies that enhance their
-                        operational efficiency, improve member services, and ensure regulatory compliance.
-                    </p>
-                </div>
+
+        {/* Content Section */}
+        <section className="py-16 md:py-24">
+          <div className="container max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold font-headline mb-8">
+              Welcome To Centrino Technologies
+            </h2>
+            <div className="text-lg text-muted-foreground space-y-6">
+              <p>
+                Centrino Technologies Ltd, with over a decade of experience in the financial technology landscape, stands as a beacon of technological innovation, offering tailored solutions to financial institutions Our unwavering commitment to excellence has positioned us as a trusted partner for institutions seeking advanced and customized technology solutions.
+              </p>
+              <p>
+                With a primary focus on empowering Microfinance Institutions (MFIs), Savings and Credit Cooperatives (SACCOs), and various financial institutions, Centrino Technologies has consistently delivered state-of-the-art products and services that redefine the way financial institutions operate and interact with their customers.
+              </p>
             </div>
+          </div>
         </section>
       </main>
     </div>
