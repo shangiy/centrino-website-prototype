@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Briefcase, Building, Code, Cpu, ExternalLink, GraduationCap, MapPin, Palette, Rocket, Users, Zap } from 'lucide-react';
+import { Briefcase, Building, Code, Cpu, ExternalLink, GraduationCap, MapPin, Palette, Rocket, Users, Zap, Upload } from 'lucide-react';
 
 const openPositions = [
   {
@@ -125,16 +125,30 @@ export default function CareerPage() {
             <p className="text-lg opacity-90">
               Are you a student or recent graduate looking to kickstart your career in tech? Our internship and attachment programs offer hands-on experience, mentorship from industry experts, and the opportunity to work on real-world projects that make a difference.
             </p>
-            <Button
-              asChild
-              variant="secondary"
-              className="font-bold"
-              size="lg"
-            >
-              <Link href="/contact?subject=Internship/Attachment">
-                Inquire About Opportunities
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <Button
+                asChild
+                variant="secondary"
+                className="font-bold"
+                size="lg"
+              >
+                <Link href="/contact?subject=Internship/Attachment">
+                  Inquire About Opportunities
+                </Link>
+              </Button>
+              <Button
+                variant="outline"
+                className="font-bold border-white text-white hover:bg-white hover:text-primary"
+                size="lg"
+                asChild
+              >
+                <label htmlFor="document-upload" className="cursor-pointer">
+                  <Upload className="mr-2 h-5 w-5" />
+                  Upload Document
+                </label>
+              </Button>
+              <input type="file" id="document-upload" className="hidden" />
+            </div>
           </div>
            <div className="relative rounded-lg overflow-hidden aspect-video shadow-lg">
             <Image
