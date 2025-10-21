@@ -67,6 +67,36 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+        
+        {/* Vision Section */}
+        <section
+            className="relative py-24 md:py-32 bg-cover bg-center text-primary-foreground"
+            style={{
+                backgroundImage:
+                "url('https://images.unsplash.com/photo-1590497003507-947c43c25a74?q=80&w=2070&auto=format&fit=crop')",
+            }}
+            >
+            <div className="absolute inset-0 bg-primary/90" />
+            <div className="container relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                <div className="relative rounded-lg overflow-hidden aspect-video shadow-lg min-h-[300px]">
+                <Image
+                    src="https://images.unsplash.com/photo-1590497003507-947c43c25a74?q=80&w=2070&auto=format&fit=crop"
+                    alt="Our Vision"
+                    fill
+                    className="object-cover"
+                    data-ai-hint="person future"
+                />
+                </div>
+                <div className="space-y-6">
+                <h2 className="text-4xl font-bold font-headline">Our Vision</h2>
+                <p className="text-lg text-primary-foreground/90">
+                    Simplifying complex needs through Innovative solutions that fosters
+                    business and community growth.
+                </p>
+                </div>
+            </div>
+        </section>
+
 
         {/* CTA Parallax Section */}
         <section
