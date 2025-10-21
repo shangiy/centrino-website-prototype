@@ -247,7 +247,7 @@ export default function Home() {
           <div className="container grid md:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-lg overflow-hidden aspect-video">
               <Image
-                src="/net fin.png"
+                src="/net_fintech.png"
                 alt="Financial technology dashboard"
                 fill
                 className="object-cover"
