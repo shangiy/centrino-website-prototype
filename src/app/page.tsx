@@ -42,8 +42,8 @@ export default function Home() {
     <div className="bg-background text-foreground">
       <main>
         {/* Hero Section */}
-        <section className="relative w-full overflow-hidden bg-gradient-to-r from-background to-accent text-foreground pt-20 md:pt-32 pb-16 md:pb-24">
-          <div className="container relative z-10 grid md:grid-cols-1 gap-10 items-center">
+        <section className="relative w-full overflow-hidden bg-gradient-to-r from-background to-accent text-foreground py-20 md:py-32">
+          <div className="container relative z-10 grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-6 text-center md:text-left">
                <div className='flex items-center gap-2 font-semibold justify-center md:justify-start text-primary'>
                 <div className='w-2 h-2 bg-primary' />
@@ -63,6 +63,38 @@ export default function Home() {
                 </Link>
               </Button>
             </div>
+             <motion.div
+                initial={{ y: -500, x: 200, opacity: 0 }}
+                animate={{ 
+                  y: 0, 
+                  x: 0,
+                  opacity: 1,
+                }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 40,
+                  damping: 8,
+                  mass: 1,
+                  y: {
+                    type: "tween",
+                    ease: [0.3, 1.2, 0.9, 1.05, 0.95, 1.02, 0.98, 1],
+                    duration: 1.8,
+                    times: [0, 0.2, 0.4, 0.6, 0.75, 0.85, 0.95, 1]
+                  }
+                }}
+                className="hidden md:flex justify-center items-center"
+              >
+                <div className="relative w-96 h-96 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden shadow-2xl">
+                    <Image
+                        src="/landingpage-image.png"
+                        alt="Creative Design"
+                        fill
+                        className="object-cover"
+                        data-ai-hint="abstract design"
+                        priority
+                    />
+                </div>
+              </motion.div>
           </div>
           <div className="absolute bottom-0 left-0 w-full h-20 text-accent overflow-hidden">
             <svg viewBox="0 0 1440 100" preserveAspectRatio="none" className="h-full w-full">
@@ -343,3 +375,4 @@ export default function Home() {
     
 
     
+
