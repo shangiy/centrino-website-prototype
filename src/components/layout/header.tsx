@@ -28,7 +28,7 @@ const navLinks = [
 const trailingNavLinks = [
     { href: '/contact', label: 'Contact' },
     { href: '/blog', label: 'Blog' },
-    { href: '/portfolio', label: 'Portfolio' },
+    { href: '/portfolio', label: 'Project' },
     { href: '/career', label: 'Career' },
 ]
 
