@@ -51,6 +51,31 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+        
+        <section className="py-20 md:py-28 bg-secondary/30">
+            <div className="container grid md:grid-cols-2 gap-12 items-center">
+                 <div className="relative rounded-lg overflow-hidden aspect-video shadow-lg group">
+                    <Image
+                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+                        alt="Team collaborating"
+                        fill
+                        className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                        data-ai-hint="team collaboration"
+                    />
+                     <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                </div>
+                <div className="space-y-6">
+                    <h2 className="text-3xl font-bold font-headline">About Us</h2>
+                    <p className="text-muted-foreground">
+                        Centrino Technologies places a particular emphasis on empowering financial
+                        institutions, recognizing their crucial role in financial inclusion and community
+                        development. Our solutions are carefully crafted to address the specific challenges
+                        faced by these institutions, offering a suite of technologies that enhance their
+                        operational efficiency, improve member services, and ensure regulatory compliance.
+                    </p>
+                </div>
+            </div>
+        </section>
       </main>
     </div>
   );
