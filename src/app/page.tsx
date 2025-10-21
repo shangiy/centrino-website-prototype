@@ -78,10 +78,10 @@ export default function Home() {
                      className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
                 >
                     <Image
-                    src="https://picsum.photos/seed/hero-image/500/500"
+                    src="/landingpage-image.png"
                     alt="Creative Design"
                     fill
-                    className="object-contain rounded-full shadow-2xl"
+                    className="object-contain"
                     data-ai-hint="abstract design"
                     />
                 </motion.div>
