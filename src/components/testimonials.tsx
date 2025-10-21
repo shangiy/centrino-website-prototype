@@ -28,11 +28,11 @@ const testimonials = [
       'Customer review can help you measure customer satisfaction and identify areas where your IT solution service is meeting or exceeding expectations. This can help you build on those strengths and promote customer loyalty',
   },
   {
-    name: 'Sarah Kimani',
-    title: 'Project Manager',
-    avatar: 'https://picsum.photos/seed/sarah/40/40',
+    name: 'Albert Kimani',
+    title: 'Cloud Architect',
+    avatar: 'https://picsum.photos/seed/albert/40/40',
     quote:
-      'The team at Centrino is exceptional. They delivered our project on time and on budget, with a level of quality that exceeded our expectations. Their communication was clear and consistent throughout the process.',
+      'Customer review can help you measure customer satisfaction and identify areas where your IT solution service is meeting or exceeding expectations. This can help you build on those strengths and promote customer loyalty',
   },
   {
     name: 'David Chen',
