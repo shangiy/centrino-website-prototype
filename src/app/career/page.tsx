@@ -160,13 +160,18 @@ export default function CareerPage() {
                   <input type="file" id="document-upload" className="hidden" onChange={handleFileChange} />
                   {selectedFile && (
                   <div className="mt-4 p-3 bg-white/10 rounded-lg flex items-center justify-between text-sm">
-                    <div className="flex items-center gap-2">
-                      <FileIcon className="w-5 h-5" />
+                    <div className="flex items-center gap-2 overflow-hidden">
+                      <FileIcon className="w-5 h-5 flex-shrink-0" />
                       <span className="font-medium truncate">{selectedFile.name}</span>
                     </div>
-                    <label htmlFor="document-upload" className="cursor-pointer text-white hover:underline font-semibold ml-4">
-                        Change
-                    </label>
+                     <div className="flex items-center gap-4 flex-shrink-0 ml-4">
+                      <label htmlFor="document-upload" className="cursor-pointer text-white hover:underline font-semibold">
+                          Change
+                      </label>
+                       <button onClick={handleRemoveFile} className="text-destructive-foreground/70 hover:text-destructive-foreground">
+                        <X className="w-5 h-5" />
+                      </button>
+                    </div>
                   </div>
                 )}
               </div>
