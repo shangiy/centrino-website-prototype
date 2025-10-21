@@ -147,8 +147,8 @@ export default function CareerPage() {
                     You can drop your resume, attachment documents, university logbook, and national ID here.
                   </p>
                   <Button
-                    variant="outline"
-                    className="font-bold border-white text-white hover:bg-white hover:text-primary w-full"
+                    variant="default"
+                    className="font-bold bg-gray-800 hover:bg-gray-700 text-white w-full"
                     size="lg"
                     asChild
                   >
