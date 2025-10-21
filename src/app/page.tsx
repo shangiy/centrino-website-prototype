@@ -65,38 +65,40 @@ export default function Home() {
             </div>
             <div className="relative flex items-center justify-center">
                 <motion.div
-                    initial={{ opacity: 0, x: 100, y: -200 }}
-                    animate={{ 
-                        opacity: 1, 
-                        x: 0, 
-                        y: 0 
-                    }}
+                    initial={{ opacity: 0, x: 200, y: -200 }}
+                    animate={{ opacity: 1, x: 0, y: 0 }}
                     transition={{
                         type: 'spring',
-                        damping: 8,
-                        stiffness: 100,
+                        stiffness: 50,
+                        damping: 10,
+                        mass: 1,
+                        restDelta: 0.001,
+                        restSpeed: 0.001,
+                        velocity: 0,
                         delay: 0.2
                     }}
-                     className="relative w-80 h-80 md:w-96 md:h-96 lg:w-[480px] lg:h-[480px] rounded-full overflow-hidden"
+                     className="relative w-80 h-80 md:w-96 md:h-96 lg:w-[480px] lg:h-[480px]"
                 >
-                    <Image
-                    src="/landingpage-image.png"
-                    alt="Creative Design"
-                    fill
-                    className="object-cover"
-                    data-ai-hint="abstract design"
-                    />
+                    <div className='relative w-full h-full rounded-full overflow-hidden'>
+                        <Image
+                        src="/landingpage-image.png"
+                        alt="Creative Design"
+                        fill
+                        className="object-cover"
+                        data-ai-hint="abstract design"
+                        />
+                    </div>
                 </motion.div>
             </div>
           </div>
           <div className="absolute bottom-0 left-0 w-full h-20 text-accent overflow-hidden">
             <svg viewBox="0 0 1440 100" preserveAspectRatio="none" className="h-full w-full">
-              <path d="M0,50 C240,0,480,100,720,50 C960,0,1200,100,1440,50 V100 H0 Z" fill="currentColor" />
+              <path d="M0,60 C200,20,400,120,720,60 C1040,0,1240,120,1440,60 V100 H0 Z" fill="currentColor" />
             </svg>
           </div>
           <div className="absolute bottom-0 left-0 w-full h-20 text-primary/30 overflow-hidden">
             <svg viewBox="0 0 1440 100" preserveAspectRatio="none" className="h-full w-full">
-              <path d="M0,60 C200,20,400,120,720,60 C1040,0,1240,120,1440,60 V100 H0 Z" fill="currentColor" />
+              <path d="M0,70 C240,10,480,110,720,70 C960,10,1200,110,1440,70 V100 H0 Z" fill="currentColor" />
             </svg>
           </div>
         </section>
