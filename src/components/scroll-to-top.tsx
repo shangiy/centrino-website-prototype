@@ -45,7 +45,7 @@ export default function ScrollToTop() {
       >
         <ArrowUp className="h-6 w-6" />
         <svg
-          className="absolute inset-0"
+          className="absolute inset-0 overflow-visible"
           width="100%"
           height="100%"
           viewBox="0 0 100 100"
@@ -54,10 +54,10 @@ export default function ScrollToTop() {
           <motion.circle
             cx="50"
             cy="50"
-            r="45"
+            r="48"
             pathLength="1"
             className="stroke-primary"
-            strokeWidth="5"
+            strokeWidth="4"
             strokeLinecap="round"
             fill="none"
             style={{ pathLength }}
