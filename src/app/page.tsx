@@ -209,11 +209,11 @@ export default function Home() {
             </div>
             <div className="relative rounded-lg overflow-hidden aspect-video shadow-xl">
               <Image
-                src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?q=80&w=2070&auto=format&fit=crop"
+                src="/net_fintech.png"
                 alt="Technician working in a server room"
                 fill
                 className="object-cover"
-                data-ai-hint="technician server room"
+                data-ai-hint="fintech dashboard"
               />
             </div>
           </div>
