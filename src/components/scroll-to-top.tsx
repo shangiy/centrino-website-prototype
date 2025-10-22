@@ -31,8 +31,8 @@ export default function ScrollToTop() {
   return (
     <div className={cn('fixed bottom-8 right-8 z-50', !isVisible && 'hidden')}>
       <div className="relative h-14 w-14">
-        <motion.svg
-          className="absolute inset-0 h-full w-full"
+        <svg
+          className="absolute -inset-1 h-[calc(100%+0.5rem)] w-[calc(100%+0.5rem)]"
           width="100"
           height="100"
           viewBox="0 0 100 100"
@@ -41,14 +41,15 @@ export default function ScrollToTop() {
           <motion.circle
             cx="50"
             cy="50"
-            r="48"
+            r="45"
             stroke="hsl(var(--primary))"
-            strokeWidth="4"
+            strokeWidth="8"
+            strokeLinecap="round"
             pathLength="1"
             className="transform -rotate-90 origin-center"
             style={{ pathLength: scrollYProgress }}
           />
-        </motion.svg>
+        </svg>
         <Button
           onClick={scrollToTop}
           size="icon"
