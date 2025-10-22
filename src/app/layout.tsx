@@ -5,6 +5,7 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { Clock, Mail } from 'lucide-react';
+import ScrollToTop from '@/components/scroll-to-top';
 
 export const metadata: Metadata = {
   title: 'Centrino Technologies Ltd',
@@ -56,6 +57,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <Toaster />
+        <ScrollToTop />
       </body>
     </html>
   );
