@@ -207,7 +207,7 @@ export default function Home() {
                 <Link href="/about-us">Discover More</Link>
               </Button>
             </div>
-            <div className="relative rounded-lg overflow-hidden aspect-video shadow-xl">
+            <div className="relative rounded-lg overflow-hidden aspect-[9/16] shadow-xl max-w-sm mx-auto w-full">
               <Image
                 src="/net_fintech.png"
                 alt="Technician working in a server room"
