@@ -18,21 +18,21 @@ const testimonials = [
     title: 'Cloud Architect',
     avatar: 'https://picsum.photos/seed/jane/40/40',
     quote:
-      'Customer review can help you measure customer satisfaction and identify areas where your IT solution service is meeting or exceeding expectations. This can help you build on those strengths and promote customer loyalty',
+      'Centrino\'s core banking solution has been a cornerstone of our digital transformation. The system is robust, scalable, and their support team is always responsive to our needs, ensuring our operations run smoothly around the clock.',
   },
   {
     name: 'Michael Mwangi',
     title: 'Sales Manager',
     avatar: 'https://picsum.photos/seed/michael/40/40',
     quote:
-      'Customer review can help you measure customer satisfaction and identify areas where your IT solution service is meeting or exceeding expectations. This can help you build on those strengths and promote customer loyalty',
+      'The mobile and agency banking platforms from Centrino have drastically expanded our market reach. We can now serve customers in remote areas efficiently, which has been incredible for our growth and financial inclusion goals.',
   },
   {
     name: 'Albert Kimani',
     title: 'Cloud Architect',
     avatar: 'https://picsum.photos/seed/albert/40/40',
     quote:
-      'Customer review can help you measure customer satisfaction and identify areas where your IT solution service is meeting or exceeding expectations. This can help you build on those strengths and promote customer loyalty',
+      'Integrating Centrino’s SMS and E-Board solutions streamlined our communications and governance. Board meetings are now seamless, and we can engage with our members instantly and securely. A truly transformative partnership.',
   },
   {
     name: 'David Chen',
@@ -138,10 +138,8 @@ export default function Testimonials() {
               </CarouselItem>
             ))}
           </CarouselContent>
-           <div className="absolute -bottom-10 right-0 left-0 md:left-auto md:right-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:translate-x-8 flex items-center justify-center md:justify-start gap-2">
-            <CarouselPrevious className="static translate-y-0" />
-            <CarouselNext className="static translate-y-0" />
-          </div>
+           <CarouselPrevious className="absolute left-0 md:-left-4 top-1/2 -translate-y-1/2" />
+           <CarouselNext className="absolute right-0 md:-right-4 top-1/2 -translate-y-1/2" />
         </Carousel>
       </div>
     </section>
