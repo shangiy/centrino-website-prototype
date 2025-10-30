@@ -46,9 +46,13 @@ export default function Home() {
         <section className="relative w-full overflow-hidden bg-gradient-to-r from-background via-purple-50 to-purple-100 text-foreground py-16 md:py-24">
           <div className="container relative z-10 grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-6 text-center md:text-left">
-               <div className='flex items-center gap-2 font-semibold justify-center md:justify-start text-primary'>
+               <div className='flex items-center gap-2 font-semibold justify-center md:justify-start'>
                 <div className='w-2 h-2 bg-primary' />
-                <p>WELCOME TO CENTRINO TECHNOLOGIES</p>
+                <p>
+                  <span className="bg-gradient-to-r from-yellow-500 via-orange-500 to-purple-500 bg-clip-text text-transparent">
+                    WELCOME TO CENTRINO TECHNOLOGIES
+                  </span>
+                </p>
               </div>
               <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-muted-foreground -mt-4">
                 <RevolvingGlobeIcon />
