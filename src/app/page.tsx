@@ -105,9 +105,11 @@ export default function Home() {
                 </div>
               </motion.div>
           </div>
-          <div className="absolute bottom-0 left-0 w-full h-20 text-accent overflow-hidden">
-            <svg viewBox="0 0 1440 100" preserveAspectRatio="none" className="h-full w-full">
-              <path d="M0,70 C240,10,480,110,720,70 C960,10,1200,110,1440,70 V100 H0 Z" fill="currentColor" />
+          <div className="absolute bottom-0 left-0 w-full h-24 bg-accent" />
+          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+            <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[100px]">
+              <path d="M0,50 C288,150 576,-50 864,50 C1152,150 1440,-50 1440,50 L1440,100 L0,100 Z" className="fill-accent"></path>
+              <path d="M0,50 C288,150 576,-50 864,50 C1152,150 1440,-50 1440,50" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"></path>
             </svg>
           </div>
         </section>
