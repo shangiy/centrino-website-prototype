@@ -73,23 +73,14 @@ export default function Home() {
               </Button>
             </div>
              <motion.div
-                initial={{ y: -500, opacity: 0 }}
+                initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ 
-                  y: 0,
+                  scale: 1,
                   opacity: 1,
                 }}
                 transition={{
-                  y: {
-                    type: 'spring',
-                    stiffness: 50,
-                    damping: 10,
-                    mass: 1,
-                    bounce: 0.25,
-                    velocity: 2,
-                  },
-                  opacity: {
-                    duration: 0.5
-                  }
+                  duration: 0.5,
+                  ease: 'easeOut'
                 }}
                 className="hidden md:flex justify-center items-center"
               >
