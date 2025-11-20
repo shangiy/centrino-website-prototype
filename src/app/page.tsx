@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Check } from 'lucide-react';
@@ -22,11 +23,17 @@ import React from 'react';
 import Testimonials from '@/components/testimonials';
 import Partners from '@/components/partners';
 import { RevolvingGlobeIcon } from '@/components/icons';
+import { cn } from '@/lib/utils';
 
 export default function Home() {
   const plugin = React.useRef(
     Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
+
+  const { ref: imageRef, inView: imageInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
   
   const expertiseItems = [
     "MIS for the microfinance sector",
@@ -177,7 +184,7 @@ export default function Home() {
 
         <StatsCounter />
 
-        <section className="py-20 md:py-28 bg-background">
+        <section className="py-20 md:py-28 bg-background financial-success-section">
           <div className="container grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">
@@ -202,7 +209,7 @@ export default function Home() {
                 <Link href="/about-us">Discover More</Link>
               </Button>
             </div>
-            <div className="relative rounded-lg overflow-hidden aspect-[9/16] shadow-xl max-w-sm mx-auto w-full">
+            <div ref={imageRef} className={cn("relative rounded-lg overflow-hidden aspect-[9/16] shadow-xl max-w-sm mx-auto w-full tech-guy-image", { 'is-visible': imageInView })}>
               <Image
                 src="/net_fintech.png"
                 alt="Technician working in a server room"

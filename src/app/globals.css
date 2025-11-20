@@ -85,3 +85,18 @@ body {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+.financial-success-section .tech-guy-image {
+  /* Set the duration and smoothness of the animation */
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.6s ease-in;
+  /* Initial state: slightly smaller (zoom-out effect) */
+  transform: scale(0.9);
+  /* Initial state: completely invisible (fade-in effect) */
+  opacity: 0;
+}
+.financial-success-section .tech-guy-image.is-visible {
+  /* Final state: original size */
+  transform: scale(1);
+  /* Final state: fully visible */
+  opacity: 1;
+}
