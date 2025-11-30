@@ -97,8 +97,7 @@ export default function Home() {
           </div>
           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
             <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[100px]">
-              <path d="M0,50 C288,150 576,-50 864,50 C1152,150 1440,-50 1440,50 L1440,100 L0,100 Z" className="fill-accent"></path>
-              <path d="M0,50 C288,150 576,-50 864,50 C1152,150 1440,-50 1440,50" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"></path>
+              <path d="M0,42 C288,150 576,-50 864,42 C1152,150 1440,-50 1440,42" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"></path>
             </svg>
           </div>
         </section>
