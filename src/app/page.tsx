@@ -36,12 +36,6 @@ export default function Home() {
     threshold: 0.2,
   });
 
-  const [isRevealed, setIsRevealed] = useState(false);
-  useEffect(() => {
-    // Trigger the reveal animation shortly after the component mounts
-    const timer = setTimeout(() => setIsRevealed(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
   
   const expertiseItems = [
     "MIS for the microfinance sector",
@@ -88,22 +82,17 @@ export default function Home() {
               </Button>
             </div>
              <div
-                className={cn(
-                  'hidden md:flex justify-center items-center image-reveal-container',
-                  { revealed: isRevealed }
-                )}
+                className='hidden md:flex justify-center items-center'
               >
-                <div>
-                    <Image
-                        src="/landingpage_image.png"
-                        alt="Creative Design"
-                        width={450}
-                        height={450}
-                        className="object-cover ken-burns rounded-full shadow-2xl"
-                        data-ai-hint="abstract design"
-                        priority
-                    />
-                </div>
+                <Image
+                    src="/landingpage_image.png"
+                    alt="Creative Design"
+                    width={450}
+                    height={450}
+                    className="object-cover ken-burns rounded-full shadow-2xl"
+                    data-ai-hint="abstract design"
+                    priority
+                />
               </div>
           </div>
           <div className="absolute bottom-0 left-0 w-full h-24 bg-accent" />
