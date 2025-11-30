@@ -19,7 +19,8 @@ import {
 } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
 import Autoplay from 'embla-carousel-autoplay';
-import React, { useEffect, useState } from 'react';
+import React,
+{ useEffect, useState } from 'react';
 import Testimonials from '@/components/testimonials';
 import Partners from '@/components/partners';
 import { RevolvingGlobeIcon } from '@/components/icons';
@@ -92,12 +93,13 @@ export default function Home() {
                   { revealed: isRevealed }
                 )}
               >
-                <div className="relative w-96 h-96 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden shadow-2xl">
+                <div>
                     <Image
                         src="/landingpage_image.png"
                         alt="Creative Design"
-                        fill
-                        className="object-cover ken-burns"
+                        width={450}
+                        height={450}
+                        className="object-cover ken-burns rounded-full shadow-2xl"
                         data-ai-hint="abstract design"
                         priority
                     />

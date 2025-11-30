@@ -133,7 +133,7 @@ body {
     content: '';
     position: absolute;
     top: 0;
-    width: 50%;
+    width: 51%;
     height: 100%;
     background-color: hsl(var(--background));
     z-index: 1;
@@ -142,12 +142,10 @@ body {
 
 .image-reveal-container::before {
     left: 0;
-    transform: translateX(0);
 }
 
 .image-reveal-container::after {
     right: 0;
-    transform: translateX(0);
 }
 
 .image-reveal-container.revealed::before {
