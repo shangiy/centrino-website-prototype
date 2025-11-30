@@ -86,8 +86,11 @@ export default function Home() {
                 </Link>
               </Button>
             </div>
-            <div
-                className={cn('hidden md:flex justify-center items-center image-reveal-container', { revealed: isRevealed })}
+             <div
+                className={cn(
+                  'hidden md:flex justify-center items-center image-reveal-container',
+                  { revealed: isRevealed }
+                )}
               >
                 <div className="relative w-96 h-96 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden shadow-2xl">
                     <Image
