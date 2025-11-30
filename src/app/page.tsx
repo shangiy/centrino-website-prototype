@@ -80,16 +80,9 @@ export default function Home() {
               </Button>
             </div>
              <motion.div
-                initial={{ y: -250, opacity: 0 }}
+                initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{
-                  type: 'spring',
-                  stiffness: 100,
-                  damping: 10,
-                  mass: 1,
-                  bounce: 0.5,
-                  duration: 1.5,
-                }}
+                transition={{ duration: 0.8, ease: 'easeOut' }}
                 className="hidden md:flex justify-center items-center"
               >
                 <div className="relative w-96 h-96 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden shadow-2xl">
@@ -97,7 +90,7 @@ export default function Home() {
                         src="/landingpage_image.png"
                         alt="Creative Design"
                         fill
-                        className="object-cover"
+                        className="object-cover ken-burns"
                         data-ai-hint="abstract design"
                         priority
                     />
