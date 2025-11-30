@@ -96,8 +96,8 @@ export default function Home() {
               </div>
           </div>
           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-            <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[100px]">
-              <path d="M0,42 C288,150 576,-50 864,42 C1152,150 1440,-50 1440,42" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"></path>
+            <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
+              <path d="M0,70 C240,10,480,120,720,70 C960,20,1200,100,1440,80" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"></path>
             </svg>
           </div>
         </section>
