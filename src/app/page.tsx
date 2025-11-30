@@ -19,7 +19,7 @@ import {
 } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
 import Autoplay from 'embla-carousel-autoplay';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Testimonials from '@/components/testimonials';
 import Partners from '@/components/partners';
 import { RevolvingGlobeIcon } from '@/components/icons';
@@ -34,6 +34,13 @@ export default function Home() {
     triggerOnce: true,
     threshold: 0.2,
   });
+
+  const [isRevealed, setIsRevealed] = useState(false);
+  useEffect(() => {
+    // Trigger the reveal animation shortly after the component mounts
+    const timer = setTimeout(() => setIsRevealed(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
   
   const expertiseItems = [
     "MIS for the microfinance sector",
@@ -79,11 +86,8 @@ export default function Home() {
                 </Link>
               </Button>
             </div>
-             <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
-                className="hidden md:flex justify-center items-center"
+            <div
+                className={cn('hidden md:flex justify-center items-center image-reveal-container', { revealed: isRevealed })}
               >
                 <div className="relative w-96 h-96 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden shadow-2xl">
                     <Image
@@ -95,7 +99,7 @@ export default function Home() {
                         priority
                     />
                 </div>
-              </motion.div>
+              </div>
           </div>
           <div className="absolute bottom-0 left-0 w-full h-24 bg-accent" />
           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
