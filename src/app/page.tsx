@@ -52,7 +52,7 @@ export default function Home() {
     <div className="bg-background text-foreground">
       <main>
         {/* Hero Section */}
-        <section className="relative w-full overflow-hidden bg-gradient-to-r from-background via-purple-50 to-purple-100 text-foreground py-16 md:py-24">
+        <section className="relative w-full overflow-hidden bg-gradient-to-r from-background via-purple-50 to-purple-100 text-foreground pt-16 md:pt-24 pb-24 md:pb-32">
           <div className="container relative z-10 grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-6 text-center md:text-left">
                <div className='flex items-center gap-2 font-semibold justify-center md:justify-start'>
@@ -95,9 +95,8 @@ export default function Home() {
                 />
               </div>
           </div>
-          <div className="absolute bottom-0 left-0 w-full h-24 bg-accent" />
           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-            <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[200px]">
+            <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[100px]">
               <path d="M0,100 C150,42 300,100 450,80 S750,20 900,50 1150,110 1300,80 1440,50 1440,50 L1440,100 L0,100 Z" className="fill-accent"></path>
               <path d="M0,100 C150,42 300,100 450,80 S750,20 900,50 1150,110 1300,80 1440,50 1440,50" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"></path>
             </svg>
@@ -357,3 +356,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
