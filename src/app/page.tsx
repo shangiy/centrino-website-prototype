@@ -40,15 +40,23 @@ export default function Home() {
   useEffect(() => {
     if (imageInView) {
       controls.start({
-        y: [ -500, 0 ],
-        transition: { 
-          type: "spring",
+        y: [-500, 0],
+        transition: {
+          type: 'spring',
           stiffness: 100,
           damping: 10,
           mass: 1,
           bounce: 0.5,
-          duration: 2
-        }
+          duration: 2,
+          times: [0, 0.4, 0.6, 0.8, 1],
+          y: {
+            type: "spring",
+            damping: 5,
+            stiffness: 100,
+            restDelta: 0.001,
+            duration: 1.5,
+          }
+        },
       });
     }
   }, [controls, imageInView]);
@@ -118,7 +126,7 @@ export default function Home() {
           </div>
            <div className="absolute bottom-0 left-0 w-full leading-none z-10">
                 <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
-                    <path d="M0,80 C240,180,360,-60,720,80 C1080,220,1200,-60,1440,80" stroke="hsl(var(--primary))" fill="none" strokeWidth="4" />
+                    <path d="M0,70 C240,180,480,-60,720,70 C960,200,1200,-60,1440,70" stroke="hsl(var(--primary))" fill="none" strokeWidth="6" />
                 </svg>
             </div>
            <div className="absolute bottom-0 left-0 w-full leading-none z-0">
@@ -265,11 +273,11 @@ export default function Home() {
           <div className="container grid md:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-lg overflow-hidden aspect-video">
               <Image
-                src="/net_fintech.png"
-                alt="Financial technology dashboard"
+                src="/Finance-Workforce.png"
+                alt="A team working in a modern office"
                 fill
                 className="object-cover"
-                data-ai-hint="fintech dashboard"
+                data-ai-hint="team working"
               />
             </div>
             <div className="space-y-6">
