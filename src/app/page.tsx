@@ -74,7 +74,7 @@ export default function Home() {
     <div className="bg-background text-foreground">
       <main>
         {/* Hero Section */}
-        <section className="relative w-full overflow-hidden bg-gradient-to-r from-background via-purple-50 to-purple-100 text-foreground pt-12 md:pt-24 pb-40">
+        <section className="relative w-full overflow-hidden bg-gradient-to-r from-background via-purple-50 to-purple-100 text-foreground pt-12 md:pt-24 pb-20">
           <div className="container relative z-10 grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-6 text-center md:text-left">
                <div className='flex items-center gap-2 font-semibold justify-center md:justify-start'>
@@ -118,17 +118,8 @@ export default function Home() {
               </div>
           </div>
            <div className="absolute bottom-0 left-0 w-full leading-none">
-            <svg
-              viewBox="0 0 1440 120"
-              xmlns="http://www.w3.org/2000/svg"
-              className="relative block w-full h-[200px]"
-            >
-              <path
-                d="M0,80 C120,-120 360,280 720,80 C1080,-120 1320,280 1440,80"
-                fill="transparent"
-                stroke="#962562"
-                strokeWidth="4"
-              />
+             <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[100px]">
+                <path d="M0,50 C480,150 960,-50 1440,50 L1440,100 L0,100 Z" fill="hsl(var(--accent))"></path>
             </svg>
           </div>
         </section>
