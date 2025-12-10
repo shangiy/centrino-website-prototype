@@ -62,7 +62,7 @@ export default function RootLayout({
                 <path
                   d="M0 6 L1440 6"
                   stroke="url(#animated-gradient)"
-                  strokeWidth="4"
+                  strokeWidth="2"
                 />
                  <defs>
                   <linearGradient id="animated-gradient" x1="0" y1="0" x2="100%" y2="0">
