@@ -70,7 +70,7 @@ export default function CareerPage() {
           <div className="space-y-6">
             <h2 className="text-3xl font-bold font-headline">Work With Us, Grow With Us</h2>
             <p className="text-muted-foreground leading-relaxed">
-              At Centrino Technologies, we believe that our people are our greatest asset. We foster a culture of innovation, collaboration, and continuous learning. We are looking for talented individuals who are passionate about technology and want to make an impact.
+              At Centrino Technologies, we believe that our people are our greatest asset. We foster a culture of innovation, collaboration, and continuous learning. We sought for talented individuals who are passionate about technology and want to make an impact.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Join us and be a part of a dynamic team that is dedicated to building solutions that empower businesses and communities.
