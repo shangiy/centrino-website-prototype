@@ -2,7 +2,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import { Button } from '@/components/ui/button';
@@ -35,6 +35,33 @@ export default function Home() {
     triggerOnce: true,
     threshold: 0.2,
   });
+
+  const controls = useAnimation();
+  const { ref: heroImageRef, inView: heroImageInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: false, // Trigger every time it comes into view
+  });
+
+  useEffect(() => {
+    if (heroImageInView) {
+      controls.start({
+        rotateY: [0, 1080], // 3 full spins (3 * 360)
+        scale: [0.5, 1], // Start small, end at full size
+        transition: {
+          duration: 2,
+          ease: 'easeOut',
+        },
+      });
+    } else {
+      // Reset when out of view
+      controls.start({
+        rotateY: 0,
+        scale: 0.5,
+        transition: { duration: 0 }
+      });
+    }
+  }, [controls, heroImageInView]);
+
 
   
   const expertiseItems = [
@@ -82,27 +109,30 @@ export default function Home() {
               </Button>
             </div>
              <div
+                ref={heroImageRef}
                 className='hidden md:flex justify-center items-center'
               >
-                <Image
-                    src="/landingpage_image.png"
-                    alt="Creative Design"
-                    width={450}
-                    height={450}
-                    className="object-cover ken-burns rounded-full shadow-2xl"
-                    data-ai-hint="abstract design"
-                    priority
-                />
+                <motion.div animate={controls}>
+                  <Image
+                      src="/landingpage_image.png"
+                      alt="Creative Design"
+                      width={450}
+                      height={450}
+                      className="object-cover rounded-full shadow-2xl"
+                      data-ai-hint="abstract design"
+                      priority
+                  />
+                </motion.div>
               </div>
           </div>
            <div className="absolute bottom-0 left-0 w-full leading-none">
             <svg
-              viewBox="0 0 1440 100"
+              viewBox="0 0 1440 120"
               xmlns="http://www.w3.org/2000/svg"
-              className="relative block w-full h-[180px]"
+              className="relative block w-full h-[200px]"
             >
               <path
-                d="M0,50 C 240,150 240,-50 480,50 S 720,150 960,50 S 1200,-50 1440,50"
+                d="M0,80 C240,-50 360,180 720,80 C1080,-20 1200,180 1440,80"
                 fill="transparent"
                 stroke="#962562"
                 strokeWidth="4"
