@@ -51,6 +51,7 @@ export default function RootLayout({
                 </a>
               </div>
             </div>
+            <div className="animated-gradient-line"></div>
           </div>
           <Header />
           <main className="flex-1">{children}</main>
