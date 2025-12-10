@@ -119,12 +119,12 @@ export default function Home() {
           </div>
            <div className="absolute bottom-0 left-0 w-full leading-none z-10">
                 <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
-                    <path d="M0,70 C120,5,240,140,480,70 C720,0,960,140,1200,70 C1320,35,1440,70,1440,70" stroke="hsl(var(--primary))" fill="none" strokeWidth="2" />
+                    <path d="M0,80 C240,180,360,-60,720,80 C1080,220,1200,-60,1440,80" stroke="hsl(var(--primary))" fill="none" strokeWidth="4" />
                 </svg>
             </div>
            <div className="absolute bottom-0 left-0 w-full leading-none z-0">
              <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
-                <path d="M0,70 C240,150,360,-30,720,70 C1080,170,1200,-30,1440,70 L1440,150 L0,150 Z" fill="hsl(var(--accent))"></path>
+                <path d="M0,70 C120,5,240,140,480,70 C720,0,960,140,1200,70 C1320,35,1440,70,1440,70 L1440,150 L0,150 Z" fill="hsl(var(--accent))"></path>
              </svg>
           </div>
         </section>
