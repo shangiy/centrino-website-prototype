@@ -60,7 +60,7 @@ export default function RootLayout({
                 preserveAspectRatio="none"
               >
                 <path
-                  d="M0 6C120 18 240 -6 360 6C480 18 600 -6 720 6C840 18 960 -6 1080 6C1200 18 1320 -6 1440 6"
+                  d="M0 6 L1440 6"
                   stroke="url(#animated-gradient)"
                   strokeWidth="2"
                 />
