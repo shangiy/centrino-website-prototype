@@ -31,15 +31,15 @@ export default function Home() {
     Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
 
-  const controls = useAnimation();
-  const { ref: imageRef, inView: imageInView } = useInView({
+  const heroImageControls = useAnimation();
+  const { ref: heroImageRef, inView: heroImageInView } = useInView({
     threshold: 0.5,
     triggerOnce: true, 
   });
 
   useEffect(() => {
-    if (imageInView) {
-      controls.start({
+    if (heroImageInView) {
+      heroImageControls.start({
         y: [-500, 0],
         transition: {
           type: 'spring',
@@ -59,7 +59,30 @@ export default function Home() {
         },
       });
     }
-  }, [controls, imageInView]);
+  }, [heroImageControls, heroImageInView]);
+
+  const expertiseImageControls = useAnimation();
+  const { ref: expertiseImageRef, inView: expertiseImageInView } = useInView({
+    threshold: 0.4,
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    const sequence = async () => {
+      if (expertiseImageInView) {
+        await expertiseImageControls.start({
+          x: 0,
+          scale: 1,
+          transition: { type: 'spring', stiffness: 50, damping: 15, duration: 1.5 },
+        });
+        await expertiseImageControls.start({
+          rotate: 360,
+          transition: { type: 'spring', stiffness: 50, damping: 15, duration: 1 },
+        });
+      }
+    };
+    sequence();
+  }, [expertiseImageControls, expertiseImageInView]);
 
 
   
@@ -108,10 +131,10 @@ export default function Home() {
               </Button>
             </div>
              <div
-                ref={imageRef}
+                ref={heroImageRef}
                 className='hidden md:flex justify-center items-center'
               >
-                <motion.div animate={controls}>
+                <motion.div animate={heroImageControls}>
                   <Image
                       src="/landingpage_image.png"
                       alt="Creative Design"
@@ -126,12 +149,12 @@ export default function Home() {
           </div>
            <div className="absolute bottom-0 left-0 w-full leading-none z-10">
                 <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
-                    <path d="M0,70 C240,180,480,-60,720,70 C960,200,1200,-60,1440,70" stroke="hsl(var(--primary))" fill="none" strokeWidth="6" />
+                    <path d="M0,70 C120,5,240,140,480,70 C720,0,960,140,1200,70 C1320,35,1440,70,1440,70" stroke="hsl(var(--primary))" fill="none" strokeWidth="12" />
                 </svg>
             </div>
            <div className="absolute bottom-0 left-0 w-full leading-none z-0">
              <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
-                <path d="M0,70 C120,5,240,140,480,70 C720,0,960,140,1200,70 C1320,35,1440,70,1440,70 L1440,150 L0,150 Z" fill="hsl(var(--accent))"></path>
+                <path d="M0,70 C120,5,240,140,480,70 C720,0,960,140,1200,70 C1320,35,1440,70,1440,70 L1440,150 L0,150 Z" fill="hsl(var(--background))"></path>
              </svg>
           </div>
         </section>
@@ -233,14 +256,20 @@ export default function Home() {
                 <Link href="/about-us">Discover More</Link>
               </Button>
             </div>
-            <div className="relative rounded-lg overflow-hidden aspect-[9/16] shadow-xl max-w-sm mx-auto w-full">
-              <Image
-                src="/net_fintech.png"
-                alt="Technician working in a server room"
-                fill
-                className="object-cover"
-                data-ai-hint="fintech dashboard"
-              />
+             <div ref={expertiseImageRef} className="relative rounded-lg overflow-hidden aspect-[9/16] shadow-xl max-w-sm mx-auto w-full">
+              <motion.div
+                className="w-full h-full"
+                initial={{ scale: 0.25, x: '50%', rotate: 0 }}
+                animate={expertiseImageControls}
+              >
+                <Image
+                  src="/net_fintech.png"
+                  alt="Technician working in a server room"
+                  fill
+                  className="object-cover"
+                  data-ai-hint="fintech dashboard"
+                />
+              </motion.div>
             </div>
           </div>
         </section>
@@ -389,3 +418,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
