@@ -97,13 +97,18 @@ export default function Home() {
           </div>
           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
             <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
-              <path d="M0,70 C240,10,480,120,720,70 C960,20,1200,100,1440,80" fill="none" stroke="hsl(var(--primary))" strokeWidth="2"></path>
+              <path
+                fill="transparent"
+                stroke="#962562"
+                strokeWidth="4"
+                d="M0,160 C150,250 300,50 450,160 C600,270 750,30 900,160 L1440,160"
+              ></path>
             </svg>
           </div>
         </section>
 
         {/* Services Section */}
-        <section id="services" className="relative pt-20 md:pt-28 pb-20 md:pb-28 bg-accent">
+        <section id="services" className="relative pt-56 md:pt-52 pb-20 md:pb-28 bg-accent">
           <div className="container relative">
             <div className="text-center max-w-3xl mx-auto">
               <div className="flex items-center justify-center gap-2">
@@ -355,6 +360,8 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
 
