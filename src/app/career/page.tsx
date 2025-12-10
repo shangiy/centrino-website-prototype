@@ -9,29 +9,6 @@ import { Badge } from '@/components/ui/badge';
 import { Briefcase, Building, Code, Cpu, ExternalLink, GraduationCap, MapPin, Palette, Rocket, Users, Zap, Upload, File as FileIcon, X } from 'lucide-react';
 import React, { useState } from 'react';
 
-const perks = [
-    {
-        icon: Zap,
-        title: 'Innovation Culture',
-        description: 'Be part of a team that thrives on creativity and pushing technological boundaries.'
-    },
-    {
-        icon: GraduationCap,
-        title: 'Continuous Learning',
-        description: 'We support your growth with access to courses, workshops, and conferences.'
-    },
-    {
-        icon: Users,
-        title: 'Collaborative Environment',
-        description: 'Work with talented and passionate people in a supportive and open atmosphere.'
-    },
-    {
-        icon: Briefcase,
-        title: 'Flexible Work',
-        description: 'We offer flexible working hours and remote options to support work-life balance.'
-    }
-]
-
 export default function CareerPage() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
@@ -78,7 +55,7 @@ export default function CareerPage() {
           </div>
           <div className="relative rounded-lg overflow-hidden aspect-video shadow-lg">
             <Image
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+              src="/Finance-Workforce.png"
               alt="Team at work"
               fill
               className="object-cover"
