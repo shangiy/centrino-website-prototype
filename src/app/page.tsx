@@ -117,11 +117,12 @@ export default function Home() {
                 />
               </div>
           </div>
-           <div className="absolute bottom-0 left-0 w-full leading-none">
-             <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[100px]">
-                <path d="M0,50 C480,150 960,-50 1440,50 L1440,100 L0,100 Z" fill="hsl(var(--accent))"></path>
+           <div className="absolute bottom-0 left-0 w-full leading-none z-0">
+             <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
+                <path d="M0,50 C240,-50 480,150 720,50 C960,-50 1200,150 1440,50 L1440,150 L0,150 Z" fill="hsl(var(--accent))"></path>
             </svg>
           </div>
+          <div className="animated-gradient-line absolute bottom-0 left-0 w-full z-10"></div>
         </section>
 
         {/* Services Section */}
@@ -379,5 +380,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
