@@ -34,25 +34,21 @@ export default function Home() {
   const controls = useAnimation();
   const { ref: imageRef, inView: imageInView } = useInView({
     threshold: 0.5,
-    triggerOnce: false, // Trigger every time it comes into view
+    triggerOnce: true, 
   });
 
   useEffect(() => {
     if (imageInView) {
       controls.start({
-        rotateY: [0, 1080], // 3 full spins (3 * 360)
-        scale: [0.5, 1], // Start small, end at full size
-        transition: {
-          duration: 2,
-          ease: 'easeOut',
-        },
-      });
-    } else {
-      // Reset when out of view
-      controls.start({
-        rotateY: 0,
-        scale: 0.5,
-        transition: { duration: 0 }
+        y: [ -500, 0 ],
+        transition: { 
+          type: "spring",
+          stiffness: 100,
+          damping: 10,
+          mass: 1,
+          bounce: 0.5,
+          duration: 2
+        }
       });
     }
   }, [controls, imageInView]);
@@ -104,17 +100,20 @@ export default function Home() {
               </Button>
             </div>
              <div
+                ref={imageRef}
                 className='hidden md:flex justify-center items-center'
               >
-                <Image
-                    src="/landingpage_image.png"
-                    alt="Creative Design"
-                    width={450}
-                    height={450}
-                    className="object-cover rounded-full shadow-2xl"
-                    data-ai-hint="abstract design"
-                    priority
-                />
+                <motion.div animate={controls}>
+                  <Image
+                      src="/landingpage_image.png"
+                      alt="Creative Design"
+                      width={450}
+                      height={450}
+                      className="object-cover rounded-full shadow-2xl"
+                      data-ai-hint="abstract design"
+                      priority
+                  />
+                </motion.div>
               </div>
           </div>
            <div className="absolute bottom-0 left-0 w-full leading-none z-10">
@@ -226,16 +225,14 @@ export default function Home() {
                 <Link href="/about-us">Discover More</Link>
               </Button>
             </div>
-            <div ref={imageRef} className="relative rounded-lg overflow-hidden aspect-[9/16] shadow-xl max-w-sm mx-auto w-full">
-              <motion.div animate={controls} className="w-full h-full">
-                <Image
-                  src="/net_fintech.png"
-                  alt="Technician working in a server room"
-                  fill
-                  className="object-cover"
-                  data-ai-hint="fintech dashboard"
-                />
-              </motion.div>
+            <div className="relative rounded-lg overflow-hidden aspect-[9/16] shadow-xl max-w-sm mx-auto w-full">
+              <Image
+                src="/net_fintech.png"
+                alt="Technician working in a server room"
+                fill
+                className="object-cover"
+                data-ai-hint="fintech dashboard"
+              />
             </div>
           </div>
         </section>
