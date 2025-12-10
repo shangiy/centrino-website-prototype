@@ -102,7 +102,7 @@ export default function Home() {
               className="relative block w-full h-[100px]"
             >
               <path
-                d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60"
+                d="M0,50 C240,150 480,-50 720,50 C960,150 1200,-50 1440,50"
                 fill="transparent"
                 stroke="#962562"
                 strokeWidth="4"
