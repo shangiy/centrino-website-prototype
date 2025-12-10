@@ -95,24 +95,13 @@ export default function Home() {
                 />
               </div>
           </div>
-          <div className="absolute -bottom-1 left-0 w-full overflow-hidden leading-none">
+          <div className="absolute bottom-0 left-0 w-full leading-none">
             <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
               <path
           fill="transparent"
           stroke="#962562"
           strokeWidth="4"
-          // M0,160: Start at x=0, y=160
-          // C100,200 200,100 300,160 : Wave 1 (Amplitude: +/- 60)
-          // C400,220 500,80 600,160 : Wave 2 (Amplitude: +/- 80)
-          // C700,240 800,60 900,160 : Wave 3 (Amplitude: +/- 100)
-          // C1000,220 1100,80 1200,160 : Wave 4 (Amplitude: +/- 80)
-          // C1300,200 1400,100 1440,160 : Wave 5 (Ends at x=1440)
-          d="M0,160 
-             C100,200 200,100 300,160 
-             C400,220 500,80 600,160 
-             C700,240 800,60 900,160 
-             C1000,220 1100,80 1200,160 
-             C1300,200 1400,100 1440,160"
+          d="M0,160 C100,200 200,100 300,160 C400,220 500,80 600,160 C700,240 800,60 900,160 C1000,220 1100,80 1200,160 C1300,200 1400,100 1440,160"
         ></path>
             </svg>
           </div>
@@ -371,6 +360,8 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
 
