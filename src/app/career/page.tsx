@@ -30,8 +30,17 @@ export default function CareerPage() {
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 bg-gradient-to-b from-primary/10 to-background">
-        <div className="container mx-auto text-center">
+      <section className="relative py-24 md:py-32 bg-gradient-to-b from-primary/10 to-background overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+            <Image
+                src="/centrino logo.png"
+                alt="Centrino Logo Background"
+                width={800}
+                height={300}
+                className="object-contain"
+            />
+        </div>
+        <div className="container relative mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight">
             Join Our Team
           </h1>
