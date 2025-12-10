@@ -52,7 +52,7 @@ export default function Home() {
     <div className="bg-background text-foreground">
       <main>
         {/* Hero Section */}
-        <section className="relative w-full overflow-hidden bg-gradient-to-r from-background via-purple-50 to-purple-100 text-foreground pt-16 md:pt-24 pb-24 md:pb-32">
+        <section className="relative w-full overflow-hidden bg-gradient-to-r from-background via-purple-50 to-purple-100 text-foreground pt-16 md:pt-24 pb-48 md:pb-64">
           <div className="container relative z-10 grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-6 text-center md:text-left">
                <div className='flex items-center gap-2 font-semibold justify-center md:justify-start'>
@@ -95,7 +95,7 @@ export default function Home() {
                 />
               </div>
           </div>
-          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+          <div className="absolute bottom-10 left-0 w-full overflow-hidden leading-none">
             <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
               <path
                 fill="transparent"
@@ -108,7 +108,7 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section id="services" className="relative pt-56 md:pt-52 pb-20 md:pb-28 bg-accent">
+        <section id="services" className="relative pt-36 md:pt-40 pb-20 md:pb-28 bg-accent">
           <div className="container relative">
             <div className="text-center max-w-3xl mx-auto">
               <div className="flex items-center justify-center gap-2">
