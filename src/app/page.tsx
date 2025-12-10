@@ -117,6 +117,11 @@ export default function Home() {
                 />
               </div>
           </div>
+           <div className="absolute bottom-0 left-0 w-full leading-none z-10">
+                <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
+                    <path d="M0,70 C240,150,360,-30,720,70 C1080,170,1200,-30,1440,70" stroke="hsl(var(--primary))" fill="none" strokeWidth="2" />
+                </svg>
+            </div>
            <div className="absolute bottom-0 left-0 w-full leading-none z-0">
              <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
                 <path d="M0,70 C240,150,360,-30,720,70 C1080,170,1200,-30,1440,70 L1440,150 L0,150 Z" fill="hsl(var(--accent))"></path>
