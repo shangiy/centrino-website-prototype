@@ -95,7 +95,7 @@ export default function Home() {
                 />
               </div>
           </div>
-          <div className="absolute bottom-10 left-0 w-full overflow-hidden leading-none">
+          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
             <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
               <path
                 fill="transparent"
@@ -108,7 +108,7 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section id="services" className="relative pt-36 md:pt-40 pb-20 md:pb-28 bg-accent">
+        <section id="services" className="relative pt-24 md:pt-28 pb-20 md:pb-28 bg-accent">
           <div className="container relative">
             <div className="text-center max-w-3xl mx-auto">
               <div className="flex items-center justify-center gap-2">
@@ -360,9 +360,5 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
 
     
