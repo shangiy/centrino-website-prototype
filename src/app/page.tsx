@@ -31,19 +31,14 @@ export default function Home() {
     Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
 
-  const { ref: imageRef, inView: imageInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
   const controls = useAnimation();
-  const { ref: heroImageRef, inView: heroImageInView } = useInView({
+  const { ref: imageRef, inView: imageInView } = useInView({
     threshold: 0.5,
     triggerOnce: false, // Trigger every time it comes into view
   });
 
   useEffect(() => {
-    if (heroImageInView) {
+    if (imageInView) {
       controls.start({
         rotateY: [0, 1080], // 3 full spins (3 * 360)
         scale: [0.5, 1], // Start small, end at full size
@@ -60,7 +55,7 @@ export default function Home() {
         transition: { duration: 0 }
       });
     }
-  }, [controls, heroImageInView]);
+  }, [controls, imageInView]);
 
 
   
@@ -109,20 +104,17 @@ export default function Home() {
               </Button>
             </div>
              <div
-                ref={heroImageRef}
                 className='hidden md:flex justify-center items-center'
               >
-                <motion.div animate={controls}>
-                  <Image
-                      src="/landingpage_image.png"
-                      alt="Creative Design"
-                      width={450}
-                      height={450}
-                      className="object-cover rounded-full shadow-2xl"
-                      data-ai-hint="abstract design"
-                      priority
-                  />
-                </motion.div>
+                <Image
+                    src="/landingpage_image.png"
+                    alt="Creative Design"
+                    width={450}
+                    height={450}
+                    className="object-cover rounded-full shadow-2xl"
+                    data-ai-hint="abstract design"
+                    priority
+                />
               </div>
           </div>
            <div className="absolute bottom-0 left-0 w-full leading-none">
@@ -132,7 +124,7 @@ export default function Home() {
               className="relative block w-full h-[200px]"
             >
               <path
-                d="M0,80 C240,-50 360,180 720,80 C1080,-20 1200,180 1440,80"
+                d="M0,80 C120,-120 360,280 720,80 C1080,-120 1320,280 1440,80"
                 fill="transparent"
                 stroke="#962562"
                 strokeWidth="4"
@@ -238,14 +230,16 @@ export default function Home() {
                 <Link href="/about-us">Discover More</Link>
               </Button>
             </div>
-            <div ref={imageRef} className={cn("relative rounded-lg overflow-hidden aspect-[9/16] shadow-xl max-w-sm mx-auto w-full tech-guy-image", { 'is-visible': imageInView })}>
-              <Image
-                src="/net_fintech.png"
-                alt="Technician working in a server room"
-                fill
-                className="object-cover"
-                data-ai-hint="fintech dashboard"
-              />
+            <div ref={imageRef} className="relative rounded-lg overflow-hidden aspect-[9/16] shadow-xl max-w-sm mx-auto w-full">
+              <motion.div animate={controls} className="w-full h-full">
+                <Image
+                  src="/net_fintech.png"
+                  alt="Technician working in a server room"
+                  fill
+                  className="object-cover"
+                  data-ai-hint="fintech dashboard"
+                />
+              </motion.div>
             </div>
           </div>
         </section>
