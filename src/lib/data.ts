@@ -333,17 +333,6 @@ export const portfolioProjects: Project[] = [
       'Our new website is not only beautiful but incredibly fast. Sales have seen a significant boost since launch.',
   },
   {
-    title: 'CyberSec Sentinel',
-    category: 'Cybersecurity',
-    imageId: 'portfolio-project-5',
-    description:
-      'A real-time threat intelligence dashboard for a major security firm.',
-    caseStudy:
-      'We designed and implemented a comprehensive security audit and developed a dashboard that visualizes threat data from multiple sources. This allowed the security team to respond to incidents 50% faster.',
-    clientFeedback:
-      'The clarity and speed of the Sentinel dashboard have fundamentally improved our security operations.',
-  },
-  {
     title: 'AI-Powered Design Tool',
     category: 'UI/UX Design',
     imageId: 'portfolio-project-6',
@@ -432,3 +421,6 @@ export const blogPosts: Post[] = [
 
     
 
+
+
+    
