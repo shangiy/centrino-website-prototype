@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
@@ -66,7 +67,7 @@ export default function StatsCounter() {
             style={{ y }}
         >
             <Image
-                src="/parallax-bg.png"
+                src="/centrino_3D.png"
                 alt="Parallax background"
                 fill
                 className="object-cover"
