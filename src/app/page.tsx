@@ -101,7 +101,7 @@ export default function Home() {
     <div className="bg-background text-foreground">
       <main>
         {/* Hero Section */}
-        <section className="relative w-full overflow-hidden bg-gradient-to-r from-background via-purple-50 to-purple-100 text-foreground pt-12 md:pt-24 pb-20 bg-accent">
+        <section className="relative w-full overflow-hidden bg-gradient-to-r from-background via-purple-50 to-purple-100 text-foreground pt-12 md:pt-24 pb-28 md:pb-36 bg-accent">
           <div className="container relative z-10 grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-6 text-center md:text-left">
               <div className="flex flex-row items-center justify-center md:justify-start gap-2 text-sm text-muted-foreground">
@@ -143,7 +143,7 @@ export default function Home() {
           </div>
            <div className="absolute bottom-0 left-0 w-full leading-none z-10">
                 <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
-                    <path d="M0,80 C240,240,480,-80,720,80 C960,240,1200,-80,1440,80" stroke="hsl(var(--primary))" fill="none" strokeWidth="16" />
+                    <path d="M0,80 C240,240,480,-80,720,80 C960,240,1200,-80,1440,80" stroke="hsl(var(--primary))" fill="none" strokeWidth="8" />
                 </svg>
             </div>
            <div className="absolute bottom-0 left-0 w-full leading-none z-0">
@@ -154,7 +154,7 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section id="services" className="relative pt-16 md:pt-28 pb-20 md:pb-28 bg-accent">
+        <section id="services" className="relative pt-16 md:pt-20 pb-20 md:pb-28 bg-accent">
           <div className="container relative">
             <div className="text-center max-w-3xl mx-auto">
               <div className="flex items-center justify-center gap-2 text-primary">
@@ -420,6 +420,9 @@ export default function Home() {
 
 
 
+
+
+    
 
 
     
