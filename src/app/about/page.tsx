@@ -97,14 +97,14 @@ export default function AboutPage() {
             className="relative py-24 md:py-32 bg-cover bg-center text-primary-foreground"
             style={{
                 backgroundImage:
-                "url('https://images.unsplash.com/photo-1590497003507-947c43c25a74?q=80&w=2070&auto=format&fit=crop')",
+                "url('/vision.png')",
             }}
             >
             <div className="absolute inset-0 bg-primary/90" />
             <div className="container relative z-10 grid md:grid-cols-2 gap-12 items-center">
                 <div className="relative rounded-lg overflow-hidden aspect-video shadow-lg min-h-[300px]">
                 <Image
-                    src="https://images.unsplash.com/photo-1590497003507-947c43c25a74?q=80&w=2070&auto=format&fit=crop"
+                    src="/vision.png"
                     alt="Our Vision"
                     fill
                     className="object-cover"
