@@ -104,7 +104,7 @@ export default function Home() {
         <section className="relative w-full overflow-hidden bg-gradient-to-r from-background via-purple-50 to-purple-100 text-foreground pt-12 md:pt-24 pb-20 bg-accent">
           <div className="container relative z-10 grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-6 text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-muted-foreground">
+              <div className="flex flex-col items-center md:items-start gap-2 text-sm text-muted-foreground">
                 <span className="bg-gradient-to-r from-yellow-500 via-orange-500 to-purple-500 bg-clip-text text-transparent font-semibold">
                   WELCOME TO CENTRINO TECHNOLOGIES
                 </span>
@@ -143,12 +143,12 @@ export default function Home() {
           </div>
            <div className="absolute bottom-0 left-0 w-full leading-none z-10">
                 <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
-                    <path d="M0,80 C180,180,340,-20,720,80 C1100,180,1260,-20,1440,80" stroke="hsl(var(--primary))" fill="none" strokeWidth="16" />
+                    <path d="M0,80 C240,240,480,-80,720,80 C960,240,1200,-80,1440,80" stroke="hsl(var(--primary))" fill="none" strokeWidth="32" />
                 </svg>
             </div>
            <div className="absolute bottom-0 left-0 w-full leading-none z-0">
              <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
-                <path d="M0,70 C120,-10,340,160,720,70 C1000,-20,1320,160,1440,70 L1440,150 L0,150 Z" fill="hsl(var(--accent))"></path>
+                <path d="M0,90 C120,-30,340,210,720,90 C1000,-30,1320,210,1440,90 L1440,150 L0,150 Z" fill="hsl(var(--accent))"></path>
              </svg>
           </div>
         </section>
@@ -416,5 +416,6 @@ export default function Home() {
     
 
     
+
 
 
