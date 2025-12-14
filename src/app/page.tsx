@@ -105,10 +105,10 @@ export default function Home() {
           <div className="container relative z-10 grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-6 text-center md:text-left">
               <div className="flex flex-row items-center justify-center md:justify-start gap-2 text-sm text-muted-foreground">
-                <span className="bg-gradient-to-r from-yellow-500 via-orange-500 to-purple-500 bg-clip-text text-transparent font-semibold">
-                  WELCOME TO CENTRINO TECHNOLOGIES
-                </span>
                 <RevolvingGlobeIcon />
+                <span className="bg-gradient-to-r from-yellow-500 via-orange-500 to-purple-500 bg-clip-text text-transparent font-semibold">
+                  WELCOME TO CENTRINO TECHNOLOGIES LTD
+                </span>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold leading-tight">
                 Smarter Tech Solutions for <span className='text-primary'>Financial Institutions</span>
