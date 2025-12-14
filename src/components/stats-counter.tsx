@@ -46,7 +46,7 @@ function Counter({ to }: { to: number }) {
 export default function StatsCounter() {
   const { ref: inViewRef, inView } = useInView({
     threshold: 0.5,
-    triggerOnce: true,
+    triggerOnce: false,
   });
 
   const sectionRef = useRef<HTMLElement>(null);
