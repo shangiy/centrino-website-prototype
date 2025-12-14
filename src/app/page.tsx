@@ -143,7 +143,7 @@ export default function Home() {
           </div>
            <div className="absolute bottom-0 left-0 w-full leading-none z-10">
                 <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
-                    <path d="M0,80 C240,240,480,-80,720,80 C960,240,1200,-80,1440,80" stroke="hsl(var(--primary))" fill="none" strokeWidth="32" />
+                    <path d="M0,80 C240,240,480,-80,720,80 C960,240,1200,-80,1440,80" stroke="hsl(var(--primary))" fill="none" strokeWidth="16" />
                 </svg>
             </div>
            <div className="absolute bottom-0 left-0 w-full leading-none z-0">
@@ -416,6 +416,7 @@ export default function Home() {
     
 
     
+
 
 
 
