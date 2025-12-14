@@ -157,12 +157,12 @@ export default function Home() {
         <section id="services" className="relative pt-16 md:pt-28 pb-20 md:pb-28 bg-accent">
           <div className="container relative">
             <div className="text-center max-w-3xl mx-auto">
-              <div className="flex items-center justify-center gap-2">
-                <div className="w-3 h-3 bg-primary"></div>
-                <p className="font-semibold tracking-wider text-sm text-primary">
+              <div className="flex items-center justify-center gap-2 text-primary">
+                <RevolvingGlobeIcon />
+                <p className="font-semibold tracking-wider text-sm">
                   OUR SERVICES
                 </p>
-                <div className="w-3 h-3 bg-primary"></div>
+                <RevolvingGlobeIcon />
               </div>
               <h2 className="text-3xl font-bold font-headline mt-4">
                 Services We Provide
