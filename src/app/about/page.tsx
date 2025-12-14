@@ -63,7 +63,7 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-
+        
         {/* Our Mission Section */}
         <section
           className="relative py-24 md:py-32 bg-background"
@@ -106,7 +106,7 @@ export default function AboutPage() {
                     data-ai-hint="person future"
                 />
                 </div>
-                <div className="space-y-6">
+                <div className="space-y-6 bg-black/30 p-8 rounded-lg">
                 <h2 className="text-4xl font-bold font-headline">Our Vision</h2>
                 <p className="text-lg text-primary-foreground/90">
                     Simplifying complex needs through Innovative solutions that fosters
