@@ -1,3 +1,4 @@
+
 import { cn } from "@/lib/utils";
 import type { SVGProps } from "react";
 import Image from 'next/image';
@@ -18,7 +19,7 @@ export const RevolvingGlobeIcon = () => (
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="w-4 h-4"
+      className="w-5 h-5"
       animate={{ rotate: 360 }}
       transition={{
           duration: 10,

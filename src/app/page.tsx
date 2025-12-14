@@ -159,7 +159,7 @@ export default function Home() {
             <div className="text-center max-w-3xl mx-auto">
               <div className="flex items-center justify-center gap-2 text-primary">
                 <RevolvingGlobeIcon />
-                <p className="font-semibold tracking-wider text-sm">
+                <p className="font-semibold tracking-wider text-base">
                   OUR SERVICES
                 </p>
                 <RevolvingGlobeIcon />
