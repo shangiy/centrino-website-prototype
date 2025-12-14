@@ -104,7 +104,7 @@ export default function Home() {
         <section className="relative w-full overflow-hidden bg-gradient-to-r from-background via-purple-50 to-purple-100 text-foreground pt-12 md:pt-24 pb-20 bg-accent">
           <div className="container relative z-10 grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-6 text-center md:text-left">
-              <div className="flex flex-col items-center md:items-start gap-2 text-sm text-muted-foreground">
+              <div className="flex flex-row items-center justify-center md:justify-start gap-2 text-sm text-muted-foreground">
                 <span className="bg-gradient-to-r from-yellow-500 via-orange-500 to-purple-500 bg-clip-text text-transparent font-semibold">
                   WELCOME TO CENTRINO TECHNOLOGIES
                 </span>
@@ -420,3 +420,6 @@ export default function Home() {
 
 
 
+
+
+    
