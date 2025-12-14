@@ -10,8 +10,14 @@ export default function AboutPage() {
     <div className="bg-background text-foreground">
       <main>
         {/* Hero Section */}
-        <section className="py-12 md:py-20 bg-secondary/10">
-          <div className="container text-center">
+        <section
+          className="relative py-24 md:py-32 bg-cover bg-center text-primary-foreground"
+          style={{
+            backgroundImage: "url('/centrino_3D.png')",
+          }}
+        >
+          <div className="absolute inset-0 bg-gray-900/80" />
+          <div className="container relative z-10 text-center">
             <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tight">
               About Us
             </h1>
