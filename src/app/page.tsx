@@ -40,7 +40,7 @@ export default function Home() {
   useEffect(() => {
     if (heroImageInView) {
       heroImageControls.start({
-        y: [-500, 0],
+        y: [-500, 50, -30, 10, 0],
         transition: {
           type: 'spring',
           stiffness: 100,
@@ -104,15 +104,10 @@ export default function Home() {
         <section className="relative w-full overflow-hidden bg-gradient-to-r from-background via-purple-50 to-purple-100 text-foreground pt-12 md:pt-24 pb-20 bg-accent">
           <div className="container relative z-10 grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-6 text-center md:text-left">
-               <div className='flex items-center gap-2 font-semibold justify-center md:justify-start'>
-                <div className='w-2 h-2 bg-primary' />
-                <p>
-                  <span className="bg-gradient-to-r from-yellow-500 via-orange-500 to-purple-500 bg-clip-text text-transparent">
-                    WELCOME TO CENTRINO TECHNOLOGIES
-                  </span>
-                </p>
-              </div>
-              <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-muted-foreground -mt-4">
+              <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-muted-foreground">
+                <span className="bg-gradient-to-r from-yellow-500 via-orange-500 to-purple-500 bg-clip-text text-transparent font-semibold">
+                  WELCOME TO CENTRINO TECHNOLOGIES
+                </span>
                 <RevolvingGlobeIcon />
                 <span>www.centrino.co.ke</span>
               </div>
@@ -149,7 +144,7 @@ export default function Home() {
           </div>
            <div className="absolute bottom-0 left-0 w-full leading-none z-10">
                 <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" className="relative block w-full h-[150px]">
-                    <path d="M0,80 C280,160,340,0,720,80 C1000,160,1140,0,1440,80" stroke="hsl(var(--primary))" fill="none" strokeWidth="8" />
+                    <path d="M0,80 C180,180,340,-20,720,80 C1100,180,1260,-20,1440,80" stroke="hsl(var(--primary))" fill="none" strokeWidth="16" />
                 </svg>
             </div>
            <div className="absolute bottom-0 left-0 w-full leading-none z-0">
@@ -422,3 +417,4 @@ export default function Home() {
     
 
     
+
