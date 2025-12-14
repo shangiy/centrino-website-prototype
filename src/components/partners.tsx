@@ -38,7 +38,7 @@ export default function Partners() {
       <div className="container relative z-10 text-center">
         <div className="flex items-center justify-center gap-2 mb-4 text-primary">
           <RevolvingGlobeIcon />
-          <p className="font-semibold tracking-wider text-sm">
+          <p className="font-semibold tracking-wider text-base">
             OUR PARTNERS
           </p>
           <RevolvingGlobeIcon />

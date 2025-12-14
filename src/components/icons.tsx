@@ -10,7 +10,7 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-export const RevolvingGlobeIcon = () => (
+export const RevolvingGlobeIcon = ({ className }: { className?: string }) => (
   <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -19,7 +19,7 @@ export const RevolvingGlobeIcon = () => (
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="w-5 h-5"
+      className={cn("w-5 h-5", className)}
       animate={{ rotate: 360 }}
       transition={{
           duration: 10,
