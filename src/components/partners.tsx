@@ -1,3 +1,4 @@
+
 'use client';
 import React from 'react';
 import Image from 'next/image';
@@ -7,6 +8,7 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
+import { RevolvingGlobeIcon } from './icons';
 
 const partners = [
   { src: '/eset-P.png', alt: 'Eset Logo' },
@@ -34,11 +36,12 @@ export default function Partners() {
     >
       <div className="absolute inset-0 bg-gray-900/80"></div>
       <div className="container relative z-10 text-center">
-        <div className="flex items-center justify-center gap-2 mb-4">
-          <div className="w-3 h-3 bg-primary"></div>
-          <p className="font-semibold tracking-wider text-sm text-primary">
+        <div className="flex items-center justify-center gap-2 mb-4 text-primary">
+          <RevolvingGlobeIcon />
+          <p className="font-semibold tracking-wider text-sm">
             OUR PARTNERS
           </p>
+          <RevolvingGlobeIcon />
         </div>
         <h2 className="text-3xl md:text-4xl font-bold font-headline mb-12">
           Meet our Partners
