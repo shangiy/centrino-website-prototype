@@ -109,7 +109,6 @@ export default function Home() {
                   WELCOME TO CENTRINO TECHNOLOGIES
                 </span>
                 <RevolvingGlobeIcon />
-                <span>www.centrino.co.ke</span>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold leading-tight">
                 Smarter Tech Solutions for <span className='text-primary'>Financial Institutions</span>
@@ -417,4 +416,5 @@ export default function Home() {
     
 
     
+
 
