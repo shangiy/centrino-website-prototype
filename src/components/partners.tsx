@@ -31,7 +31,7 @@ export default function Partners() {
     <section
       className="relative py-20 bg-cover bg-center text-white"
       style={{
-        backgroundImage: "url('/partners-bg.png')",
+        backgroundImage: "url('/centrino_3D.png')",
       }}
     >
       <div className="absolute inset-0 bg-gray-900/80"></div>
