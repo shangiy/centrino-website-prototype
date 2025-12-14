@@ -52,30 +52,7 @@ export default function RootLayout({
               </div>
             </div>
             <div className="w-full">
-              <svg
-                viewBox="0 0 1440 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-full"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M0 6 L1440 6"
-                  stroke="url(#animated-gradient)"
-                  strokeWidth="2"
-                />
-                 <defs>
-                  <linearGradient id="animated-gradient" x1="0" y1="0" x2="100%" y2="0">
-                      <stop offset="0%" stopColor="#00E0FF" />
-                      <stop offset="25%" stopColor="#9D00FF" />
-                      <stop offset="50%" stopColor="#FF005C" />
-                      <stop offset="75%" stopColor="#9D00FF" />
-                      <stop offset="100%" stopColor="#00E0FF" />
-                      <animate attributeName="x1" from="-100%" to="0%" dur="5s" repeatCount="indefinite" />
-                      <animate attributeName="x2" from="0%" to="100%" dur="5s" repeatCount="indefinite" />
-                  </linearGradient>
-                </defs>
-              </svg>
+              <hr className="animated-gradient-line" />
             </div>
           </div>
           <Header />
