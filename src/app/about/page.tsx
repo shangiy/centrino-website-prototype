@@ -41,6 +41,29 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Core Values Section */}
+        <section className="relative py-24 md:py-32 text-primary-foreground"
+          style={{ background: 'linear-gradient(to right, hsl(var(--primary)), #a83279)'}}
+        >
+          <div className="container grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold font-headline">Our Core Values</h2>
+              <p className="text-lg text-primary-foreground/90">
+                These core values, represented by the acronym " ICE-SIG," define the ethical guidelines and behaviors that guide Centrino Technologies' culture and decision-making. They reflect our commitment to Innovation, Excellence, client-centricity, integrity, Seamlessness, and Global Impact, providing a clear and focused framework for our organization's actions and interactions.
+              </p>
+            </div>
+            <div className="relative rounded-lg overflow-hidden aspect-video shadow-lg min-h-[300px]">
+                <Image
+                    src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop"
+                    alt="Our Core Values"
+                    fill
+                    className="object-cover"
+                    data-ai-hint="teamwork gear"
+                />
+            </div>
+          </div>
+        </section>
+
         {/* Our Mission Section */}
         <section
           className="relative py-24 md:py-32 bg-background"
@@ -123,29 +146,6 @@ export default function AboutPage() {
                 className="object-cover"
                 data-ai-hint="team meeting"
               />
-            </div>
-          </div>
-        </section>
-
-        {/* Core Values Section */}
-        <section className="relative py-24 md:py-32 text-primary-foreground"
-          style={{ background: 'linear-gradient(to right, hsl(var(--primary)), #a83279)'}}
-        >
-          <div className="container grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-4xl font-bold font-headline">Our Core Values</h2>
-              <p className="text-lg text-primary-foreground/90">
-                These core values, represented by the acronym " ICE-SIG," define the ethical guidelines and behaviors that guide Centrino Technologies' culture and decision-making. They reflect our commitment to Innovation, Excellence, client-centricity, integrity, Seamlessness, and Global Impact, providing a clear and focused framework for our organization's actions and interactions.
-              </p>
-            </div>
-            <div className="relative rounded-lg overflow-hidden aspect-video shadow-lg min-h-[300px]">
-                <Image
-                    src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop"
-                    alt="Our Core Values"
-                    fill
-                    className="object-cover"
-                    data-ai-hint="teamwork gear"
-                />
             </div>
           </div>
         </section>
