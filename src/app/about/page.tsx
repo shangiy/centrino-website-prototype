@@ -116,8 +116,6 @@ export default function AboutPage() {
             </div>
         </section>
 
-        <StatsCounter />
-
         <section className="py-20 md:py-28 bg-background">
           <div className="container grid md:grid-cols-2 gap-12 items-center">
              <div className="space-y-6">
@@ -149,6 +147,8 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        <StatsCounter />
 
         <Testimonials />
 
