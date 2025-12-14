@@ -37,17 +37,12 @@ export default function AboutPage() {
 
         {/* Our Mission Section */}
         <section
-          className="relative py-24 md:py-32 bg-cover bg-center text-primary-foreground"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=format&fit=crop')",
-          }}
+          className="relative py-24 md:py-32 bg-background"
         >
-          <div className="absolute inset-0 bg-primary/90" />
           <div className="container relative z-10 grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-4xl font-bold font-headline">Our Mission</h2>
-              <p className="text-lg text-primary-foreground/90">
+              <h2 className="text-4xl font-bold font-headline text-primary">Our Mission</h2>
+              <p className="text-lg text-muted-foreground">
                 To empower organisations to thrive through innovative fintech solutions that simplify complex needs, enable seamless integration, and foster excellence.
               </p>
             </div>
