@@ -43,42 +43,6 @@ const testimonials = [
   },
 ];
 
-const CircuitIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    width="150"
-    height="150"
-    viewBox="0 0 200 150"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <path
-      d="M200 40H180V20H160V0H140"
-      stroke="currentColor"
-      strokeWidth="2"
-    />
-    <path d="M160 20H140" stroke="currentColor" strokeWidth="2" />
-    <circle cx="180" cy="40" r="4" fill="currentColor" />
-    <circle cx="160" cy="20" r="4" fill="currentColor" />
-    <circle cx="140" cy="20" r="4" fill="currentColor" />
-    <path d="M140 20H120V40H100" stroke="currentColor" strokeWidth="2" />
-    <circle cx="120" cy="20" r="4" fill="currentColor" />
-    <circle cx="120" cy="40" r="4" fill="currentColor" />
-    <path d="M120 40H100" stroke="currentColor" strokeWidth="2" />
-    <circle cx="100" cy="40" r="4" fill="currentColor" />
-    <path d="M100 40H80V60H60" stroke="currentColor" strokeWidth="2" />
-    <circle cx="80" cy="40" r="4" fill="currentColor" />
-    <circle cx="80" cy="60" r="4" fill="currentColor" />
-    <path d="M80 60H60" stroke="currentColor" strokeWidth="2" />
-    <circle cx="60" cy="60" r="4"fill="currentColor" />
-    <path d="M60 60H40V80H20V100H0" stroke="currentColor" strokeWidth="2" />
-    <circle cx="40" cy="60" r="4" fill="currentColor" />
-    <circle cx="40"cy="80" r="4" fill="currentColor" />
-    <circle cx="20" cy="80" r="4" fill="currentColor" />
-    <circle cx="20" cy="100" r="4" fill="currentColor" />
-  </svg>
-);
-
 export default function Testimonials() {
   const plugin = React.useRef(
     Autoplay({ delay: 5000, stopOnInteraction: true })
@@ -87,9 +51,8 @@ export default function Testimonials() {
   return (
     <section className="py-20 bg-background overflow-hidden">
       <div className="container relative">
-        <div className="flex items-center gap-8 mb-12">
-            <CircuitIcon className="text-primary hidden md:block flex-shrink-0" />
-            <h2 className="text-3xl md:text-4xl font-bold font-headline text-center md:text-left">
+        <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold font-headline">
                 Customers Experiences
             </h2>
         </div>
