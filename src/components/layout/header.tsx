@@ -130,8 +130,8 @@ export function Header() {
               </SheetContent>
             </Sheet>
             <div className="ml-4">
-              <Link href="/" className='md:hidden'>
-                  <Logo />
+              <Link href="/" className="md:hidden">
+                <Image src="/centrino logo.png" alt="Centrino Logo" width={180} height={50} className="h-full w-auto" />
               </Link>
             </div>
         </div>
