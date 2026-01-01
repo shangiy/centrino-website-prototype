@@ -19,6 +19,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { services } from '@/lib/data';
+import { Logo } from '../icons';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -62,9 +63,78 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 max-w-screen-2xl items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
+        <Link href="/" className="mr-6 hidden md:flex items-center space-x-2">
           <Image src="/centrino logo.png" alt="Centrino Logo" width={140} height={40} />
         </Link>
+        <div className="flex md:hidden items-center flex-1">
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Open menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left">
+                  <SheetHeader>
+                      <SheetTitle className='sr-only'>Mobile Menu</SheetTitle>
+                  </SheetHeader>
+                <div className="flex flex-col h-full">
+                  <div className="flex items-center justify-between pb-4 border-b">
+                    <Link
+                      href="/"
+                      className="flex items-center space-x-2"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <Image src="/centrino logo.png" alt="Centrino Logo" width={140} height={40} />
+                    </Link>
+                  </div>
+                  <nav className="flex flex-col space-y-4 mt-6 overflow-y-auto flex-grow">
+                    {[...navLinks, ...trailingNavLinks].map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className={cn(
+                          'text-lg transition-colors hover:text-primary',
+                          pathname === link.href
+                            ? 'text-primary font-semibold'
+                            : 'text-foreground'
+                        )}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                    {/* Mobile Services Links */}
+                    <div className="text-lg text-foreground font-semibold">Services</div>
+                    {services.map((service) => (
+                       <Link
+                        key={service.title}
+                        href={`/services/${service.slug}`}
+                        className='text-foreground/80 pl-4 text-base hover:text-primary'
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {service.title}
+                      </Link>
+                    ))}
+                  </nav>
+                  <div className="mt-auto pt-6">
+                    <Button
+                      asChild
+                      className="w-full"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <Link href="/contact">Contact Us</Link>
+                    </Button>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+            <div className="ml-4">
+              <Link href="/" className='md:hidden'>
+                  <Logo />
+              </Link>
+            </div>
+        </div>
         <nav className="hidden md:flex items-center space-x-1 text-sm font-medium">
           {navLinks.map((link) => (
             <Link
@@ -130,76 +200,16 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end gap-4">
-           <a href="tel:+254202587637" className="flex items-center gap-2 text-foreground/80 font-semibold hover:text-primary transition-colors">
+           <a href="tel:+254202587637" className="hidden md:flex items-center gap-2 text-foreground/80 font-semibold hover:text-primary transition-colors">
             <Phone className="w-4 h-4 text-primary" />
             +254 20 2587637
           </a>
-          <Button asChild className="rounded-full">
+          <Button asChild className="rounded-full hidden md:inline-flex">
             <Link href="/contact">Contact Us</Link>
           </Button>
-
-          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-            <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Open menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left">
-                <SheetHeader>
-                    <SheetTitle className='sr-only'>Mobile Menu</SheetTitle>
-                </SheetHeader>
-              <div className="flex flex-col h-full">
-                <div className="flex items-center justify-between pb-4 border-b">
-                  <Link
-                    href="/"
-                    className="flex items-center space-x-2"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <Image src="/centrino logo.png" alt="Centrino Logo" width={140} height={40} />
-                  </Link>
-                </div>
-                <nav className="flex flex-col space-y-4 mt-6">
-                  {[...navLinks, ...trailingNavLinks].map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className={cn(
-                        'text-lg transition-colors hover:text-primary',
-                        pathname === link.href
-                          ? 'text-primary font-semibold'
-                          : 'text-foreground'
-                      )}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                  {/* Mobile Services Links */}
-                  <div className="text-lg text-foreground font-semibold">Services</div>
-                  {services.map((service) => (
-                     <Link
-                      key={service.title}
-                      href={`/services/${service.slug}`}
-                      className='text-foreground/80 pl-4 text-base hover:text-primary'
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {service.title}
-                    </Link>
-                  ))}
-                </nav>
-                <div className="mt-auto">
-                  <Button
-                    asChild
-                    className="w-full"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <Link href="/contact">Contact Us</Link>
-                  </Button>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
+          <Button asChild className="rounded-full md:hidden text-sm px-3 h-8">
+            <Link href="/contact">Contact</Link>
+          </Button>
         </div>
       </div>
     </header>
