@@ -1,3 +1,4 @@
+
 'use client';
 import React from 'react';
 import Image from 'next/image';
@@ -101,8 +102,8 @@ export default function Testimonials() {
               </CarouselItem>
             ))}
           </CarouselContent>
-           <CarouselPrevious className="absolute left-0 md:-left-4 top-1/2 -translate-y-1/2" />
-           <CarouselNext className="absolute right-0 md:-right-4 top-1/2 -translate-y-1/2" />
+           <CarouselPrevious className="absolute -left-2 md:-left-4 top-1/2 -translate-y-1/2" />
+           <CarouselNext className="absolute -right-2 md:-right-4 top-1/2 -translate-y-1/2" />
         </Carousel>
       </div>
     </section>

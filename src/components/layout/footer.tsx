@@ -1,16 +1,14 @@
+
 import {
   Clock,
   Facebook,
   Instagram,
   Linkedin,
-  LocateIcon,
-  Mail,
   MapPin,
   Phone,
   Twitter,
 } from 'lucide-react';
 import Link from 'next/link';
-import { Logo } from '@/components/icons';
 import { Separator } from '../ui/separator';
 
 const usefulLinks = [
@@ -159,8 +157,8 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="bg-black/20 py-4">
-        <p className="text-center text-sm text-accent-foreground/60">
+      <div className="bg-black/20 py-4 px-4 text-center">
+        <p className="text-sm text-accent-foreground/60">
           Copyright © {new Date().getFullYear()}. All Rights Reserved.
         </p>
       </div>

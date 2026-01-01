@@ -6,9 +6,8 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { services } from '@/lib/data';
-import { Badge } from '@/components/ui/badge';
 import StatsCounter from '@/components/stats-counter';
 import {
   Carousel,
@@ -20,11 +19,10 @@ import {
 import { Card, CardContent } from '@/components/ui/card';
 import Autoplay from 'embla-carousel-autoplay';
 import React,
-{ useEffect, useState } from 'react';
+{ useEffect } from 'react';
 import Testimonials from '@/components/testimonials';
 import Partners from '@/components/partners';
 import { RevolvingGlobeIcon } from '@/components/icons';
-import { cn } from '@/lib/utils';
 
 export default function Home() {
   const plugin = React.useRef(
@@ -126,7 +124,7 @@ export default function Home() {
             </div>
              <div
                 ref={heroImageRef}
-                className='hidden md:flex justify-center items-center'
+                className='flex justify-center items-center mt-8 md:mt-0'
               >
                 <motion.div animate={heroImageControls}>
                   <Image

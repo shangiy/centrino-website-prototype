@@ -130,11 +130,11 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end gap-4">
-           <a href="tel:+254202587637" className="hidden md:flex items-center gap-2 text-foreground/80 font-semibold hover:text-primary transition-colors">
+           <a href="tel:+254202587637" className="hidden sm:flex items-center gap-2 text-foreground/80 font-semibold hover:text-primary transition-colors">
             <Phone className="w-4 h-4 text-primary" />
             +254 20 2587637
           </a>
-          <Button asChild className="hidden md:flex rounded-full">
+          <Button asChild className="hidden sm:flex rounded-full">
             <Link href="/contact">Contact Us</Link>
           </Button>
 
